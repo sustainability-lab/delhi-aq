@@ -1,7 +1,7 @@
 project:
   type: website
   resources:
-    - forecasting/data/dataset/timesfm_non_recursive_336days_24day_all.csv
+    - forecasting/data/dataset/timesfm.csv
 
 website:
   title: "PM₂.₅"

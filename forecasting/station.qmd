@@ -60,7 +60,7 @@ execute:
   // --- CSV + Plotting ---
   let allData = null;
 
-  Papa.parse("./data/dataset/timesfm_non_recursive_336days_24day_all.csv", {
+  Papa.parse("./data/dataset/timesfm.csv", {
     download: true,
     header: true,
     dynamicTyping: true,
@@ -96,11 +96,15 @@ execute:
   function plotForecast(station) {
     if (!allData) return;
 
+    const startDate = new Date("2023-10-01T00:00:00");
     const cutoff = new Date("2023-12-31T23:00:00");
 
     const stationData = allData.filter(row =>
-      row.station === station && row.Timestamp <= cutoff
+      row.station === station &&
+      row.Timestamp >= startDate &&
+      row.Timestamp <= cutoff
     );
+
 
     if (stationData.length === 0) {
       document.getElementById("forecast-chart").innerHTML = "<p>No data found for this station before cutoff date.</p>";
