@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Forecasting – PM₂.₅</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">PM₂.₅</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../forecasting/forecasting.html" aria-current="page"> 
+<span class="menu-text">Forecasting</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Forecasting</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_03997695767be8ec7d9e076d3a74c640 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_03997695767be8ec7d9e076d3a74c640&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_03997695767be8ec7d9e076d3a74c640 = L.map(
+                &quot;map_03997695767be8ec7d9e076d3a74c640&quot;,
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 1,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;maxBounds&quot;: [
+[
+28.403052135245247,
+76.84251435748224,
+],
+[
+28.879321705537276,
+77.34765178578583,
+],
+],
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5d2286e15bb4b5cd56d1e2ec16fb03e8 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 10,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_5d2286e15bb4b5cd56d1e2ec16fb03e8.addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+            map_03997695767be8ec7d9e076d3a74c640.fitBounds(
+                [[28.403052135245247, 76.84251435748224], [28.879321705537276, 77.34765178578583]],
+                {}
+            );
+        
+    
+            var marker_510d4b753eda8dd95c017e3e98b9ee65 = L.marker(
+                [28.695381, 77.181665],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_527a36805b017da0e43f1b43b0d9e807 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_98ff21185466c368339adabb915bbf34 = $(`<div id=&quot;html_98ff21185466c368339adabb915bbf34&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_527a36805b017da0e43f1b43b0d9e807.setContent(html_98ff21185466c368339adabb915bbf34);
+            
+        
+
+        marker_510d4b753eda8dd95c017e3e98b9ee65.bindPopup(popup_527a36805b017da0e43f1b43b0d9e807)
+        ;
+
+        
+    
+    
+            marker_510d4b753eda8dd95c017e3e98b9ee65.bindTooltip(
+                `<div>
+                     Ashok Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_3061602940eac1077e5fa2925e9ad2f5 = L.marker(
+                [28.7762, 77.051074],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_4386687b91c8c918ec871b1d6663fddc = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3543f49c01be48f90594c9b42893d764 = $(`<div id=&quot;html_3543f49c01be48f90594c9b42893d764&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_4386687b91c8c918ec871b1d6663fddc.setContent(html_3543f49c01be48f90594c9b42893d764);
+            
+        
+
+        marker_3061602940eac1077e5fa2925e9ad2f5.bindPopup(popup_4386687b91c8c918ec871b1d6663fddc)
+        ;
+
+        
+    
+    
+            marker_3061602940eac1077e5fa2925e9ad2f5.bindTooltip(
+                `<div>
+                     Bawana, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_58d830214d5f82d884ab9da449e9a49c = L.marker(
+                [28.498571, 77.26484],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_db9afb9e5d242162dacd533acbf4eba9 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_c33038469a67b33474121a0f48b8ff6d = $(`<div id=&quot;html_c33038469a67b33474121a0f48b8ff6d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_db9afb9e5d242162dacd533acbf4eba9.setContent(html_c33038469a67b33474121a0f48b8ff6d);
+            
+        
+
+        marker_58d830214d5f82d884ab9da449e9a49c.bindPopup(popup_db9afb9e5d242162dacd533acbf4eba9)
+        ;
+
+        
+    
+    
+            marker_58d830214d5f82d884ab9da449e9a49c.bindTooltip(
+                `<div>
+                     Dr. Karni Singh Shooting Range, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_e84b5a225dde6da330da564abdf2a829 = L.marker(
+                [28.5710274, 77.0719006],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_f1615027129e428e9769607ffbcf691f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_89fb202afcc3c021d8dedc1a7b571a37 = $(`<div id=&quot;html_89fb202afcc3c021d8dedc1a7b571a37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f1615027129e428e9769607ffbcf691f.setContent(html_89fb202afcc3c021d8dedc1a7b571a37);
+            
+        
+
+        marker_e84b5a225dde6da330da564abdf2a829.bindPopup(popup_f1615027129e428e9769607ffbcf691f)
+        ;
+
+        
+    
+    
+            marker_e84b5a225dde6da330da564abdf2a829.bindTooltip(
+                `<div>
+                     Dwarka-Sector 8, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_99f66d564170723278b669df01750fbc = L.marker(
+                [28.73282, 77.170633],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_9a35a2753d7449b03a81452b0b513940 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_a82c5e651b2e68f30f793feb6b4351a5 = $(`<div id=&quot;html_a82c5e651b2e68f30f793feb6b4351a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_9a35a2753d7449b03a81452b0b513940.setContent(html_a82c5e651b2e68f30f793feb6b4351a5);
+            
+        
+
+        marker_99f66d564170723278b669df01750fbc.bindPopup(popup_9a35a2753d7449b03a81452b0b513940)
+        ;
+
+        
+    
+    
+            marker_99f66d564170723278b669df01750fbc.bindTooltip(
+                `<div>
+                     Jahangirpuri, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_79221f67e0177b0376f6884236bf476d = L.marker(
+                [28.58028, 77.233829],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_5b55762b51c0b351a3c844a16e755e52 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_9c801260d42c9584c1c9b37a745f0c5d = $(`<div id=&quot;html_9c801260d42c9584c1c9b37a745f0c5d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_5b55762b51c0b351a3c844a16e755e52.setContent(html_9c801260d42c9584c1c9b37a745f0c5d);
+            
+        
+
+        marker_79221f67e0177b0376f6884236bf476d.bindPopup(popup_5b55762b51c0b351a3c844a16e755e52)
+        ;
+
+        
+    
+    
+            marker_79221f67e0177b0376f6884236bf476d.bindTooltip(
+                `<div>
+                     Jawaharlal Nehru Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_ba413f2aa06ac4747290be678444bd80 = L.marker(
+                [28.611281, 77.237738],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_1268c03f4dd967330a0d5977d585ce75 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_aa897a483fa084ad807e93b9edfa131b = $(`<div id=&quot;html_aa897a483fa084ad807e93b9edfa131b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_1268c03f4dd967330a0d5977d585ce75.setContent(html_aa897a483fa084ad807e93b9edfa131b);
+            
+        
+
+        marker_ba413f2aa06ac4747290be678444bd80.bindPopup(popup_1268c03f4dd967330a0d5977d585ce75)
+        ;
+
+        
+    
+    
+            marker_ba413f2aa06ac4747290be678444bd80.bindTooltip(
+                `<div>
+                     Major Dhyan Chand National Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_666dceb9c7f4935fbef89fdb5085a7db = L.marker(
+                [28.636429, 77.201067],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_554cb2d4ac0963471f7af2e94279acf4 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_230fe8849da2a6748b089276d91bb39d = $(`<div id=&quot;html_230fe8849da2a6748b089276d91bb39d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_554cb2d4ac0963471f7af2e94279acf4.setContent(html_230fe8849da2a6748b089276d91bb39d);
+            
+        
+
+        marker_666dceb9c7f4935fbef89fdb5085a7db.bindPopup(popup_554cb2d4ac0963471f7af2e94279acf4)
+        ;
+
+        
+    
+    
+            marker_666dceb9c7f4935fbef89fdb5085a7db.bindTooltip(
+                `<div>
+                     Mandir Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_a4a5b57707093925a7c84e2d8b36fd06 = L.marker(
+                [28.684678, 77.076574],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_1d719bec2ac6743bbb675edfb80f8199 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_b80192dafb64382cb916c2d7274874a2 = $(`<div id=&quot;html_b80192dafb64382cb916c2d7274874a2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_1d719bec2ac6743bbb675edfb80f8199.setContent(html_b80192dafb64382cb916c2d7274874a2);
+            
+        
+
+        marker_a4a5b57707093925a7c84e2d8b36fd06.bindPopup(popup_1d719bec2ac6743bbb675edfb80f8199)
+        ;
+
+        
+    
+    
+            marker_a4a5b57707093925a7c84e2d8b36fd06.bindTooltip(
+                `<div>
+                     Mundka, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_c67b74285ce64a36c6ce7031c9cb35a4 = L.marker(
+                [28.570173, 76.933762],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3ccad60485e16de09cf6d4716b88ef9f = $(`<div id=&quot;html_3ccad60485e16de09cf6d4716b88ef9f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44.setContent(html_3ccad60485e16de09cf6d4716b88ef9f);
+            
+        
+
+        marker_c67b74285ce64a36c6ce7031c9cb35a4.bindPopup(popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44)
+        ;
+
+        
+    
+    
+            marker_c67b74285ce64a36c6ce7031c9cb35a4.bindTooltip(
+                `<div>
+                     Najafgarh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_309ecda59eb5f693f0e79ee3ba8bf1bc = L.marker(
+                [28.822836, 77.101981],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_279e1fda10454baee4545fe309105708 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_a21da3e215a822edb0dbc32cf7ccb4bb = $(`<div id=&quot;html_a21da3e215a822edb0dbc32cf7ccb4bb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_279e1fda10454baee4545fe309105708.setContent(html_a21da3e215a822edb0dbc32cf7ccb4bb);
+            
+        
+
+        marker_309ecda59eb5f693f0e79ee3ba8bf1bc.bindPopup(popup_279e1fda10454baee4545fe309105708)
+        ;
+
+        
+    
+    
+            marker_309ecda59eb5f693f0e79ee3ba8bf1bc.bindTooltip(
+                `<div>
+                     Narela, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_25cadcb4e30e117e83d56fd6ce236cf6 = L.marker(
+                [28.56789, 77.250515],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_2c3f53fc0a85394556cd5b51b0e0e043 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_0ae94c330b33ff6a6b39bd967669a7dc = $(`<div id=&quot;html_0ae94c330b33ff6a6b39bd967669a7dc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_2c3f53fc0a85394556cd5b51b0e0e043.setContent(html_0ae94c330b33ff6a6b39bd967669a7dc);
+            
+        
+
+        marker_25cadcb4e30e117e83d56fd6ce236cf6.bindPopup(popup_2c3f53fc0a85394556cd5b51b0e0e043)
+        ;
+
+        
+    
+    
+            marker_25cadcb4e30e117e83d56fd6ce236cf6.bindTooltip(
+                `<div>
+                     Nehru Nagar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_5e818da240432bf2c4d2ee6317e03b78 = L.marker(
+                [28.530785, 77.271255],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_7f852e5a65d77e0f64a214635dba0185 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_17a0948b4e7cb7a73b1ad63c850aa8b9 = $(`<div id=&quot;html_17a0948b4e7cb7a73b1ad63c850aa8b9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_7f852e5a65d77e0f64a214635dba0185.setContent(html_17a0948b4e7cb7a73b1ad63c850aa8b9);
+            
+        
+
+        marker_5e818da240432bf2c4d2ee6317e03b78.bindPopup(popup_7f852e5a65d77e0f64a214635dba0185)
+        ;
+
+        
+    
+    
+            marker_5e818da240432bf2c4d2ee6317e03b78.bindTooltip(
+                `<div>
+                     Okhla Phase-2, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_785387b08cf17149c1e121cecf2ba222 = L.marker(
+                [28.623763, 77.287209],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_562844b9e88063f884b3cc7e60fd01fa = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_1888d87274721117dfd176df194ae6ec = $(`<div id=&quot;html_1888d87274721117dfd176df194ae6ec&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_562844b9e88063f884b3cc7e60fd01fa.setContent(html_1888d87274721117dfd176df194ae6ec);
+            
+        
+
+        marker_785387b08cf17149c1e121cecf2ba222.bindPopup(popup_562844b9e88063f884b3cc7e60fd01fa)
+        ;
+
+        
+    
+    
+            marker_785387b08cf17149c1e121cecf2ba222.bindTooltip(
+                `<div>
+                     Patparganj, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_99fa1a96c9759c991a2d14f37568af34 = L.marker(
+                [28.674045, 77.131023],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_894b7936f77dc34d229976141f27a1fc = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_c9dd6f524f2ef47327f2c5ff50128bb8 = $(`<div id=&quot;html_c9dd6f524f2ef47327f2c5ff50128bb8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_894b7936f77dc34d229976141f27a1fc.setContent(html_c9dd6f524f2ef47327f2c5ff50128bb8);
+            
+        
+
+        marker_99fa1a96c9759c991a2d14f37568af34.bindPopup(popup_894b7936f77dc34d229976141f27a1fc)
+        ;
+
+        
+    
+    
+            marker_99fa1a96c9759c991a2d14f37568af34.bindTooltip(
+                `<div>
+                     Punjabi Bagh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_2384adc4776889f83e66e0a749714138 = L.marker(
+                [28.639652, 77.146275],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_2166db6df62541ba906f471416dc5aa9 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_35dfde08237d9019c3e4b8e2b8e1a204 = $(`<div id=&quot;html_35dfde08237d9019c3e4b8e2b8e1a204&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_2166db6df62541ba906f471416dc5aa9.setContent(html_35dfde08237d9019c3e4b8e2b8e1a204);
+            
+        
+
+        marker_2384adc4776889f83e66e0a749714138.bindPopup(popup_2166db6df62541ba906f471416dc5aa9)
+        ;
+
+        
+    
+    
+            marker_2384adc4776889f83e66e0a749714138.bindTooltip(
+                `<div>
+                     Pusa, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_71d902529a59aecf5495d0447c491774 = L.marker(
+                [28.563262, 77.186937],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_6546b63596f63f46827f5456ee40c536 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3a61b79261bc82f45820a93bfb0c2622 = $(`<div id=&quot;html_3a61b79261bc82f45820a93bfb0c2622&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6546b63596f63f46827f5456ee40c536.setContent(html_3a61b79261bc82f45820a93bfb0c2622);
+            
+        
+
+        marker_71d902529a59aecf5495d0447c491774.bindPopup(popup_6546b63596f63f46827f5456ee40c536)
+        ;
+
+        
+    
+    
+            marker_71d902529a59aecf5495d0447c491774.bindTooltip(
+                `<div>
+                     R K Puram, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_a007f327b0a430fc48cee58f56d58e77 = L.marker(
+                [28.732528, 77.11992],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_3103b789bda9e6f2a1bc20d756e1c97a = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_875d8fa72d321d6f51b12df7d4239b9b = $(`<div id=&quot;html_875d8fa72d321d6f51b12df7d4239b9b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_3103b789bda9e6f2a1bc20d756e1c97a.setContent(html_875d8fa72d321d6f51b12df7d4239b9b);
+            
+        
+
+        marker_a007f327b0a430fc48cee58f56d58e77.bindPopup(popup_3103b789bda9e6f2a1bc20d756e1c97a)
+        ;
+
+        
+    
+    
+            marker_a007f327b0a430fc48cee58f56d58e77.bindTooltip(
+                `<div>
+                     Rohini, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_4253bdcc8682fb936c2b1eb059a40502 = L.marker(
+                [28.710508, 77.249485],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_835d3039823ebc0f83465d1900cb0f83 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ac3dfd658c9de130ec0de6bdf71fb2f3 = $(`<div id=&quot;html_ac3dfd658c9de130ec0de6bdf71fb2f3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_835d3039823ebc0f83465d1900cb0f83.setContent(html_ac3dfd658c9de130ec0de6bdf71fb2f3);
+            
+        
+
+        marker_4253bdcc8682fb936c2b1eb059a40502.bindPopup(popup_835d3039823ebc0f83465d1900cb0f83)
+        ;
+
+        
+    
+    
+            marker_4253bdcc8682fb936c2b1eb059a40502.bindTooltip(
+                `<div>
+                     Sonia Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_1de39bdeef4185e0c446c8d11fe0a16e = L.marker(
+                [28.531346, 77.190156],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_d3e9bbdfe9ae107933b99b7256fe9aaa = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_e31e3d0655d0856551936076ea78dc25 = $(`<div id=&quot;html_e31e3d0655d0856551936076ea78dc25&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_d3e9bbdfe9ae107933b99b7256fe9aaa.setContent(html_e31e3d0655d0856551936076ea78dc25);
+            
+        
+
+        marker_1de39bdeef4185e0c446c8d11fe0a16e.bindPopup(popup_d3e9bbdfe9ae107933b99b7256fe9aaa)
+        ;
+
+        
+    
+    
+            marker_1de39bdeef4185e0c446c8d11fe0a16e.bindTooltip(
+                `<div>
+                     Sri Aurobindo Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_df611124ac9d5e7372c90a32342e0901 = L.marker(
+                [28.672342, 77.31526],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_09134905b1236fff1e7115623b4bae87 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ef013db79da6b506971d9f966cafab5b = $(`<div id=&quot;html_ef013db79da6b506971d9f966cafab5b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_09134905b1236fff1e7115623b4bae87.setContent(html_ef013db79da6b506971d9f966cafab5b);
+            
+        
+
+        marker_df611124ac9d5e7372c90a32342e0901.bindPopup(popup_09134905b1236fff1e7115623b4bae87)
+        ;
+
+        
+    
+    
+            marker_df611124ac9d5e7372c90a32342e0901.bindTooltip(
+                `<div>
+                     Vivek Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_a892c98023def3451a9b8483de9212c8 = L.marker(
+                [28.699793, 77.165453],
+                {
+}
+            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+    
+        var popup_b0a953fa0af5c041ad9eb78fc009ed8b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_8b86ee67e44569529a364e421bfab548 = $(`<div id=&quot;html_8b86ee67e44569529a364e421bfab548&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_b0a953fa0af5c041ad9eb78fc009ed8b.setContent(html_8b86ee67e44569529a364e421bfab548);
+            
+        
+
+        marker_a892c98023def3451a9b8483de9212c8.bindPopup(popup_b0a953fa0af5c041ad9eb78fc009ed8b)
+        ;
+
+        
+    
+    
+            marker_a892c98023def3451a9b8483de9212c8.bindTooltip(
+                `<div>
+                     Wazirpur, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+
+        function geo_json_18d21ef47b623c9b92e6dcb040d48416_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_18d21ef47b623c9b92e6dcb040d48416 = L.geoJson(null, {
+                onEachFeature: geo_json_18d21ef47b623c9b92e6dcb040d48416_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_18d21ef47b623c9b92e6dcb040d48416_add (data) {
+            geo_json_18d21ef47b623c9b92e6dcb040d48416
+                .addData(data);
+        }
+            geo_json_18d21ef47b623c9b92e6dcb040d48416_add({&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;features&quot;: [{&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.32800389493826, 28.67239167204768], [77.32772533394477, 28.666531902780093], [77.32770785324212, 28.666164048955366], [77.325557835788, 28.657802965445374], [77.32554397539066, 28.65638446899026], [77.32553763151414, 28.655733096057418], [77.32544205436459, 28.645907030477645], [77.32318501604315, 28.641208839049714], [77.3213046867176, 28.6391865225465], [77.32367042123747, 28.63774460047442], [77.323997068761, 28.637426911332668], [77.3260345355317, 28.635444915488762], [77.33105474972714, 28.630560992626954], [77.33632519075763, 28.627993545614935], [77.34055944724112, 28.62593061720227], [77.34431417293108, 28.62150692359716], [77.34716790087138, 28.616412145357774], [77.3476231172752, 28.612011393650366], [77.34625279456911, 28.603392151011704], [77.34320094917466, 28.601226628263596], [77.33789379673176, 28.59939961184384], [77.3269718934987, 28.59448299051775], [77.32337195280223, 28.59397295082713], [77.31995806102422, 28.593489177566717], [77.31716425390505, 28.591442137128972], [77.31556413106117, 28.58955191184122], [77.31515956021418, 28.589074042138343], [77.30491000912598, 28.576964198625987], [77.30482387610402, 28.576782106473466], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.3051413673883, 28.555732227913847], [77.31300984258708, 28.544969186315203], [77.31438979060256, 28.54374539175398], [77.32063479974838, 28.538206659501633], [77.32483339884692, 28.53600158105828], [77.33144856523451, 28.530363873542257], [77.33649680441096, 28.523759166083913], [77.3404435650323, 28.518594852514614], [77.34292260123115, 28.516156785945718], [77.34389780963718, 28.51519772004282], [77.34415045531287, 28.514752834089922], [77.3467555736686, 28.510166443541074], [77.34765178578583, 28.50345539386918], [77.34437051094167, 28.505584654180733], [77.33889524476847, 28.50282321673253], [77.33657377596872, 28.49795786780577], [77.33159199450778, 28.493882989277235], [77.32474908115456, 28.48906551600393], [77.31672824601804, 28.485191441211544], [77.31080442189256, 28.484632836029512], [77.30612106397625, 28.485668662545912], [77.29564126151455, 28.490795216269316], [77.28790080744703, 28.492677906822067], [77.28096052855314, 28.491564112316944], [77.26991008923501, 28.48297439297787], [77.26378569834469, 28.48009357731464], [77.25244400621256, 28.47915064567805], [77.24652091948481, 28.474240019183075], [77.24218273391853, 28.47035216349048], [77.2373837747999, 28.464308874093746], [77.23549659680403, 28.45856822564237], [77.2361795589214, 28.454817613335457], [77.24285892495196, 28.45400642953283], [77.24961574516955, 28.44815818475137], [77.2530268026152, 28.442036338229865], [77.25403011720421, 28.436207899655177], [77.25291103475394, 28.428222896042964], [77.25034156499044, 28.42340186441194], [77.23243251187648, 28.413519899282143], [77.22497561624277, 28.410302025107384], [77.21556351810086, 28.407962744783415], [77.20487044226623, 28.40710099160931], [77.18913212642883, 28.406957202651455], [77.1753786965703, 28.403052135245247], [77.16397705230139, 28.415900047311332], [77.1615020553078, 28.42292256332066], [77.15205411077763, 28.430329863056606], [77.14103210162064, 28.433326205367408], [77.13370781022178, 28.433864579383528], [77.12793400653317, 28.437064448307424], [77.12215454261144, 28.444875475495117], [77.1183944590692, 28.451997790825555], [77.11570174637525, 28.46054327066356], [77.11240519680932, 28.46510414626018], [77.1112007528156, 28.471134423109145], [77.1130200358822, 28.477774583149763], [77.11505260605611, 28.482787775065173], [77.11737741977366, 28.488521191935334], [77.11321439219618, 28.49212104394551], [77.10002289768582, 28.500122093855918], [77.09568418742538, 28.505535157149794], [77.08218639784023, 28.514969729422507], [77.07717268518716, 28.515336739053954], [77.06664152553824, 28.50856863575967], [77.05844843242112, 28.509950156564734], [77.0513371066247, 28.513677486259233], [77.04283624252213, 28.523067890818023], [77.02931240272851, 28.528010242359837], [77.02533919539864, 28.528069326699114], [77.01578176421805, 28.537520967096555], [77.0098872844861, 28.536763689882264], [77.00562253774439, 28.531655257826593], [77.00787223541388, 28.52689841227009], [77.01466123810748, 28.52348360827443], [77.02105034555119, 28.518854424369597], [77.02058822779065, 28.512771093394687], [77.01519124948031, 28.509187790973435], [76.9999072575318, 28.51453985486166], [76.98617060137151, 28.518579969390444], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.94279847995226, 28.51084937097648], [76.93223080421859, 28.51408299365603], [76.91802423683191, 28.509739375596542], [76.90700264854304, 28.51260929400555], [76.90326649034155, 28.510985967247592], [76.89633714122468, 28.506079493782593], [76.888890648998, 28.503906424160505], [76.88332862462205, 28.509253264411544], [76.88899488687875, 28.51885231626565], [76.88586106805107, 28.52326006274611], [76.86877345556685, 28.536804588992013], [76.86630758723604, 28.542702284659295], [76.84717142496928, 28.55189587437348], [76.84251435748224, 28.577422597419602], [76.84464047343846, 28.586319016621548], [76.8598587067249, 28.585022638082673], [76.86444686291388, 28.58724614495722], [76.87055846965707, 28.597408516419637], [76.88765759795864, 28.632525240430876], [76.90341270731547, 28.62762487083816], [76.9070096334832, 28.627671664479006], [76.91375069989202, 28.63280689778049], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.93572361453052, 28.624101213998003], [76.94367249234084, 28.632492501025634], [76.92798055656309, 28.648132152727797], [76.92727591837325, 28.652127844819315], [76.93291729164164, 28.664080331174244], [76.93955322250906, 28.669276359015303], [76.95208088103936, 28.669941183426623], [76.95238879168892, 28.669957511543057], [76.95710295606034, 28.672006049929216], [76.95579604403122, 28.678325016988953], [76.95824478865269, 28.682834769896143], [76.95987859921074, 28.68898025956203], [76.96372126982114, 28.69480579748066], [76.96409474481646, 28.695371953722788], [76.96450443108594, 28.700214302077242], [76.9608590847245, 28.70461254284807], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.95915313241429, 28.736356587893432], [76.96026542078114, 28.741514679343066], [76.9573973479795, 28.74599614812088], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.95397161658781, 28.773408004550145], [76.95234457925335, 28.78264123627383], [76.95311925089919, 28.789998472271208], [76.94750610430553, 28.79838957173434], [76.94740075351014, 28.804046761530323], [76.95237135087149, 28.815574517806848], [76.95828556327555, 28.81255028052861], [76.96584862691063, 28.81490894886266], [76.96810662971122, 28.825219642126683], [76.97093040117177, 28.82655719312726], [76.98065730358687, 28.81997686114232], [76.9837952124208, 28.820710136769204], [76.98967913275564, 28.831574872108764], [76.99363678918797, 28.833955941949693], [76.99986666974684, 28.834022508788333], [77.01676989532704, 28.830110428072633], [77.0289528247558, 28.831891732354034], [77.0348385350697, 28.83110210017568], [77.04170609206948, 28.831609861967735], [77.04786158554664, 28.84759933243861], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.08041327970415, 28.874797294780972], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.10973064204086, 28.86721775214927], [77.11741355606702, 28.86322476825236], [77.11997601034905, 28.860891041976934], [77.13883755570389, 28.86013342522956], [77.14536199101484, 28.853229476866307], [77.14586011244924, 28.8474284358327], [77.14406717911004, 28.83944953660806], [77.14946011330588, 28.836399908015032], [77.15264742713133, 28.837195019299894], [77.16092954944801, 28.84317053769546], [77.16990445479617, 28.852147600481793], [77.17490730047335, 28.85535417182215], [77.19398918870692, 28.857001316197163], [77.19721033144612, 28.861519456499753], [77.20383582344276, 28.860039631383188], [77.20999957954142, 28.85962904794304], [77.21515278829848, 28.857591132498012], [77.21818736263195, 28.85490179099469], [77.22180895061327, 28.84960424534348], [77.22093899702955, 28.83996404332024], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.20468972213968, 28.796959832985785], [77.207169612488, 28.789949943276], [77.21052226373159, 28.78651978038676], [77.21291649218315, 28.784070027014202], [77.2143440039084, 28.7835189924518], [77.2186797593756, 28.781845232583745], [77.2233009667238, 28.781095494546847], [77.22426421506802, 28.781313811917038], [77.22642010451952, 28.781802345810856], [77.22851677648046, 28.782277426895156], [77.2304651904059, 28.782276394666184], [77.2338181975754, 28.782274469435254], [77.23493032368563, 28.782273792343755], [77.2323205733389, 28.778380986561967], [77.2273273412673, 28.776331649021603], [77.23113894140936, 28.772545339912906], [77.23700717110162, 28.768592574441026], [77.2392638482639, 28.76707241371082], [77.2453830610995, 28.75802298651334], [77.24820531120781, 28.75384868265035], [77.248696429135, 28.753731424176507], [77.25608762170775, 28.751966179092694], [77.25868312652483, 28.752152873178126], [77.26341465224546, 28.74740002465139], [77.26207910610313, 28.740112503092273], [77.26637280166048, 28.73454010236981], [77.27012818633878, 28.732723939288697], [77.27657100341791, 28.7338795378577], [77.28133040053568, 28.732781866462926], [77.28706457692951, 28.72898544461337], [77.29089325926482, 28.72461991045587], [77.29104691592772, 28.724368227144385], [77.29462447352118, 28.71850977850799], [77.2938530820123, 28.713557060198188], [77.29509038307268, 28.7070330410502], [77.30312431192496, 28.70434348419933], [77.30581072337357, 28.70760858582894], [77.31166707844272, 28.71129384143181], [77.31643073365667, 28.712231616501384], [77.32737700698904, 28.711763774281142], [77.33370385341296, 28.71041555057635], [77.3318683847603, 28.70637169176919], [77.33003330949782, 28.69819532955926], [77.33111759751431, 28.694218477306148], [77.33775169207539, 28.68638048190534], [77.33729417289436, 28.67969463083855], [77.33578362518006, 28.677391375868243], [77.3355514988024, 28.677037384140963], [77.32807488393293, 28.673885185094285], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_18d21ef47b623c9b92e6dcb040d48416.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_18d21ef47b623c9b92e6dcb040d48416.addTo(map_03997695767be8ec7d9e076d3a74c640);
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

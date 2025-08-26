@@ -1,0 +1,124 @@
+---
+title: "Station Forecast"
+format: html
+execute:
+  echo: false
+---
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  #forecast-chart {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+  }
+</style>
+
+<label for="station-dropdown">Select Station:</label>
+<select id="station-dropdown"></select>
+
+<div id="forecast-chart"></div>
+
+<!-- Load Plotly + PapaParse -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<script>
+  const stations = [
+    "Ashok Vihar, Delhi - DPCC","Bawana, Delhi - DPCC","Dr. Karni Singh Shooting Range, Delhi - DPCC",
+    "Dwarka-Sector 8, Delhi - DPCC","Jahangirpuri, Delhi - DPCC","Jawaharlal Nehru Stadium, Delhi - DPCC",
+    "Major Dhyan Chand National Stadium, Delhi - DPCC","Mandir Marg, Delhi - DPCC","Mundka, Delhi - DPCC",
+    "Najafgarh, Delhi - DPCC","Narela, Delhi - DPCC","Nehru Nagar, Delhi - DPCC","Okhla Phase-2, Delhi - DPCC",
+    "Patparganj, Delhi - DPCC","Punjabi Bagh, Delhi - DPCC","Pusa, Delhi - DPCC","R K Puram, Delhi - DPCC",
+    "Rohini, Delhi - DPCC","Sonia Vihar, Delhi - DPCC","Sri Aurobindo Marg, Delhi - DPCC",
+    "Vivek Vihar, Delhi - DPCC","Wazirpur, Delhi - DPCC"
+  ];
+
+  // --- Preselect from query param ---
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  const dropdown = document.getElementById("station-dropdown");
+  const selectedStation = getQueryParam("station") || stations[0];
+
+  stations.forEach(station => {
+    const option = document.createElement("option");
+    option.value = station;
+    option.text = station;
+    if (station === selectedStation) option.selected = true;
+    dropdown.add(option);
+  });
+
+  // --- CSV + Plotting ---
+  let allData = null;
+
+  Papa.parse("./data/dataset/timesfm_non_recursive_336days_24day_all.csv", {
+    download: true,
+    header: true,
+    dynamicTyping: true,
+    complete: function(results) {
+      allData = results.data;
+
+      allData.forEach(row => {
+        row.Timestamp = new Date(row.Timestamp);
+      });
+
+      console.log("CSV loaded:", allData.length, "rows");
+
+      plotForecast(selectedStation);
+    },
+    error: function(err) {
+      console.error("CSV load error:", err);
+      document.getElementById("forecast-chart").innerHTML = "<p>Failed to load data.</p>";
+    }
+  });
+
+  // --- Dropdown change: update URL + plot ---
+  dropdown.addEventListener("change", function() {
+    const station = dropdown.value;
+
+    // Update query param in the browser (without reload)
+    const newUrl = window.location.pathname + "?station=" + encodeURIComponent(station);
+    window.history.replaceState(null, "", newUrl);
+
+    // Update chart instantly
+    plotForecast(station);
+  });
+
+  function plotForecast(station) {
+    if (!allData) return;
+
+    const cutoff = new Date("2023-12-31T23:00:00");
+
+    const stationData = allData.filter(row =>
+      row.station === station && row.Timestamp <= cutoff
+    );
+
+    if (stationData.length === 0) {
+      document.getElementById("forecast-chart").innerHTML = "<p>No data found for this station before cutoff date.</p>";
+      return;
+    }
+
+    const dates = stationData.map(row => row.Timestamp);
+    const actual = stationData.map(row => row["Actual_PM2.5"]);
+    const predicted = stationData.map(row => row["Predicted_PM2.5"]);
+
+    Plotly.newPlot("forecast-chart", [
+      { x: dates, y: actual, mode: "lines", name: "Actual PM₂.₅" },
+      { x: dates, y: predicted, mode: "lines", name: "Predicted PM₂.₅" }
+    ], {
+      title: station + " PM₂.₅ Forecast",
+      xaxis: { title: "Timestamp" },
+      yaxis: { title: "PM₂.₅ (µg/m³)" },
+      responsive: true
+    });
+  }
+</script>

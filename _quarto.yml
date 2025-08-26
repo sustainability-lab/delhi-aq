@@ -1,0 +1,19 @@
+project:
+  type: website
+  resources:
+    - forecasting/data/dataset/timesfm_non_recursive_336days_24day_all.csv
+
+website:
+  title: "PM₂.₅"
+  navbar:
+    left:
+      - text: Forecasting
+        href: forecasting/forecasting.ipynb
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true

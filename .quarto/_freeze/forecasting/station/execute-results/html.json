@@ -1,0 +1,12 @@
+{
+  "hash": "a45ece837d1c5005305452be665ba6db",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Station Forecast\"\nformat: html\nexecute:\n  echo: false\n---\n\n# Station Forecast\n\n<select id=\"station-dropdown\" onchange=\"onStationChange()\">\n  <!-- Options will be populated by JS -->\n</select>\n\n::: {#f116bb43 .cell execution_count=1}\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n'[\"Ashok Vihar, Delhi - DPCC\",\"Bawana, Delhi - DPCC\",\"Dr. Karni Singh Shooting Range, Delhi - DPCC\",\"Dwarka-Sector 8, Delhi - DPCC\",\"Jahangirpuri, Delhi - DPCC\",\"Jawaharlal Nehru Stadium, Delhi - DPCC\",\"Major Dhyan Chand National Stadium, Delhi - DPCC\",\"Mandir Marg, Delhi - DPCC\",\"Mundka, Delhi - DPCC\",\"Najafgarh, Delhi - DPCC\",\"Narela, Delhi - DPCC\",\"Nehru Nagar, Delhi - DPCC\",\"Okhla Phase-2, Delhi - DPCC\",\"Patparganj, Delhi - DPCC\",\"Punjabi Bagh, Delhi - DPCC\",\"Pusa, Delhi - DPCC\",\"R K Puram, Delhi - DPCC\",\"Rohini, Delhi - DPCC\",\"Sonia Vihar, Delhi - DPCC\",\"Sri Aurobindo Marg, Delhi - DPCC\",\"Vivek Vihar, Delhi - DPCC\",\"Wazirpur, Delhi - DPCC\"]'\n```\n:::\n:::\n\n\n<script>\n// List of stations injected from CSV\nconst stations = {{ js_array }};\n\n// Get query parameter from URL\nfunction getQueryParam(param) {\n  const urlParams = new URLSearchParams(window.location.search);\n  return urlParams.get(param);\n}\n\n// Populate dropdown\nconst dropdown = document.getElementById(\"station-dropdown\");\nconst selectedStation = getQueryParam(\"station\") || stations[0];\n\nstations.forEach(station => {\n  const option = document.createElement(\"option\");\n  option.value = station;\n  option.text = station;\n  if(station === selectedStation) option.selected = true;\n  dropdown.add(option);\n});\n\n// Handle change\nfunction onStationChange() {\n  const station = dropdown.value;\n  window.location.href = `station.html?station=${station}`;\n}\n</script>\n\n",
+    "supporting": [
+      "station_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
