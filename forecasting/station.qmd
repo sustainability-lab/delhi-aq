@@ -1,6 +1,8 @@
 ---
 title: "Station Forecast"
-format: html
+format: 
+  html:
+    page-layout: full
 execute:
   echo: false
 ---

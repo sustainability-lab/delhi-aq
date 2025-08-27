@@ -8,7 +8,7 @@ website:
   navbar:
     left:
       - text: Forecasting
-        href: forecasting/forecasting.ipynb
+        href: forecasting/forecasting.qmd
 
 format:
   html:

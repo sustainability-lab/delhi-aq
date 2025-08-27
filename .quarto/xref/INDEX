@@ -10,5 +10,8 @@
   },
   "forecasting/station.qmd": {
     "station.html": "269f8e5b"
+  },
+  "forecasting/forecasting.qmd": {
+    "forecasting.html": "0091a99b"
   }
 }
