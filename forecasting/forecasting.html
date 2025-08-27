@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -151,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_03997695767be8ec7d9e076d3a74c640 {
+                #map_7400d2089c7155d3321ea62c4750b0d5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -188,14 +223,14 @@ ul.task-list li input[type="checkbox"] {
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_03997695767be8ec7d9e076d3a74c640&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_7400d2089c7155d3321ea62c4750b0d5&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_03997695767be8ec7d9e076d3a74c640 = L.map(
-                &quot;map_03997695767be8ec7d9e076d3a74c640&quot;,
+            var map_7400d2089c7155d3321ea62c4750b0d5 = L.map(
+                &quot;map_7400d2089c7155d3321ea62c4750b0d5&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -222,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 
         
     
-            var tile_layer_5d2286e15bb4b5cd56d1e2ec16fb03e8 = L.tileLayer(
+            var tile_layer_02591c71b5572518537145ca8e94fb67 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 10,
@@ -239,40 +274,40 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            tile_layer_5d2286e15bb4b5cd56d1e2ec16fb03e8.addTo(map_03997695767be8ec7d9e076d3a74c640);
+            tile_layer_02591c71b5572518537145ca8e94fb67.addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-            map_03997695767be8ec7d9e076d3a74c640.fitBounds(
+            map_7400d2089c7155d3321ea62c4750b0d5.fitBounds(
                 [[28.403052135245247, 76.84251435748224], [28.879321705537276, 77.34765178578583]],
                 {}
             );
         
     
-            var marker_510d4b753eda8dd95c017e3e98b9ee65 = L.marker(
+            var marker_364cf1e0c58881e505b241ea661afa26 = L.marker(
                 [28.695381, 77.181665],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_527a36805b017da0e43f1b43b0d9e807 = L.popup({
+        var popup_6157d1cb0e76a72b4c687fb70af5cc56 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_98ff21185466c368339adabb915bbf34 = $(`<div id=&quot;html_98ff21185466c368339adabb915bbf34&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_527a36805b017da0e43f1b43b0d9e807.setContent(html_98ff21185466c368339adabb915bbf34);
+                var html_1d9374b21c783fc4c951e4ab4f7f0626 = $(`<div id=&quot;html_1d9374b21c783fc4c951e4ab4f7f0626&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6157d1cb0e76a72b4c687fb70af5cc56.setContent(html_1d9374b21c783fc4c951e4ab4f7f0626);
             
         
 
-        marker_510d4b753eda8dd95c017e3e98b9ee65.bindPopup(popup_527a36805b017da0e43f1b43b0d9e807)
+        marker_364cf1e0c58881e505b241ea661afa26.bindPopup(popup_6157d1cb0e76a72b4c687fb70af5cc56)
         ;
 
         
     
     
-            marker_510d4b753eda8dd95c017e3e98b9ee65.bindTooltip(
+            marker_364cf1e0c58881e505b241ea661afa26.bindTooltip(
                 `<div>
                      Ashok Vihar, Delhi - DPCC
                  </div>`,
@@ -282,31 +317,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_3061602940eac1077e5fa2925e9ad2f5 = L.marker(
+            var marker_3c012173b92819669ab5b91226d4f29b = L.marker(
                 [28.7762, 77.051074],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_4386687b91c8c918ec871b1d6663fddc = L.popup({
+        var popup_7f946a8418ec275bc2a6ffbe32adc9dc = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_3543f49c01be48f90594c9b42893d764 = $(`<div id=&quot;html_3543f49c01be48f90594c9b42893d764&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_4386687b91c8c918ec871b1d6663fddc.setContent(html_3543f49c01be48f90594c9b42893d764);
+                var html_db4d14e891188357a3c736fb04e83332 = $(`<div id=&quot;html_db4d14e891188357a3c736fb04e83332&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_7f946a8418ec275bc2a6ffbe32adc9dc.setContent(html_db4d14e891188357a3c736fb04e83332);
             
         
 
-        marker_3061602940eac1077e5fa2925e9ad2f5.bindPopup(popup_4386687b91c8c918ec871b1d6663fddc)
+        marker_3c012173b92819669ab5b91226d4f29b.bindPopup(popup_7f946a8418ec275bc2a6ffbe32adc9dc)
         ;
 
         
     
     
-            marker_3061602940eac1077e5fa2925e9ad2f5.bindTooltip(
+            marker_3c012173b92819669ab5b91226d4f29b.bindTooltip(
                 `<div>
                      Bawana, Delhi - DPCC
                  </div>`,
@@ -316,31 +351,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_58d830214d5f82d884ab9da449e9a49c = L.marker(
+            var marker_6ab55cd8635794518176a46dc1d97ffa = L.marker(
                 [28.498571, 77.26484],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_db9afb9e5d242162dacd533acbf4eba9 = L.popup({
+        var popup_d9cd5caa38aca20c00afe72722ab36e1 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_c33038469a67b33474121a0f48b8ff6d = $(`<div id=&quot;html_c33038469a67b33474121a0f48b8ff6d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_db9afb9e5d242162dacd533acbf4eba9.setContent(html_c33038469a67b33474121a0f48b8ff6d);
+                var html_32f0738c6dd251d9936fe3bcf8bd3398 = $(`<div id=&quot;html_32f0738c6dd251d9936fe3bcf8bd3398&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_d9cd5caa38aca20c00afe72722ab36e1.setContent(html_32f0738c6dd251d9936fe3bcf8bd3398);
             
         
 
-        marker_58d830214d5f82d884ab9da449e9a49c.bindPopup(popup_db9afb9e5d242162dacd533acbf4eba9)
+        marker_6ab55cd8635794518176a46dc1d97ffa.bindPopup(popup_d9cd5caa38aca20c00afe72722ab36e1)
         ;
 
         
     
     
-            marker_58d830214d5f82d884ab9da449e9a49c.bindTooltip(
+            marker_6ab55cd8635794518176a46dc1d97ffa.bindTooltip(
                 `<div>
                      Dr. Karni Singh Shooting Range, Delhi - DPCC
                  </div>`,
@@ -350,31 +385,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_e84b5a225dde6da330da564abdf2a829 = L.marker(
+            var marker_6bb10c15381158548a517fefbe0af5f3 = L.marker(
                 [28.5710274, 77.0719006],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_f1615027129e428e9769607ffbcf691f = L.popup({
+        var popup_5fac5f2a900d2ec309c9f7eef2ca6495 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_89fb202afcc3c021d8dedc1a7b571a37 = $(`<div id=&quot;html_89fb202afcc3c021d8dedc1a7b571a37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_f1615027129e428e9769607ffbcf691f.setContent(html_89fb202afcc3c021d8dedc1a7b571a37);
+                var html_5b5716eb56c6cf8a2b54117b5b3951f5 = $(`<div id=&quot;html_5b5716eb56c6cf8a2b54117b5b3951f5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_5fac5f2a900d2ec309c9f7eef2ca6495.setContent(html_5b5716eb56c6cf8a2b54117b5b3951f5);
             
         
 
-        marker_e84b5a225dde6da330da564abdf2a829.bindPopup(popup_f1615027129e428e9769607ffbcf691f)
+        marker_6bb10c15381158548a517fefbe0af5f3.bindPopup(popup_5fac5f2a900d2ec309c9f7eef2ca6495)
         ;
 
         
     
     
-            marker_e84b5a225dde6da330da564abdf2a829.bindTooltip(
+            marker_6bb10c15381158548a517fefbe0af5f3.bindTooltip(
                 `<div>
                      Dwarka-Sector 8, Delhi - DPCC
                  </div>`,
@@ -384,31 +419,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_99f66d564170723278b669df01750fbc = L.marker(
+            var marker_607fd20b433928f454ff80549241c92a = L.marker(
                 [28.73282, 77.170633],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_9a35a2753d7449b03a81452b0b513940 = L.popup({
+        var popup_f88cb5e240991a8575a5db8a89280a70 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_a82c5e651b2e68f30f793feb6b4351a5 = $(`<div id=&quot;html_a82c5e651b2e68f30f793feb6b4351a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_9a35a2753d7449b03a81452b0b513940.setContent(html_a82c5e651b2e68f30f793feb6b4351a5);
+                var html_bc99090a0d9759a21d2f04ccec7326a5 = $(`<div id=&quot;html_bc99090a0d9759a21d2f04ccec7326a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f88cb5e240991a8575a5db8a89280a70.setContent(html_bc99090a0d9759a21d2f04ccec7326a5);
             
         
 
-        marker_99f66d564170723278b669df01750fbc.bindPopup(popup_9a35a2753d7449b03a81452b0b513940)
+        marker_607fd20b433928f454ff80549241c92a.bindPopup(popup_f88cb5e240991a8575a5db8a89280a70)
         ;
 
         
     
     
-            marker_99f66d564170723278b669df01750fbc.bindTooltip(
+            marker_607fd20b433928f454ff80549241c92a.bindTooltip(
                 `<div>
                      Jahangirpuri, Delhi - DPCC
                  </div>`,
@@ -418,31 +453,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_79221f67e0177b0376f6884236bf476d = L.marker(
+            var marker_5cfdfefd460cca951ea78e9e8b5929a4 = L.marker(
                 [28.58028, 77.233829],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_5b55762b51c0b351a3c844a16e755e52 = L.popup({
+        var popup_6c6b2d6d8278e485ea60ff0642ecebc0 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_9c801260d42c9584c1c9b37a745f0c5d = $(`<div id=&quot;html_9c801260d42c9584c1c9b37a745f0c5d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_5b55762b51c0b351a3c844a16e755e52.setContent(html_9c801260d42c9584c1c9b37a745f0c5d);
+                var html_9b7b642380965a89b39abc30926919ab = $(`<div id=&quot;html_9b7b642380965a89b39abc30926919ab&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6c6b2d6d8278e485ea60ff0642ecebc0.setContent(html_9b7b642380965a89b39abc30926919ab);
             
         
 
-        marker_79221f67e0177b0376f6884236bf476d.bindPopup(popup_5b55762b51c0b351a3c844a16e755e52)
+        marker_5cfdfefd460cca951ea78e9e8b5929a4.bindPopup(popup_6c6b2d6d8278e485ea60ff0642ecebc0)
         ;
 
         
     
     
-            marker_79221f67e0177b0376f6884236bf476d.bindTooltip(
+            marker_5cfdfefd460cca951ea78e9e8b5929a4.bindTooltip(
                 `<div>
                      Jawaharlal Nehru Stadium, Delhi - DPCC
                  </div>`,
@@ -452,31 +487,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_ba413f2aa06ac4747290be678444bd80 = L.marker(
+            var marker_6d5f32595eb7593367c25993bc65abf0 = L.marker(
                 [28.611281, 77.237738],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_1268c03f4dd967330a0d5977d585ce75 = L.popup({
+        var popup_78f97500e3dab487adf8b6564814b595 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_aa897a483fa084ad807e93b9edfa131b = $(`<div id=&quot;html_aa897a483fa084ad807e93b9edfa131b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_1268c03f4dd967330a0d5977d585ce75.setContent(html_aa897a483fa084ad807e93b9edfa131b);
+                var html_6af33687af31bfecb4bb78e0148f679b = $(`<div id=&quot;html_6af33687af31bfecb4bb78e0148f679b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_78f97500e3dab487adf8b6564814b595.setContent(html_6af33687af31bfecb4bb78e0148f679b);
             
         
 
-        marker_ba413f2aa06ac4747290be678444bd80.bindPopup(popup_1268c03f4dd967330a0d5977d585ce75)
+        marker_6d5f32595eb7593367c25993bc65abf0.bindPopup(popup_78f97500e3dab487adf8b6564814b595)
         ;
 
         
     
     
-            marker_ba413f2aa06ac4747290be678444bd80.bindTooltip(
+            marker_6d5f32595eb7593367c25993bc65abf0.bindTooltip(
                 `<div>
                      Major Dhyan Chand National Stadium, Delhi - DPCC
                  </div>`,
@@ -486,31 +521,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_666dceb9c7f4935fbef89fdb5085a7db = L.marker(
+            var marker_cd4bb1bf47fd290b4009c20e46e0950c = L.marker(
                 [28.636429, 77.201067],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_554cb2d4ac0963471f7af2e94279acf4 = L.popup({
+        var popup_b5fa16136862884692a19efab968306a = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_230fe8849da2a6748b089276d91bb39d = $(`<div id=&quot;html_230fe8849da2a6748b089276d91bb39d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_554cb2d4ac0963471f7af2e94279acf4.setContent(html_230fe8849da2a6748b089276d91bb39d);
+                var html_60fe5c9576e236118032d8130ba98d6a = $(`<div id=&quot;html_60fe5c9576e236118032d8130ba98d6a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_b5fa16136862884692a19efab968306a.setContent(html_60fe5c9576e236118032d8130ba98d6a);
             
         
 
-        marker_666dceb9c7f4935fbef89fdb5085a7db.bindPopup(popup_554cb2d4ac0963471f7af2e94279acf4)
+        marker_cd4bb1bf47fd290b4009c20e46e0950c.bindPopup(popup_b5fa16136862884692a19efab968306a)
         ;
 
         
     
     
-            marker_666dceb9c7f4935fbef89fdb5085a7db.bindTooltip(
+            marker_cd4bb1bf47fd290b4009c20e46e0950c.bindTooltip(
                 `<div>
                      Mandir Marg, Delhi - DPCC
                  </div>`,
@@ -520,31 +555,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_a4a5b57707093925a7c84e2d8b36fd06 = L.marker(
+            var marker_ccda959f0eecf79bd7e1a9024fb604d7 = L.marker(
                 [28.684678, 77.076574],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_1d719bec2ac6743bbb675edfb80f8199 = L.popup({
+        var popup_529c588b91ecda1ae46e9a032e9def26 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_b80192dafb64382cb916c2d7274874a2 = $(`<div id=&quot;html_b80192dafb64382cb916c2d7274874a2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_1d719bec2ac6743bbb675edfb80f8199.setContent(html_b80192dafb64382cb916c2d7274874a2);
+                var html_7934189fd73ebd22d497c32cbbfc2f2f = $(`<div id=&quot;html_7934189fd73ebd22d497c32cbbfc2f2f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_529c588b91ecda1ae46e9a032e9def26.setContent(html_7934189fd73ebd22d497c32cbbfc2f2f);
             
         
 
-        marker_a4a5b57707093925a7c84e2d8b36fd06.bindPopup(popup_1d719bec2ac6743bbb675edfb80f8199)
+        marker_ccda959f0eecf79bd7e1a9024fb604d7.bindPopup(popup_529c588b91ecda1ae46e9a032e9def26)
         ;
 
         
     
     
-            marker_a4a5b57707093925a7c84e2d8b36fd06.bindTooltip(
+            marker_ccda959f0eecf79bd7e1a9024fb604d7.bindTooltip(
                 `<div>
                      Mundka, Delhi - DPCC
                  </div>`,
@@ -554,31 +589,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_c67b74285ce64a36c6ce7031c9cb35a4 = L.marker(
+            var marker_238421d514133327fa54a61e4359b884 = L.marker(
                 [28.570173, 76.933762],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44 = L.popup({
+        var popup_cbdf57281903d45bbd03dac5a3bcad13 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_3ccad60485e16de09cf6d4716b88ef9f = $(`<div id=&quot;html_3ccad60485e16de09cf6d4716b88ef9f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44.setContent(html_3ccad60485e16de09cf6d4716b88ef9f);
+                var html_a55c19a0be382cd46303ce6ebee60baf = $(`<div id=&quot;html_a55c19a0be382cd46303ce6ebee60baf&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_cbdf57281903d45bbd03dac5a3bcad13.setContent(html_a55c19a0be382cd46303ce6ebee60baf);
             
         
 
-        marker_c67b74285ce64a36c6ce7031c9cb35a4.bindPopup(popup_a9fb4f515a6a6ec4cb1ce251d0ad4d44)
+        marker_238421d514133327fa54a61e4359b884.bindPopup(popup_cbdf57281903d45bbd03dac5a3bcad13)
         ;
 
         
     
     
-            marker_c67b74285ce64a36c6ce7031c9cb35a4.bindTooltip(
+            marker_238421d514133327fa54a61e4359b884.bindTooltip(
                 `<div>
                      Najafgarh, Delhi - DPCC
                  </div>`,
@@ -588,31 +623,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_309ecda59eb5f693f0e79ee3ba8bf1bc = L.marker(
+            var marker_ba53926c55670d6a9bc08d1c5913db7c = L.marker(
                 [28.822836, 77.101981],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_279e1fda10454baee4545fe309105708 = L.popup({
+        var popup_ee577e10f18f177006de9800fb604762 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_a21da3e215a822edb0dbc32cf7ccb4bb = $(`<div id=&quot;html_a21da3e215a822edb0dbc32cf7ccb4bb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_279e1fda10454baee4545fe309105708.setContent(html_a21da3e215a822edb0dbc32cf7ccb4bb);
+                var html_7e4c88b34a4babf76b75ffc9ce2cedec = $(`<div id=&quot;html_7e4c88b34a4babf76b75ffc9ce2cedec&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ee577e10f18f177006de9800fb604762.setContent(html_7e4c88b34a4babf76b75ffc9ce2cedec);
             
         
 
-        marker_309ecda59eb5f693f0e79ee3ba8bf1bc.bindPopup(popup_279e1fda10454baee4545fe309105708)
+        marker_ba53926c55670d6a9bc08d1c5913db7c.bindPopup(popup_ee577e10f18f177006de9800fb604762)
         ;
 
         
     
     
-            marker_309ecda59eb5f693f0e79ee3ba8bf1bc.bindTooltip(
+            marker_ba53926c55670d6a9bc08d1c5913db7c.bindTooltip(
                 `<div>
                      Narela, Delhi - DPCC
                  </div>`,
@@ -622,31 +657,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_25cadcb4e30e117e83d56fd6ce236cf6 = L.marker(
+            var marker_a7fe9268c1522edd612e74ffa4bf189c = L.marker(
                 [28.56789, 77.250515],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_2c3f53fc0a85394556cd5b51b0e0e043 = L.popup({
+        var popup_ba8b5354c819b56ce23168ecd2e0a42b = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_0ae94c330b33ff6a6b39bd967669a7dc = $(`<div id=&quot;html_0ae94c330b33ff6a6b39bd967669a7dc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_2c3f53fc0a85394556cd5b51b0e0e043.setContent(html_0ae94c330b33ff6a6b39bd967669a7dc);
+                var html_a1de6aae5fc60107e058e21e09ef5431 = $(`<div id=&quot;html_a1de6aae5fc60107e058e21e09ef5431&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ba8b5354c819b56ce23168ecd2e0a42b.setContent(html_a1de6aae5fc60107e058e21e09ef5431);
             
         
 
-        marker_25cadcb4e30e117e83d56fd6ce236cf6.bindPopup(popup_2c3f53fc0a85394556cd5b51b0e0e043)
+        marker_a7fe9268c1522edd612e74ffa4bf189c.bindPopup(popup_ba8b5354c819b56ce23168ecd2e0a42b)
         ;
 
         
     
     
-            marker_25cadcb4e30e117e83d56fd6ce236cf6.bindTooltip(
+            marker_a7fe9268c1522edd612e74ffa4bf189c.bindTooltip(
                 `<div>
                      Nehru Nagar, Delhi - DPCC
                  </div>`,
@@ -656,31 +691,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_5e818da240432bf2c4d2ee6317e03b78 = L.marker(
+            var marker_5fecab52653a247cc2e8b0d86fa2fef3 = L.marker(
                 [28.530785, 77.271255],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_7f852e5a65d77e0f64a214635dba0185 = L.popup({
+        var popup_ba2794a194d8ae0bb031c470e3984784 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_17a0948b4e7cb7a73b1ad63c850aa8b9 = $(`<div id=&quot;html_17a0948b4e7cb7a73b1ad63c850aa8b9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_7f852e5a65d77e0f64a214635dba0185.setContent(html_17a0948b4e7cb7a73b1ad63c850aa8b9);
+                var html_6bbea5ca3157c03aa495bd0ebfcab7f8 = $(`<div id=&quot;html_6bbea5ca3157c03aa495bd0ebfcab7f8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ba2794a194d8ae0bb031c470e3984784.setContent(html_6bbea5ca3157c03aa495bd0ebfcab7f8);
             
         
 
-        marker_5e818da240432bf2c4d2ee6317e03b78.bindPopup(popup_7f852e5a65d77e0f64a214635dba0185)
+        marker_5fecab52653a247cc2e8b0d86fa2fef3.bindPopup(popup_ba2794a194d8ae0bb031c470e3984784)
         ;
 
         
     
     
-            marker_5e818da240432bf2c4d2ee6317e03b78.bindTooltip(
+            marker_5fecab52653a247cc2e8b0d86fa2fef3.bindTooltip(
                 `<div>
                      Okhla Phase-2, Delhi - DPCC
                  </div>`,
@@ -690,31 +725,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_785387b08cf17149c1e121cecf2ba222 = L.marker(
+            var marker_9ec46ae03e201e16eb794ebe7d7568d4 = L.marker(
                 [28.623763, 77.287209],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_562844b9e88063f884b3cc7e60fd01fa = L.popup({
+        var popup_ebcfdabc921d9007fe4eb14860bde197 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_1888d87274721117dfd176df194ae6ec = $(`<div id=&quot;html_1888d87274721117dfd176df194ae6ec&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_562844b9e88063f884b3cc7e60fd01fa.setContent(html_1888d87274721117dfd176df194ae6ec);
+                var html_3f70e7b85bb6a811cbe9d9e8118c4db6 = $(`<div id=&quot;html_3f70e7b85bb6a811cbe9d9e8118c4db6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ebcfdabc921d9007fe4eb14860bde197.setContent(html_3f70e7b85bb6a811cbe9d9e8118c4db6);
             
         
 
-        marker_785387b08cf17149c1e121cecf2ba222.bindPopup(popup_562844b9e88063f884b3cc7e60fd01fa)
+        marker_9ec46ae03e201e16eb794ebe7d7568d4.bindPopup(popup_ebcfdabc921d9007fe4eb14860bde197)
         ;
 
         
     
     
-            marker_785387b08cf17149c1e121cecf2ba222.bindTooltip(
+            marker_9ec46ae03e201e16eb794ebe7d7568d4.bindTooltip(
                 `<div>
                      Patparganj, Delhi - DPCC
                  </div>`,
@@ -724,31 +759,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_99fa1a96c9759c991a2d14f37568af34 = L.marker(
+            var marker_86c86c3ad785075bd906e4dcbe9a21dc = L.marker(
                 [28.674045, 77.131023],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_894b7936f77dc34d229976141f27a1fc = L.popup({
+        var popup_cb3df8f8cd10fd3a2e8f8b87746d7817 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_c9dd6f524f2ef47327f2c5ff50128bb8 = $(`<div id=&quot;html_c9dd6f524f2ef47327f2c5ff50128bb8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_894b7936f77dc34d229976141f27a1fc.setContent(html_c9dd6f524f2ef47327f2c5ff50128bb8);
+                var html_ae2e09390ebde29acd47552c92e11694 = $(`<div id=&quot;html_ae2e09390ebde29acd47552c92e11694&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_cb3df8f8cd10fd3a2e8f8b87746d7817.setContent(html_ae2e09390ebde29acd47552c92e11694);
             
         
 
-        marker_99fa1a96c9759c991a2d14f37568af34.bindPopup(popup_894b7936f77dc34d229976141f27a1fc)
+        marker_86c86c3ad785075bd906e4dcbe9a21dc.bindPopup(popup_cb3df8f8cd10fd3a2e8f8b87746d7817)
         ;
 
         
     
     
-            marker_99fa1a96c9759c991a2d14f37568af34.bindTooltip(
+            marker_86c86c3ad785075bd906e4dcbe9a21dc.bindTooltip(
                 `<div>
                      Punjabi Bagh, Delhi - DPCC
                  </div>`,
@@ -758,31 +793,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_2384adc4776889f83e66e0a749714138 = L.marker(
+            var marker_3d6689df3a257137a941f0e1fe73c9c4 = L.marker(
                 [28.639652, 77.146275],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_2166db6df62541ba906f471416dc5aa9 = L.popup({
+        var popup_b4b0e3bfad5b2b147b963f46e6ee8632 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_35dfde08237d9019c3e4b8e2b8e1a204 = $(`<div id=&quot;html_35dfde08237d9019c3e4b8e2b8e1a204&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_2166db6df62541ba906f471416dc5aa9.setContent(html_35dfde08237d9019c3e4b8e2b8e1a204);
+                var html_f5ac006e555ae1a4750f7b524ba74ead = $(`<div id=&quot;html_f5ac006e555ae1a4750f7b524ba74ead&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_b4b0e3bfad5b2b147b963f46e6ee8632.setContent(html_f5ac006e555ae1a4750f7b524ba74ead);
             
         
 
-        marker_2384adc4776889f83e66e0a749714138.bindPopup(popup_2166db6df62541ba906f471416dc5aa9)
+        marker_3d6689df3a257137a941f0e1fe73c9c4.bindPopup(popup_b4b0e3bfad5b2b147b963f46e6ee8632)
         ;
 
         
     
     
-            marker_2384adc4776889f83e66e0a749714138.bindTooltip(
+            marker_3d6689df3a257137a941f0e1fe73c9c4.bindTooltip(
                 `<div>
                      Pusa, Delhi - DPCC
                  </div>`,
@@ -792,31 +827,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_71d902529a59aecf5495d0447c491774 = L.marker(
+            var marker_d3b2aa25f6b39aac7ad3326fecc18797 = L.marker(
                 [28.563262, 77.186937],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_6546b63596f63f46827f5456ee40c536 = L.popup({
+        var popup_84fb288d98e1b2307f72068a08171b1b = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_3a61b79261bc82f45820a93bfb0c2622 = $(`<div id=&quot;html_3a61b79261bc82f45820a93bfb0c2622&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_6546b63596f63f46827f5456ee40c536.setContent(html_3a61b79261bc82f45820a93bfb0c2622);
+                var html_77e0c63808691830b6196b9d89258f37 = $(`<div id=&quot;html_77e0c63808691830b6196b9d89258f37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_84fb288d98e1b2307f72068a08171b1b.setContent(html_77e0c63808691830b6196b9d89258f37);
             
         
 
-        marker_71d902529a59aecf5495d0447c491774.bindPopup(popup_6546b63596f63f46827f5456ee40c536)
+        marker_d3b2aa25f6b39aac7ad3326fecc18797.bindPopup(popup_84fb288d98e1b2307f72068a08171b1b)
         ;
 
         
     
     
-            marker_71d902529a59aecf5495d0447c491774.bindTooltip(
+            marker_d3b2aa25f6b39aac7ad3326fecc18797.bindTooltip(
                 `<div>
                      R K Puram, Delhi - DPCC
                  </div>`,
@@ -826,31 +861,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_a007f327b0a430fc48cee58f56d58e77 = L.marker(
+            var marker_b20c68afc17f4b986231d8e5efebee44 = L.marker(
                 [28.732528, 77.11992],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_3103b789bda9e6f2a1bc20d756e1c97a = L.popup({
+        var popup_58d13d9c61ccee3f011ce3d22e0cf583 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_875d8fa72d321d6f51b12df7d4239b9b = $(`<div id=&quot;html_875d8fa72d321d6f51b12df7d4239b9b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_3103b789bda9e6f2a1bc20d756e1c97a.setContent(html_875d8fa72d321d6f51b12df7d4239b9b);
+                var html_a11b911313b646fd13b36eff3ddbd139 = $(`<div id=&quot;html_a11b911313b646fd13b36eff3ddbd139&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_58d13d9c61ccee3f011ce3d22e0cf583.setContent(html_a11b911313b646fd13b36eff3ddbd139);
             
         
 
-        marker_a007f327b0a430fc48cee58f56d58e77.bindPopup(popup_3103b789bda9e6f2a1bc20d756e1c97a)
+        marker_b20c68afc17f4b986231d8e5efebee44.bindPopup(popup_58d13d9c61ccee3f011ce3d22e0cf583)
         ;
 
         
     
     
-            marker_a007f327b0a430fc48cee58f56d58e77.bindTooltip(
+            marker_b20c68afc17f4b986231d8e5efebee44.bindTooltip(
                 `<div>
                      Rohini, Delhi - DPCC
                  </div>`,
@@ -860,31 +895,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_4253bdcc8682fb936c2b1eb059a40502 = L.marker(
+            var marker_d45ff0209ff7514b145656c162a7b834 = L.marker(
                 [28.710508, 77.249485],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_835d3039823ebc0f83465d1900cb0f83 = L.popup({
+        var popup_6369c6c6ea2c87dd92cfb09d6ef38194 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_ac3dfd658c9de130ec0de6bdf71fb2f3 = $(`<div id=&quot;html_ac3dfd658c9de130ec0de6bdf71fb2f3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_835d3039823ebc0f83465d1900cb0f83.setContent(html_ac3dfd658c9de130ec0de6bdf71fb2f3);
+                var html_5cbf226083a2f9ff4a1587cf2903dabc = $(`<div id=&quot;html_5cbf226083a2f9ff4a1587cf2903dabc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6369c6c6ea2c87dd92cfb09d6ef38194.setContent(html_5cbf226083a2f9ff4a1587cf2903dabc);
             
         
 
-        marker_4253bdcc8682fb936c2b1eb059a40502.bindPopup(popup_835d3039823ebc0f83465d1900cb0f83)
+        marker_d45ff0209ff7514b145656c162a7b834.bindPopup(popup_6369c6c6ea2c87dd92cfb09d6ef38194)
         ;
 
         
     
     
-            marker_4253bdcc8682fb936c2b1eb059a40502.bindTooltip(
+            marker_d45ff0209ff7514b145656c162a7b834.bindTooltip(
                 `<div>
                      Sonia Vihar, Delhi - DPCC
                  </div>`,
@@ -894,31 +929,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_1de39bdeef4185e0c446c8d11fe0a16e = L.marker(
+            var marker_8913b56786d55560792c8d831cbb0340 = L.marker(
                 [28.531346, 77.190156],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_d3e9bbdfe9ae107933b99b7256fe9aaa = L.popup({
+        var popup_8110fb20ac47dd87109da484734e3f65 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_e31e3d0655d0856551936076ea78dc25 = $(`<div id=&quot;html_e31e3d0655d0856551936076ea78dc25&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_d3e9bbdfe9ae107933b99b7256fe9aaa.setContent(html_e31e3d0655d0856551936076ea78dc25);
+                var html_41e2b91b0390814b9a866600eb6ab85c = $(`<div id=&quot;html_41e2b91b0390814b9a866600eb6ab85c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_8110fb20ac47dd87109da484734e3f65.setContent(html_41e2b91b0390814b9a866600eb6ab85c);
             
         
 
-        marker_1de39bdeef4185e0c446c8d11fe0a16e.bindPopup(popup_d3e9bbdfe9ae107933b99b7256fe9aaa)
+        marker_8913b56786d55560792c8d831cbb0340.bindPopup(popup_8110fb20ac47dd87109da484734e3f65)
         ;
 
         
     
     
-            marker_1de39bdeef4185e0c446c8d11fe0a16e.bindTooltip(
+            marker_8913b56786d55560792c8d831cbb0340.bindTooltip(
                 `<div>
                      Sri Aurobindo Marg, Delhi - DPCC
                  </div>`,
@@ -928,31 +963,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_df611124ac9d5e7372c90a32342e0901 = L.marker(
+            var marker_3021fb94b6b10a6cbf355e2bbe213503 = L.marker(
                 [28.672342, 77.31526],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_09134905b1236fff1e7115623b4bae87 = L.popup({
+        var popup_f2d2753a4d9d2bcce63384a5de65a155 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_ef013db79da6b506971d9f966cafab5b = $(`<div id=&quot;html_ef013db79da6b506971d9f966cafab5b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_09134905b1236fff1e7115623b4bae87.setContent(html_ef013db79da6b506971d9f966cafab5b);
+                var html_d3bb3b407d426bf0e3a131341600184b = $(`<div id=&quot;html_d3bb3b407d426bf0e3a131341600184b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f2d2753a4d9d2bcce63384a5de65a155.setContent(html_d3bb3b407d426bf0e3a131341600184b);
             
         
 
-        marker_df611124ac9d5e7372c90a32342e0901.bindPopup(popup_09134905b1236fff1e7115623b4bae87)
+        marker_3021fb94b6b10a6cbf355e2bbe213503.bindPopup(popup_f2d2753a4d9d2bcce63384a5de65a155)
         ;
 
         
     
     
-            marker_df611124ac9d5e7372c90a32342e0901.bindTooltip(
+            marker_3021fb94b6b10a6cbf355e2bbe213503.bindTooltip(
                 `<div>
                      Vivek Vihar, Delhi - DPCC
                  </div>`,
@@ -962,31 +997,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_a892c98023def3451a9b8483de9212c8 = L.marker(
+            var marker_dbc65e8fa989575127a853ca4c20a88b = L.marker(
                 [28.699793, 77.165453],
                 {
 }
-            ).addTo(map_03997695767be8ec7d9e076d3a74c640);
+            ).addTo(map_7400d2089c7155d3321ea62c4750b0d5);
         
     
-        var popup_b0a953fa0af5c041ad9eb78fc009ed8b = L.popup({
+        var popup_ff453857b8817cfd6ad61c3eb409f59b = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_8b86ee67e44569529a364e421bfab548 = $(`<div id=&quot;html_8b86ee67e44569529a364e421bfab548&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
-                popup_b0a953fa0af5c041ad9eb78fc009ed8b.setContent(html_8b86ee67e44569529a364e421bfab548);
+                var html_ea946058c927ac894ce54e0ed23d2f92 = $(`<div id=&quot;html_ea946058c927ac894ce54e0ed23d2f92&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ff453857b8817cfd6ad61c3eb409f59b.setContent(html_ea946058c927ac894ce54e0ed23d2f92);
             
         
 
-        marker_a892c98023def3451a9b8483de9212c8.bindPopup(popup_b0a953fa0af5c041ad9eb78fc009ed8b)
+        marker_dbc65e8fa989575127a853ca4c20a88b.bindPopup(popup_ff453857b8817cfd6ad61c3eb409f59b)
         ;
 
         
     
     
-            marker_a892c98023def3451a9b8483de9212c8.bindTooltip(
+            marker_dbc65e8fa989575127a853ca4c20a88b.bindTooltip(
                 `<div>
                      Wazirpur, Delhi - DPCC
                  </div>`,
@@ -997,28 +1032,2758 @@ ul.task-list li input[type="checkbox"] {
         
     
 
-        function geo_json_18d21ef47b623c9b92e6dcb040d48416_onEachFeature(feature, layer) {
+        function geo_json_2982241b40f7f9523f19564a40376d3e_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_18d21ef47b623c9b92e6dcb040d48416 = L.geoJson(null, {
-                onEachFeature: geo_json_18d21ef47b623c9b92e6dcb040d48416_onEachFeature,
+        var geo_json_2982241b40f7f9523f19564a40376d3e = L.geoJson(null, {
+                onEachFeature: geo_json_2982241b40f7f9523f19564a40376d3e_onEachFeature,
             
             ...{
 }
         });
 
-        function geo_json_18d21ef47b623c9b92e6dcb040d48416_add (data) {
-            geo_json_18d21ef47b623c9b92e6dcb040d48416
+        function geo_json_2982241b40f7f9523f19564a40376d3e_add (data) {
+            geo_json_2982241b40f7f9523f19564a40376d3e
                 .addData(data);
         }
-            geo_json_18d21ef47b623c9b92e6dcb040d48416_add({&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;features&quot;: [{&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.32800389493826, 28.67239167204768], [77.32772533394477, 28.666531902780093], [77.32770785324212, 28.666164048955366], [77.325557835788, 28.657802965445374], [77.32554397539066, 28.65638446899026], [77.32553763151414, 28.655733096057418], [77.32544205436459, 28.645907030477645], [77.32318501604315, 28.641208839049714], [77.3213046867176, 28.6391865225465], [77.32367042123747, 28.63774460047442], [77.323997068761, 28.637426911332668], [77.3260345355317, 28.635444915488762], [77.33105474972714, 28.630560992626954], [77.33632519075763, 28.627993545614935], [77.34055944724112, 28.62593061720227], [77.34431417293108, 28.62150692359716], [77.34716790087138, 28.616412145357774], [77.3476231172752, 28.612011393650366], [77.34625279456911, 28.603392151011704], [77.34320094917466, 28.601226628263596], [77.33789379673176, 28.59939961184384], [77.3269718934987, 28.59448299051775], [77.32337195280223, 28.59397295082713], [77.31995806102422, 28.593489177566717], [77.31716425390505, 28.591442137128972], [77.31556413106117, 28.58955191184122], [77.31515956021418, 28.589074042138343], [77.30491000912598, 28.576964198625987], [77.30482387610402, 28.576782106473466], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.3051413673883, 28.555732227913847], [77.31300984258708, 28.544969186315203], [77.31438979060256, 28.54374539175398], [77.32063479974838, 28.538206659501633], [77.32483339884692, 28.53600158105828], [77.33144856523451, 28.530363873542257], [77.33649680441096, 28.523759166083913], [77.3404435650323, 28.518594852514614], [77.34292260123115, 28.516156785945718], [77.34389780963718, 28.51519772004282], [77.34415045531287, 28.514752834089922], [77.3467555736686, 28.510166443541074], [77.34765178578583, 28.50345539386918], [77.34437051094167, 28.505584654180733], [77.33889524476847, 28.50282321673253], [77.33657377596872, 28.49795786780577], [77.33159199450778, 28.493882989277235], [77.32474908115456, 28.48906551600393], [77.31672824601804, 28.485191441211544], [77.31080442189256, 28.484632836029512], [77.30612106397625, 28.485668662545912], [77.29564126151455, 28.490795216269316], [77.28790080744703, 28.492677906822067], [77.28096052855314, 28.491564112316944], [77.26991008923501, 28.48297439297787], [77.26378569834469, 28.48009357731464], [77.25244400621256, 28.47915064567805], [77.24652091948481, 28.474240019183075], [77.24218273391853, 28.47035216349048], [77.2373837747999, 28.464308874093746], [77.23549659680403, 28.45856822564237], [77.2361795589214, 28.454817613335457], [77.24285892495196, 28.45400642953283], [77.24961574516955, 28.44815818475137], [77.2530268026152, 28.442036338229865], [77.25403011720421, 28.436207899655177], [77.25291103475394, 28.428222896042964], [77.25034156499044, 28.42340186441194], [77.23243251187648, 28.413519899282143], [77.22497561624277, 28.410302025107384], [77.21556351810086, 28.407962744783415], [77.20487044226623, 28.40710099160931], [77.18913212642883, 28.406957202651455], [77.1753786965703, 28.403052135245247], [77.16397705230139, 28.415900047311332], [77.1615020553078, 28.42292256332066], [77.15205411077763, 28.430329863056606], [77.14103210162064, 28.433326205367408], [77.13370781022178, 28.433864579383528], [77.12793400653317, 28.437064448307424], [77.12215454261144, 28.444875475495117], [77.1183944590692, 28.451997790825555], [77.11570174637525, 28.46054327066356], [77.11240519680932, 28.46510414626018], [77.1112007528156, 28.471134423109145], [77.1130200358822, 28.477774583149763], [77.11505260605611, 28.482787775065173], [77.11737741977366, 28.488521191935334], [77.11321439219618, 28.49212104394551], [77.10002289768582, 28.500122093855918], [77.09568418742538, 28.505535157149794], [77.08218639784023, 28.514969729422507], [77.07717268518716, 28.515336739053954], [77.06664152553824, 28.50856863575967], [77.05844843242112, 28.509950156564734], [77.0513371066247, 28.513677486259233], [77.04283624252213, 28.523067890818023], [77.02931240272851, 28.528010242359837], [77.02533919539864, 28.528069326699114], [77.01578176421805, 28.537520967096555], [77.0098872844861, 28.536763689882264], [77.00562253774439, 28.531655257826593], [77.00787223541388, 28.52689841227009], [77.01466123810748, 28.52348360827443], [77.02105034555119, 28.518854424369597], [77.02058822779065, 28.512771093394687], [77.01519124948031, 28.509187790973435], [76.9999072575318, 28.51453985486166], [76.98617060137151, 28.518579969390444], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.94279847995226, 28.51084937097648], [76.93223080421859, 28.51408299365603], [76.91802423683191, 28.509739375596542], [76.90700264854304, 28.51260929400555], [76.90326649034155, 28.510985967247592], [76.89633714122468, 28.506079493782593], [76.888890648998, 28.503906424160505], [76.88332862462205, 28.509253264411544], [76.88899488687875, 28.51885231626565], [76.88586106805107, 28.52326006274611], [76.86877345556685, 28.536804588992013], [76.86630758723604, 28.542702284659295], [76.84717142496928, 28.55189587437348], [76.84251435748224, 28.577422597419602], [76.84464047343846, 28.586319016621548], [76.8598587067249, 28.585022638082673], [76.86444686291388, 28.58724614495722], [76.87055846965707, 28.597408516419637], [76.88765759795864, 28.632525240430876], [76.90341270731547, 28.62762487083816], [76.9070096334832, 28.627671664479006], [76.91375069989202, 28.63280689778049], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.93572361453052, 28.624101213998003], [76.94367249234084, 28.632492501025634], [76.92798055656309, 28.648132152727797], [76.92727591837325, 28.652127844819315], [76.93291729164164, 28.664080331174244], [76.93955322250906, 28.669276359015303], [76.95208088103936, 28.669941183426623], [76.95238879168892, 28.669957511543057], [76.95710295606034, 28.672006049929216], [76.95579604403122, 28.678325016988953], [76.95824478865269, 28.682834769896143], [76.95987859921074, 28.68898025956203], [76.96372126982114, 28.69480579748066], [76.96409474481646, 28.695371953722788], [76.96450443108594, 28.700214302077242], [76.9608590847245, 28.70461254284807], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.95915313241429, 28.736356587893432], [76.96026542078114, 28.741514679343066], [76.9573973479795, 28.74599614812088], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.95397161658781, 28.773408004550145], [76.95234457925335, 28.78264123627383], [76.95311925089919, 28.789998472271208], [76.94750610430553, 28.79838957173434], [76.94740075351014, 28.804046761530323], [76.95237135087149, 28.815574517806848], [76.95828556327555, 28.81255028052861], [76.96584862691063, 28.81490894886266], [76.96810662971122, 28.825219642126683], [76.97093040117177, 28.82655719312726], [76.98065730358687, 28.81997686114232], [76.9837952124208, 28.820710136769204], [76.98967913275564, 28.831574872108764], [76.99363678918797, 28.833955941949693], [76.99986666974684, 28.834022508788333], [77.01676989532704, 28.830110428072633], [77.0289528247558, 28.831891732354034], [77.0348385350697, 28.83110210017568], [77.04170609206948, 28.831609861967735], [77.04786158554664, 28.84759933243861], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.08041327970415, 28.874797294780972], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.10973064204086, 28.86721775214927], [77.11741355606702, 28.86322476825236], [77.11997601034905, 28.860891041976934], [77.13883755570389, 28.86013342522956], [77.14536199101484, 28.853229476866307], [77.14586011244924, 28.8474284358327], [77.14406717911004, 28.83944953660806], [77.14946011330588, 28.836399908015032], [77.15264742713133, 28.837195019299894], [77.16092954944801, 28.84317053769546], [77.16990445479617, 28.852147600481793], [77.17490730047335, 28.85535417182215], [77.19398918870692, 28.857001316197163], [77.19721033144612, 28.861519456499753], [77.20383582344276, 28.860039631383188], [77.20999957954142, 28.85962904794304], [77.21515278829848, 28.857591132498012], [77.21818736263195, 28.85490179099469], [77.22180895061327, 28.84960424534348], [77.22093899702955, 28.83996404332024], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.20468972213968, 28.796959832985785], [77.207169612488, 28.789949943276], [77.21052226373159, 28.78651978038676], [77.21291649218315, 28.784070027014202], [77.2143440039084, 28.7835189924518], [77.2186797593756, 28.781845232583745], [77.2233009667238, 28.781095494546847], [77.22426421506802, 28.781313811917038], [77.22642010451952, 28.781802345810856], [77.22851677648046, 28.782277426895156], [77.2304651904059, 28.782276394666184], [77.2338181975754, 28.782274469435254], [77.23493032368563, 28.782273792343755], [77.2323205733389, 28.778380986561967], [77.2273273412673, 28.776331649021603], [77.23113894140936, 28.772545339912906], [77.23700717110162, 28.768592574441026], [77.2392638482639, 28.76707241371082], [77.2453830610995, 28.75802298651334], [77.24820531120781, 28.75384868265035], [77.248696429135, 28.753731424176507], [77.25608762170775, 28.751966179092694], [77.25868312652483, 28.752152873178126], [77.26341465224546, 28.74740002465139], [77.26207910610313, 28.740112503092273], [77.26637280166048, 28.73454010236981], [77.27012818633878, 28.732723939288697], [77.27657100341791, 28.7338795378577], [77.28133040053568, 28.732781866462926], [77.28706457692951, 28.72898544461337], [77.29089325926482, 28.72461991045587], [77.29104691592772, 28.724368227144385], [77.29462447352118, 28.71850977850799], [77.2938530820123, 28.713557060198188], [77.29509038307268, 28.7070330410502], [77.30312431192496, 28.70434348419933], [77.30581072337357, 28.70760858582894], [77.31166707844272, 28.71129384143181], [77.31643073365667, 28.712231616501384], [77.32737700698904, 28.711763774281142], [77.33370385341296, 28.71041555057635], [77.3318683847603, 28.70637169176919], [77.33003330949782, 28.69819532955926], [77.33111759751431, 28.694218477306148], [77.33775169207539, 28.68638048190534], [77.33729417289436, 28.67969463083855], [77.33578362518006, 28.677391375868243], [77.3355514988024, 28.677037384140963], [77.32807488393293, 28.673885185094285], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
-        geo_json_18d21ef47b623c9b92e6dcb040d48416.setStyle(function(feature) {return feature.properties.style;});
+            geo_json_2982241b40f7f9523f19564a40376d3e_add({&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;features&quot;: [{&quot;bbox&quot;: [76.84251435748224, 28.403052135245247, 77.34765178578583, 28.879321705537276], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.32800389493826, 28.67239167204768], [77.32772533394477, 28.666531902780093], [77.32770785324212, 28.666164048955366], [77.325557835788, 28.657802965445374], [77.32554397539066, 28.65638446899026], [77.32553763151414, 28.655733096057418], [77.32544205436459, 28.645907030477645], [77.32318501604315, 28.641208839049714], [77.3213046867176, 28.6391865225465], [77.32367042123747, 28.63774460047442], [77.323997068761, 28.637426911332668], [77.3260345355317, 28.635444915488762], [77.33105474972714, 28.630560992626954], [77.33632519075763, 28.627993545614935], [77.34055944724112, 28.62593061720227], [77.34431417293108, 28.62150692359716], [77.34716790087138, 28.616412145357774], [77.3476231172752, 28.612011393650366], [77.34625279456911, 28.603392151011704], [77.34320094917466, 28.601226628263596], [77.33789379673176, 28.59939961184384], [77.3269718934987, 28.59448299051775], [77.32337195280223, 28.59397295082713], [77.31995806102422, 28.593489177566717], [77.31716425390505, 28.591442137128972], [77.31556413106117, 28.58955191184122], [77.31515956021418, 28.589074042138343], [77.30491000912598, 28.576964198625987], [77.30482387610402, 28.576782106473466], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.3051413673883, 28.555732227913847], [77.31300984258708, 28.544969186315203], [77.31438979060256, 28.54374539175398], [77.32063479974838, 28.538206659501633], [77.32483339884692, 28.53600158105828], [77.33144856523451, 28.530363873542257], [77.33649680441096, 28.523759166083913], [77.3404435650323, 28.518594852514614], [77.34292260123115, 28.516156785945718], [77.34389780963718, 28.51519772004282], [77.34415045531287, 28.514752834089922], [77.3467555736686, 28.510166443541074], [77.34765178578583, 28.50345539386918], [77.34437051094167, 28.505584654180733], [77.33889524476847, 28.50282321673253], [77.33657377596872, 28.49795786780577], [77.33159199450778, 28.493882989277235], [77.32474908115456, 28.48906551600393], [77.31672824601804, 28.485191441211544], [77.31080442189256, 28.484632836029512], [77.30612106397625, 28.485668662545912], [77.29564126151455, 28.490795216269316], [77.28790080744703, 28.492677906822067], [77.28096052855314, 28.491564112316944], [77.26991008923501, 28.48297439297787], [77.26378569834469, 28.48009357731464], [77.25244400621256, 28.47915064567805], [77.24652091948481, 28.474240019183075], [77.24218273391853, 28.47035216349048], [77.2373837747999, 28.464308874093746], [77.23549659680403, 28.45856822564237], [77.2361795589214, 28.454817613335457], [77.24285892495196, 28.45400642953283], [77.24961574516955, 28.44815818475137], [77.2530268026152, 28.442036338229865], [77.25403011720421, 28.436207899655177], [77.25291103475394, 28.428222896042964], [77.25034156499044, 28.42340186441194], [77.23243251187648, 28.413519899282143], [77.22497561624277, 28.410302025107384], [77.21556351810086, 28.407962744783415], [77.20487044226623, 28.40710099160931], [77.18913212642883, 28.406957202651455], [77.1753786965703, 28.403052135245247], [77.16397705230139, 28.415900047311332], [77.1615020553078, 28.42292256332066], [77.15205411077763, 28.430329863056606], [77.14103210162064, 28.433326205367408], [77.13370781022178, 28.433864579383528], [77.12793400653317, 28.437064448307424], [77.12215454261144, 28.444875475495117], [77.1183944590692, 28.451997790825555], [77.11570174637525, 28.46054327066356], [77.11240519680932, 28.46510414626018], [77.1112007528156, 28.471134423109145], [77.1130200358822, 28.477774583149763], [77.11505260605611, 28.482787775065173], [77.11737741977366, 28.488521191935334], [77.11321439219618, 28.49212104394551], [77.10002289768582, 28.500122093855918], [77.09568418742538, 28.505535157149794], [77.08218639784023, 28.514969729422507], [77.07717268518716, 28.515336739053954], [77.06664152553824, 28.50856863575967], [77.05844843242112, 28.509950156564734], [77.0513371066247, 28.513677486259233], [77.04283624252213, 28.523067890818023], [77.02931240272851, 28.528010242359837], [77.02533919539864, 28.528069326699114], [77.01578176421805, 28.537520967096555], [77.0098872844861, 28.536763689882264], [77.00562253774439, 28.531655257826593], [77.00787223541388, 28.52689841227009], [77.01466123810748, 28.52348360827443], [77.02105034555119, 28.518854424369597], [77.02058822779065, 28.512771093394687], [77.01519124948031, 28.509187790973435], [76.9999072575318, 28.51453985486166], [76.98617060137151, 28.518579969390444], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.94279847995226, 28.51084937097648], [76.93223080421859, 28.51408299365603], [76.91802423683191, 28.509739375596542], [76.90700264854304, 28.51260929400555], [76.90326649034155, 28.510985967247592], [76.89633714122468, 28.506079493782593], [76.888890648998, 28.503906424160505], [76.88332862462205, 28.509253264411544], [76.88899488687875, 28.51885231626565], [76.88586106805107, 28.52326006274611], [76.86877345556685, 28.536804588992013], [76.86630758723604, 28.542702284659295], [76.84717142496928, 28.55189587437348], [76.84251435748224, 28.577422597419602], [76.84464047343846, 28.586319016621548], [76.8598587067249, 28.585022638082673], [76.86444686291388, 28.58724614495722], [76.87055846965707, 28.597408516419637], [76.88765759795864, 28.632525240430876], [76.90341270731547, 28.62762487083816], [76.9070096334832, 28.627671664479006], [76.91375069989202, 28.63280689778049], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.93572361453052, 28.624101213998003], [76.94367249234084, 28.632492501025634], [76.92798055656309, 28.648132152727797], [76.92727591837325, 28.652127844819315], [76.93291729164164, 28.664080331174244], [76.93955322250906, 28.669276359015303], [76.95208088103936, 28.669941183426623], [76.95238879168892, 28.669957511543057], [76.95710295606034, 28.672006049929216], [76.95579604403122, 28.678325016988953], [76.95824478865269, 28.682834769896143], [76.95987859921074, 28.68898025956203], [76.96372126982114, 28.69480579748066], [76.96409474481646, 28.695371953722788], [76.96450443108594, 28.700214302077242], [76.9608590847245, 28.70461254284807], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.95915313241429, 28.736356587893432], [76.96026542078114, 28.741514679343066], [76.9573973479795, 28.74599614812088], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.95397161658781, 28.773408004550145], [76.95234457925335, 28.78264123627383], [76.95311925089919, 28.789998472271208], [76.94750610430553, 28.79838957173434], [76.94740075351014, 28.804046761530323], [76.95237135087149, 28.815574517806848], [76.95828556327555, 28.81255028052861], [76.96584862691063, 28.81490894886266], [76.96810662971122, 28.825219642126683], [76.97093040117177, 28.82655719312726], [76.98065730358687, 28.81997686114232], [76.9837952124208, 28.820710136769204], [76.98967913275564, 28.831574872108764], [76.99363678918797, 28.833955941949693], [76.99986666974684, 28.834022508788333], [77.01676989532704, 28.830110428072633], [77.0289528247558, 28.831891732354034], [77.0348385350697, 28.83110210017568], [77.04170609206948, 28.831609861967735], [77.04786158554664, 28.84759933243861], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.08041327970415, 28.874797294780972], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.10973064204086, 28.86721775214927], [77.11741355606702, 28.86322476825236], [77.11997601034905, 28.860891041976934], [77.13883755570389, 28.86013342522956], [77.14536199101484, 28.853229476866307], [77.14586011244924, 28.8474284358327], [77.14406717911004, 28.83944953660806], [77.14946011330588, 28.836399908015032], [77.15264742713133, 28.837195019299894], [77.16092954944801, 28.84317053769546], [77.16990445479617, 28.852147600481793], [77.17490730047335, 28.85535417182215], [77.19398918870692, 28.857001316197163], [77.19721033144612, 28.861519456499753], [77.20383582344276, 28.860039631383188], [77.20999957954142, 28.85962904794304], [77.21515278829848, 28.857591132498012], [77.21818736263195, 28.85490179099469], [77.22180895061327, 28.84960424534348], [77.22093899702955, 28.83996404332024], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.20468972213968, 28.796959832985785], [77.207169612488, 28.789949943276], [77.21052226373159, 28.78651978038676], [77.21291649218315, 28.784070027014202], [77.2143440039084, 28.7835189924518], [77.2186797593756, 28.781845232583745], [77.2233009667238, 28.781095494546847], [77.22426421506802, 28.781313811917038], [77.22642010451952, 28.781802345810856], [77.22851677648046, 28.782277426895156], [77.2304651904059, 28.782276394666184], [77.2338181975754, 28.782274469435254], [77.23493032368563, 28.782273792343755], [77.2323205733389, 28.778380986561967], [77.2273273412673, 28.776331649021603], [77.23113894140936, 28.772545339912906], [77.23700717110162, 28.768592574441026], [77.2392638482639, 28.76707241371082], [77.2453830610995, 28.75802298651334], [77.24820531120781, 28.75384868265035], [77.248696429135, 28.753731424176507], [77.25608762170775, 28.751966179092694], [77.25868312652483, 28.752152873178126], [77.26341465224546, 28.74740002465139], [77.26207910610313, 28.740112503092273], [77.26637280166048, 28.73454010236981], [77.27012818633878, 28.732723939288697], [77.27657100341791, 28.7338795378577], [77.28133040053568, 28.732781866462926], [77.28706457692951, 28.72898544461337], [77.29089325926482, 28.72461991045587], [77.29104691592772, 28.724368227144385], [77.29462447352118, 28.71850977850799], [77.2938530820123, 28.713557060198188], [77.29509038307268, 28.7070330410502], [77.30312431192496, 28.70434348419933], [77.30581072337357, 28.70760858582894], [77.31166707844272, 28.71129384143181], [77.31643073365667, 28.712231616501384], [77.32737700698904, 28.711763774281142], [77.33370385341296, 28.71041555057635], [77.3318683847603, 28.70637169176919], [77.33003330949782, 28.69819532955926], [77.33111759751431, 28.694218477306148], [77.33775169207539, 28.68638048190534], [77.33729417289436, 28.67969463083855], [77.33578362518006, 28.677391375868243], [77.3355514988024, 28.677037384140963], [77.32807488393293, 28.673885185094285], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_2982241b40f7f9523f19564a40376d3e.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_18d21ef47b623c9b92e6dcb040d48416.addTo(map_03997695767be8ec7d9e076d3a74c640);
+            geo_json_2982241b40f7f9523f19564a40376d3e.addTo(map_7400d2089c7155d3321ea62c4750b0d5);
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+<div id="3c11d1e2" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save_delhi_geojson.py</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the shapefile</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>shapefile_path <span class="op">=</span> <span class="st">"data/shapefile/Districts.shp"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>delhi <span class="op">=</span> gpd.read_file(shapefile_path)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplify the geometry to reduce points (speeds up web rendering)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>delhi_simple <span class="op">=</span> delhi.copy()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># delhi_simple['geometry'] = delhi_simple['geometry'].simplify(tolerance=0.005, preserve_topology=True)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Save as GeoJSON</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>delhi_simple.to_file(<span class="st">"data/shapefile/delhi_simple.geojson"</span>, driver<span class="op">=</span><span class="st">"GeoJSON"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Converted to GeoJSON"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Converted to GeoJSON</code></pre>
+</div>
+</div>
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_40afe45e5cb8376e52931494b8b852e5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_40afe45e5cb8376e52931494b8b852e5&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_40afe45e5cb8376e52931494b8b852e5 = L.map(
+                &quot;map_40afe45e5cb8376e52931494b8b852e5&quot;,
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 1,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;maxBounds&quot;: [
+[
+28.403052135245247,
+76.84251435748224,
+],
+[
+28.879321705537276,
+77.34765178578583,
+],
+],
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6d5139611f7dd25d5718aef895483d1e = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 10,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_6d5139611f7dd25d5718aef895483d1e.addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+            map_40afe45e5cb8376e52931494b8b852e5.fitBounds(
+                [[28.403052135245247, 76.84251435748224], [28.879321705537276, 77.34765178578583]],
+                {}
+            );
+        
+    
+            var marker_56ab9c8b6d8cd17a0b6f6a3aee0c5533 = L.marker(
+                [28.695381, 77.181665],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_62bd09918a5a6ccce49c4c95dc24098c = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3fded04b8dd2ef189554eda8f9e1fc04 = $(`<div id=&quot;html_3fded04b8dd2ef189554eda8f9e1fc04&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_62bd09918a5a6ccce49c4c95dc24098c.setContent(html_3fded04b8dd2ef189554eda8f9e1fc04);
+            
+        
+
+        marker_56ab9c8b6d8cd17a0b6f6a3aee0c5533.bindPopup(popup_62bd09918a5a6ccce49c4c95dc24098c)
+        ;
+
+        
+    
+    
+            marker_56ab9c8b6d8cd17a0b6f6a3aee0c5533.bindTooltip(
+                `<div>
+                     Ashok Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_d57538ec57de5b9393265167825e111b = L.marker(
+                [28.7762, 77.051074],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_b05cc545d84b406defcc01c165fc7a4f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_d9dd1248a4d5c6f98677d12071d0896c = $(`<div id=&quot;html_d9dd1248a4d5c6f98677d12071d0896c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_b05cc545d84b406defcc01c165fc7a4f.setContent(html_d9dd1248a4d5c6f98677d12071d0896c);
+            
+        
+
+        marker_d57538ec57de5b9393265167825e111b.bindPopup(popup_b05cc545d84b406defcc01c165fc7a4f)
+        ;
+
+        
+    
+    
+            marker_d57538ec57de5b9393265167825e111b.bindTooltip(
+                `<div>
+                     Bawana, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_a71db6ef3e1f5ef40d8eb3a9d2223360 = L.marker(
+                [28.498571, 77.26484],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_a9d73497c76ce326133b1ceaf3f5965a = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_2a8503ebddc6c71e02719e21faa9fde1 = $(`<div id=&quot;html_2a8503ebddc6c71e02719e21faa9fde1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_a9d73497c76ce326133b1ceaf3f5965a.setContent(html_2a8503ebddc6c71e02719e21faa9fde1);
+            
+        
+
+        marker_a71db6ef3e1f5ef40d8eb3a9d2223360.bindPopup(popup_a9d73497c76ce326133b1ceaf3f5965a)
+        ;
+
+        
+    
+    
+            marker_a71db6ef3e1f5ef40d8eb3a9d2223360.bindTooltip(
+                `<div>
+                     Dr. Karni Singh Shooting Range, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_34fc84885c153a782c4618b6622c88dc = L.marker(
+                [28.5710274, 77.0719006],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_621f1d59d8957a143fe1431527ab200e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_587aa8ca2d5b3a97d8a9d788b317c28d = $(`<div id=&quot;html_587aa8ca2d5b3a97d8a9d788b317c28d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_621f1d59d8957a143fe1431527ab200e.setContent(html_587aa8ca2d5b3a97d8a9d788b317c28d);
+            
+        
+
+        marker_34fc84885c153a782c4618b6622c88dc.bindPopup(popup_621f1d59d8957a143fe1431527ab200e)
+        ;
+
+        
+    
+    
+            marker_34fc84885c153a782c4618b6622c88dc.bindTooltip(
+                `<div>
+                     Dwarka-Sector 8, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_37cc38a214399b8f4aece589afd039d4 = L.marker(
+                [28.73282, 77.170633],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_70b6a9490f1b852e1e23f94c89e85b49 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_2e4de14de60fb4bdd79ac3583ad326c6 = $(`<div id=&quot;html_2e4de14de60fb4bdd79ac3583ad326c6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_70b6a9490f1b852e1e23f94c89e85b49.setContent(html_2e4de14de60fb4bdd79ac3583ad326c6);
+            
+        
+
+        marker_37cc38a214399b8f4aece589afd039d4.bindPopup(popup_70b6a9490f1b852e1e23f94c89e85b49)
+        ;
+
+        
+    
+    
+            marker_37cc38a214399b8f4aece589afd039d4.bindTooltip(
+                `<div>
+                     Jahangirpuri, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_68b64d251382f9ebf36cd132d9ff33d0 = L.marker(
+                [28.58028, 77.233829],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_de7160c06f74131087478359281e17f5 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_00debd2ff3a2cb503c2b33122541d05e = $(`<div id=&quot;html_00debd2ff3a2cb503c2b33122541d05e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_de7160c06f74131087478359281e17f5.setContent(html_00debd2ff3a2cb503c2b33122541d05e);
+            
+        
+
+        marker_68b64d251382f9ebf36cd132d9ff33d0.bindPopup(popup_de7160c06f74131087478359281e17f5)
+        ;
+
+        
+    
+    
+            marker_68b64d251382f9ebf36cd132d9ff33d0.bindTooltip(
+                `<div>
+                     Jawaharlal Nehru Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_de5ccb807abe13407de93c63de02f9d6 = L.marker(
+                [28.611281, 77.237738],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_10e8fdf603d04ecd1e262e78aa5de51e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ce4910aefcc79b51f463e4b507e85e26 = $(`<div id=&quot;html_ce4910aefcc79b51f463e4b507e85e26&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_10e8fdf603d04ecd1e262e78aa5de51e.setContent(html_ce4910aefcc79b51f463e4b507e85e26);
+            
+        
+
+        marker_de5ccb807abe13407de93c63de02f9d6.bindPopup(popup_10e8fdf603d04ecd1e262e78aa5de51e)
+        ;
+
+        
+    
+    
+            marker_de5ccb807abe13407de93c63de02f9d6.bindTooltip(
+                `<div>
+                     Major Dhyan Chand National Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_c98d8f5288c1d380e680e35b82471b45 = L.marker(
+                [28.636429, 77.201067],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_c73b00e0113bd3a3650656293661ad42 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_1a19f2a5f3fc08c34ad26753de6a2d18 = $(`<div id=&quot;html_1a19f2a5f3fc08c34ad26753de6a2d18&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_c73b00e0113bd3a3650656293661ad42.setContent(html_1a19f2a5f3fc08c34ad26753de6a2d18);
+            
+        
+
+        marker_c98d8f5288c1d380e680e35b82471b45.bindPopup(popup_c73b00e0113bd3a3650656293661ad42)
+        ;
+
+        
+    
+    
+            marker_c98d8f5288c1d380e680e35b82471b45.bindTooltip(
+                `<div>
+                     Mandir Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_0f29c10f85064a07fa2994656a670f13 = L.marker(
+                [28.684678, 77.076574],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_6dac29549bfee8c36445824f1d218922 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_813414d2486e13fa25c60945adad85ed = $(`<div id=&quot;html_813414d2486e13fa25c60945adad85ed&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6dac29549bfee8c36445824f1d218922.setContent(html_813414d2486e13fa25c60945adad85ed);
+            
+        
+
+        marker_0f29c10f85064a07fa2994656a670f13.bindPopup(popup_6dac29549bfee8c36445824f1d218922)
+        ;
+
+        
+    
+    
+            marker_0f29c10f85064a07fa2994656a670f13.bindTooltip(
+                `<div>
+                     Mundka, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_fc6f8e61dcc9b659ef079344de85410a = L.marker(
+                [28.570173, 76.933762],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_9d620f0ffd53277c9374ee7f374dad23 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_965019beeb33a17e20ab111346945b2b = $(`<div id=&quot;html_965019beeb33a17e20ab111346945b2b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_9d620f0ffd53277c9374ee7f374dad23.setContent(html_965019beeb33a17e20ab111346945b2b);
+            
+        
+
+        marker_fc6f8e61dcc9b659ef079344de85410a.bindPopup(popup_9d620f0ffd53277c9374ee7f374dad23)
+        ;
+
+        
+    
+    
+            marker_fc6f8e61dcc9b659ef079344de85410a.bindTooltip(
+                `<div>
+                     Najafgarh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_ac3cf463d92fa8c59ca1d9af46cd6aa4 = L.marker(
+                [28.822836, 77.101981],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_3060dce4e7dd1536c952af2b3b977ba3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_bbb36e26eddc595f8fa6c825a22e4193 = $(`<div id=&quot;html_bbb36e26eddc595f8fa6c825a22e4193&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_3060dce4e7dd1536c952af2b3b977ba3.setContent(html_bbb36e26eddc595f8fa6c825a22e4193);
+            
+        
+
+        marker_ac3cf463d92fa8c59ca1d9af46cd6aa4.bindPopup(popup_3060dce4e7dd1536c952af2b3b977ba3)
+        ;
+
+        
+    
+    
+            marker_ac3cf463d92fa8c59ca1d9af46cd6aa4.bindTooltip(
+                `<div>
+                     Narela, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_b9d3981893e702c1222fb8b021e0d04f = L.marker(
+                [28.56789, 77.250515],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_56d72973c3d1653127c4237020496ade = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_57e839d0ecc9daf49931fce59ac0f826 = $(`<div id=&quot;html_57e839d0ecc9daf49931fce59ac0f826&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_56d72973c3d1653127c4237020496ade.setContent(html_57e839d0ecc9daf49931fce59ac0f826);
+            
+        
+
+        marker_b9d3981893e702c1222fb8b021e0d04f.bindPopup(popup_56d72973c3d1653127c4237020496ade)
+        ;
+
+        
+    
+    
+            marker_b9d3981893e702c1222fb8b021e0d04f.bindTooltip(
+                `<div>
+                     Nehru Nagar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_e114d2916ffdce3554abbf78eb45885f = L.marker(
+                [28.530785, 77.271255],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_f4b653ae53bad3b6aaff3c599e5d4a1b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_f97271346eb6a534cd7ab8df20c9b144 = $(`<div id=&quot;html_f97271346eb6a534cd7ab8df20c9b144&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f4b653ae53bad3b6aaff3c599e5d4a1b.setContent(html_f97271346eb6a534cd7ab8df20c9b144);
+            
+        
+
+        marker_e114d2916ffdce3554abbf78eb45885f.bindPopup(popup_f4b653ae53bad3b6aaff3c599e5d4a1b)
+        ;
+
+        
+    
+    
+            marker_e114d2916ffdce3554abbf78eb45885f.bindTooltip(
+                `<div>
+                     Okhla Phase-2, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_32d2166d7d28bb29fe6f586e5cd1c621 = L.marker(
+                [28.623763, 77.287209],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_f1b26b2cb9fc45dfaed012bbecef56c1 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_28c3cc9c22625075f39eaed819abb01a = $(`<div id=&quot;html_28c3cc9c22625075f39eaed819abb01a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f1b26b2cb9fc45dfaed012bbecef56c1.setContent(html_28c3cc9c22625075f39eaed819abb01a);
+            
+        
+
+        marker_32d2166d7d28bb29fe6f586e5cd1c621.bindPopup(popup_f1b26b2cb9fc45dfaed012bbecef56c1)
+        ;
+
+        
+    
+    
+            marker_32d2166d7d28bb29fe6f586e5cd1c621.bindTooltip(
+                `<div>
+                     Patparganj, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_41b7bc60e289a9dd8499eb3b531b369b = L.marker(
+                [28.674045, 77.131023],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_c5939e66e02dc24cf793189c5ece26ca = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_c4bc6d29faf42e07cbcd1d29b97e268f = $(`<div id=&quot;html_c4bc6d29faf42e07cbcd1d29b97e268f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_c5939e66e02dc24cf793189c5ece26ca.setContent(html_c4bc6d29faf42e07cbcd1d29b97e268f);
+            
+        
+
+        marker_41b7bc60e289a9dd8499eb3b531b369b.bindPopup(popup_c5939e66e02dc24cf793189c5ece26ca)
+        ;
+
+        
+    
+    
+            marker_41b7bc60e289a9dd8499eb3b531b369b.bindTooltip(
+                `<div>
+                     Punjabi Bagh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_606b717a769aba0cdd13e438e33bcba4 = L.marker(
+                [28.639652, 77.146275],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_82c2bf789510273fca1b7bc543ea1569 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_56b4b0d95e3f8f408c5b082d87383ea1 = $(`<div id=&quot;html_56b4b0d95e3f8f408c5b082d87383ea1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_82c2bf789510273fca1b7bc543ea1569.setContent(html_56b4b0d95e3f8f408c5b082d87383ea1);
+            
+        
+
+        marker_606b717a769aba0cdd13e438e33bcba4.bindPopup(popup_82c2bf789510273fca1b7bc543ea1569)
+        ;
+
+        
+    
+    
+            marker_606b717a769aba0cdd13e438e33bcba4.bindTooltip(
+                `<div>
+                     Pusa, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_259c5d1eef7d93cf6cc75fcfb02b9a60 = L.marker(
+                [28.563262, 77.186937],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_1c7adce1559fe25d4abc8488b8343ce0 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_5112cf23aa3d6cb29e92d04ece683c1c = $(`<div id=&quot;html_5112cf23aa3d6cb29e92d04ece683c1c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_1c7adce1559fe25d4abc8488b8343ce0.setContent(html_5112cf23aa3d6cb29e92d04ece683c1c);
+            
+        
+
+        marker_259c5d1eef7d93cf6cc75fcfb02b9a60.bindPopup(popup_1c7adce1559fe25d4abc8488b8343ce0)
+        ;
+
+        
+    
+    
+            marker_259c5d1eef7d93cf6cc75fcfb02b9a60.bindTooltip(
+                `<div>
+                     R K Puram, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_1c73b50669664fa9fdf420aa4cef8ba5 = L.marker(
+                [28.732528, 77.11992],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_3bf1e5f9df55f01215dd7f195aebfa93 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ad44df21b91ed9288d5011bb3682f5b2 = $(`<div id=&quot;html_ad44df21b91ed9288d5011bb3682f5b2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_3bf1e5f9df55f01215dd7f195aebfa93.setContent(html_ad44df21b91ed9288d5011bb3682f5b2);
+            
+        
+
+        marker_1c73b50669664fa9fdf420aa4cef8ba5.bindPopup(popup_3bf1e5f9df55f01215dd7f195aebfa93)
+        ;
+
+        
+    
+    
+            marker_1c73b50669664fa9fdf420aa4cef8ba5.bindTooltip(
+                `<div>
+                     Rohini, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_2294d32908ca74081e10ccb9ac93cb3a = L.marker(
+                [28.710508, 77.249485],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_6d86d091de21e047ae69673fc9c07d51 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_6db6157154f1c8199f7635a5a1d727c1 = $(`<div id=&quot;html_6db6157154f1c8199f7635a5a1d727c1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6d86d091de21e047ae69673fc9c07d51.setContent(html_6db6157154f1c8199f7635a5a1d727c1);
+            
+        
+
+        marker_2294d32908ca74081e10ccb9ac93cb3a.bindPopup(popup_6d86d091de21e047ae69673fc9c07d51)
+        ;
+
+        
+    
+    
+            marker_2294d32908ca74081e10ccb9ac93cb3a.bindTooltip(
+                `<div>
+                     Sonia Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_8bddf064689886b5b2997463e1aa952c = L.marker(
+                [28.531346, 77.190156],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_84f7bb742bca0f164894bb8195b7e6a4 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3539a750066ce22ce56e8e777422283f = $(`<div id=&quot;html_3539a750066ce22ce56e8e777422283f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_84f7bb742bca0f164894bb8195b7e6a4.setContent(html_3539a750066ce22ce56e8e777422283f);
+            
+        
+
+        marker_8bddf064689886b5b2997463e1aa952c.bindPopup(popup_84f7bb742bca0f164894bb8195b7e6a4)
+        ;
+
+        
+    
+    
+            marker_8bddf064689886b5b2997463e1aa952c.bindTooltip(
+                `<div>
+                     Sri Aurobindo Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_09f104aab8d3dc4fa4cb36f3493e3cad = L.marker(
+                [28.672342, 77.31526],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_f670fd4579bd9ddf89c064a5c1ec7c58 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_1fd24a8857d1572482a0876df027d450 = $(`<div id=&quot;html_1fd24a8857d1572482a0876df027d450&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f670fd4579bd9ddf89c064a5c1ec7c58.setContent(html_1fd24a8857d1572482a0876df027d450);
+            
+        
+
+        marker_09f104aab8d3dc4fa4cb36f3493e3cad.bindPopup(popup_f670fd4579bd9ddf89c064a5c1ec7c58)
+        ;
+
+        
+    
+    
+            marker_09f104aab8d3dc4fa4cb36f3493e3cad.bindTooltip(
+                `<div>
+                     Vivek Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_069f0a5add85a40609eeae0c23730743 = L.marker(
+                [28.699793, 77.165453],
+                {
+}
+            ).addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+    
+        var popup_1d701297783007b45c565d64ac6c656e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_7f54080f61d14815e60cae4db45f32b8 = $(`<div id=&quot;html_7f54080f61d14815e60cae4db45f32b8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_1d701297783007b45c565d64ac6c656e.setContent(html_7f54080f61d14815e60cae4db45f32b8);
+            
+        
+
+        marker_069f0a5add85a40609eeae0c23730743.bindPopup(popup_1d701297783007b45c565d64ac6c656e)
+        ;
+
+        
+    
+    
+            marker_069f0a5add85a40609eeae0c23730743.bindTooltip(
+                `<div>
+                     Wazirpur, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+
+        function geo_json_d4fa9d1a1988bdc4110fffda7888182c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d4fa9d1a1988bdc4110fffda7888182c = L.geoJson(null, {
+                onEachFeature: geo_json_d4fa9d1a1988bdc4110fffda7888182c_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_d4fa9d1a1988bdc4110fffda7888182c_add (data) {
+            geo_json_d4fa9d1a1988bdc4110fffda7888182c
+                .addData(data);
+        }
+            geo_json_d4fa9d1a1988bdc4110fffda7888182c_add({&quot;crs&quot;: {&quot;properties&quot;: {&quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;}, &quot;type&quot;: &quot;name&quot;}, &quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.32800389493826, 28.67239167204768], [77.32772533394477, 28.666531902780093], [77.32770785324212, 28.666164048955366], [77.325557835788, 28.657802965445374], [77.32554397539066, 28.65638446899026], [77.32553763151414, 28.655733096057418], [77.32544205436459, 28.645907030477645], [77.32318501604315, 28.641208839049714], [77.3213046867176, 28.6391865225465], [77.32367042123747, 28.63774460047442], [77.323997068761, 28.637426911332668], [77.3260345355317, 28.635444915488762], [77.33105474972714, 28.630560992626954], [77.33632519075763, 28.627993545614935], [77.34055944724112, 28.62593061720227], [77.34431417293108, 28.62150692359716], [77.34716790087138, 28.616412145357774], [77.3476231172752, 28.612011393650366], [77.34625279456911, 28.603392151011704], [77.34320094917466, 28.601226628263596], [77.33789379673176, 28.59939961184384], [77.3269718934987, 28.59448299051775], [77.32337195280223, 28.59397295082713], [77.31995806102422, 28.593489177566717], [77.31716425390505, 28.591442137128972], [77.31556413106117, 28.58955191184122], [77.31515956021418, 28.589074042138343], [77.30491000912598, 28.576964198625987], [77.30482387610402, 28.576782106473466], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.3051413673883, 28.555732227913847], [77.31300984258708, 28.544969186315203], [77.31438979060256, 28.54374539175398], [77.32063479974838, 28.538206659501633], [77.32483339884692, 28.53600158105828], [77.33144856523451, 28.530363873542257], [77.33649680441096, 28.523759166083913], [77.3404435650323, 28.518594852514614], [77.34292260123115, 28.516156785945718], [77.34389780963718, 28.51519772004282], [77.34415045531287, 28.514752834089922], [77.3467555736686, 28.510166443541074], [77.34765178578583, 28.50345539386918], [77.34437051094167, 28.505584654180733], [77.33889524476847, 28.50282321673253], [77.33657377596872, 28.49795786780577], [77.33159199450778, 28.493882989277235], [77.32474908115456, 28.48906551600393], [77.31672824601804, 28.485191441211544], [77.31080442189256, 28.484632836029512], [77.30612106397625, 28.485668662545912], [77.29564126151455, 28.490795216269316], [77.28790080744703, 28.492677906822067], [77.28096052855314, 28.491564112316944], [77.26991008923501, 28.48297439297787], [77.26378569834469, 28.48009357731464], [77.25244400621256, 28.47915064567805], [77.24652091948481, 28.474240019183075], [77.24218273391853, 28.47035216349048], [77.2373837747999, 28.464308874093746], [77.23549659680403, 28.45856822564237], [77.2361795589214, 28.454817613335457], [77.24285892495196, 28.45400642953283], [77.24961574516955, 28.44815818475137], [77.2530268026152, 28.442036338229865], [77.25403011720421, 28.436207899655177], [77.25291103475394, 28.428222896042964], [77.25034156499044, 28.42340186441194], [77.23243251187648, 28.413519899282143], [77.22497561624277, 28.410302025107384], [77.21556351810086, 28.407962744783415], [77.20487044226623, 28.40710099160931], [77.18913212642883, 28.406957202651455], [77.1753786965703, 28.403052135245247], [77.16397705230139, 28.415900047311332], [77.1615020553078, 28.42292256332066], [77.15205411077763, 28.430329863056606], [77.14103210162064, 28.433326205367408], [77.13370781022178, 28.433864579383528], [77.12793400653317, 28.437064448307424], [77.12215454261144, 28.444875475495117], [77.1183944590692, 28.451997790825555], [77.11570174637525, 28.46054327066356], [77.11240519680932, 28.46510414626018], [77.1112007528156, 28.471134423109145], [77.1130200358822, 28.477774583149763], [77.11505260605611, 28.482787775065173], [77.11737741977366, 28.488521191935334], [77.11321439219618, 28.49212104394551], [77.10002289768582, 28.500122093855918], [77.09568418742538, 28.505535157149794], [77.08218639784023, 28.514969729422507], [77.07717268518716, 28.515336739053954], [77.06664152553824, 28.50856863575967], [77.05844843242112, 28.509950156564734], [77.0513371066247, 28.513677486259233], [77.04283624252213, 28.523067890818023], [77.02931240272851, 28.528010242359837], [77.02533919539864, 28.528069326699114], [77.01578176421805, 28.537520967096555], [77.0098872844861, 28.536763689882264], [77.00562253774439, 28.531655257826593], [77.00787223541388, 28.52689841227009], [77.01466123810748, 28.52348360827443], [77.02105034555119, 28.518854424369597], [77.02058822779065, 28.512771093394687], [77.01519124948031, 28.509187790973435], [76.9999072575318, 28.51453985486166], [76.98617060137151, 28.518579969390444], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.94279847995226, 28.51084937097648], [76.93223080421859, 28.51408299365603], [76.91802423683191, 28.509739375596542], [76.90700264854304, 28.51260929400555], [76.90326649034155, 28.510985967247592], [76.89633714122468, 28.506079493782593], [76.888890648998, 28.503906424160505], [76.88332862462205, 28.509253264411544], [76.88899488687875, 28.51885231626565], [76.88586106805107, 28.52326006274611], [76.86877345556685, 28.536804588992013], [76.86630758723604, 28.542702284659295], [76.84717142496928, 28.55189587437348], [76.84251435748224, 28.577422597419602], [76.84464047343846, 28.586319016621548], [76.8598587067249, 28.585022638082673], [76.86444686291388, 28.58724614495722], [76.87055846965707, 28.597408516419637], [76.88765759795864, 28.632525240430876], [76.90341270731547, 28.62762487083816], [76.9070096334832, 28.627671664479006], [76.91375069989202, 28.63280689778049], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.93572361453052, 28.624101213998003], [76.94367249234084, 28.632492501025634], [76.92798055656309, 28.648132152727797], [76.92727591837325, 28.652127844819315], [76.93291729164164, 28.664080331174244], [76.93955322250906, 28.669276359015303], [76.95208088103936, 28.669941183426623], [76.95238879168892, 28.669957511543057], [76.95710295606034, 28.672006049929216], [76.95579604403122, 28.678325016988953], [76.95824478865269, 28.682834769896143], [76.95987859921074, 28.68898025956203], [76.96372126982114, 28.69480579748066], [76.96409474481646, 28.695371953722788], [76.96450443108594, 28.700214302077242], [76.9608590847245, 28.70461254284807], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.95915313241429, 28.736356587893432], [76.96026542078114, 28.741514679343066], [76.9573973479795, 28.74599614812088], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.95397161658781, 28.773408004550145], [76.95234457925335, 28.78264123627383], [76.95311925089919, 28.789998472271208], [76.94750610430553, 28.79838957173434], [76.94740075351014, 28.804046761530323], [76.95237135087149, 28.815574517806848], [76.95828556327555, 28.81255028052861], [76.96584862691063, 28.81490894886266], [76.96810662971122, 28.825219642126683], [76.97093040117177, 28.82655719312726], [76.98065730358687, 28.81997686114232], [76.9837952124208, 28.820710136769204], [76.98967913275564, 28.831574872108764], [76.99363678918797, 28.833955941949693], [76.99986666974684, 28.834022508788333], [77.01676989532704, 28.830110428072633], [77.0289528247558, 28.831891732354034], [77.0348385350697, 28.83110210017568], [77.04170609206948, 28.831609861967735], [77.04786158554664, 28.84759933243861], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.08041327970415, 28.874797294780972], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.10973064204086, 28.86721775214927], [77.11741355606702, 28.86322476825236], [77.11997601034905, 28.860891041976934], [77.13883755570389, 28.86013342522956], [77.14536199101484, 28.853229476866307], [77.14586011244924, 28.8474284358327], [77.14406717911004, 28.83944953660806], [77.14946011330588, 28.836399908015032], [77.15264742713133, 28.837195019299894], [77.16092954944801, 28.84317053769546], [77.16990445479617, 28.852147600481793], [77.17490730047335, 28.85535417182215], [77.19398918870692, 28.857001316197163], [77.19721033144612, 28.861519456499753], [77.20383582344276, 28.860039631383188], [77.20999957954142, 28.85962904794304], [77.21515278829848, 28.857591132498012], [77.21818736263195, 28.85490179099469], [77.22180895061327, 28.84960424534348], [77.22093899702955, 28.83996404332024], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.20468972213968, 28.796959832985785], [77.207169612488, 28.789949943276], [77.21052226373159, 28.78651978038676], [77.21291649218315, 28.784070027014202], [77.2143440039084, 28.7835189924518], [77.2186797593756, 28.781845232583745], [77.2233009667238, 28.781095494546847], [77.22426421506802, 28.781313811917038], [77.22642010451952, 28.781802345810856], [77.22851677648046, 28.782277426895156], [77.2304651904059, 28.782276394666184], [77.2338181975754, 28.782274469435254], [77.23493032368563, 28.782273792343755], [77.2323205733389, 28.778380986561967], [77.2273273412673, 28.776331649021603], [77.23113894140936, 28.772545339912906], [77.23700717110162, 28.768592574441026], [77.2392638482639, 28.76707241371082], [77.2453830610995, 28.75802298651334], [77.24820531120781, 28.75384868265035], [77.248696429135, 28.753731424176507], [77.25608762170775, 28.751966179092694], [77.25868312652483, 28.752152873178126], [77.26341465224546, 28.74740002465139], [77.26207910610313, 28.740112503092273], [77.26637280166048, 28.73454010236981], [77.27012818633878, 28.732723939288697], [77.27657100341791, 28.7338795378577], [77.28133040053568, 28.732781866462926], [77.28706457692951, 28.72898544461337], [77.29089325926482, 28.72461991045587], [77.29104691592772, 28.724368227144385], [77.29462447352118, 28.71850977850799], [77.2938530820123, 28.713557060198188], [77.29509038307268, 28.7070330410502], [77.30312431192496, 28.70434348419933], [77.30581072337357, 28.70760858582894], [77.31166707844272, 28.71129384143181], [77.31643073365667, 28.712231616501384], [77.32737700698904, 28.711763774281142], [77.33370385341296, 28.71041555057635], [77.3318683847603, 28.70637169176919], [77.33003330949782, 28.69819532955926], [77.33111759751431, 28.694218477306148], [77.33775169207539, 28.68638048190534], [77.33729417289436, 28.67969463083855], [77.33578362518006, 28.677391375868243], [77.3355514988024, 28.677037384140963], [77.32807488393293, 28.673885185094285], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;name&quot;: &quot;delhi_simple&quot;, &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_d4fa9d1a1988bdc4110fffda7888182c.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_d4fa9d1a1988bdc4110fffda7888182c.addTo(map_40afe45e5cb8376e52931494b8b852e5);
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+<div id="381cba0d" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save_delhi_geojson.py</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the shapefile</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>shapefile_path <span class="op">=</span> <span class="st">"data/shapefile/Districts.shp"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>delhi <span class="op">=</span> gpd.read_file(shapefile_path)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplify the geometry to reduce points (speeds up web rendering)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>delhi_simple <span class="op">=</span> delhi.copy()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>delhi_simple[<span class="st">'geometry'</span>] <span class="op">=</span> delhi_simple[<span class="st">'geometry'</span>].simplify(tolerance<span class="op">=</span><span class="fl">0.001</span>, preserve_topology<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Save as GeoJSON</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>delhi_simple.to_file(<span class="st">"data/shapefile/delhi_simple_001.geojson"</span>, driver<span class="op">=</span><span class="st">"GeoJSON"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"GeoJSON with tolerance = 0.001"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GeoJSON with tolerance = 0.001</code></pre>
+</div>
+</div>
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_d9d772f777f1f1933d034aa9367f2fc7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_d9d772f777f1f1933d034aa9367f2fc7&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d9d772f777f1f1933d034aa9367f2fc7 = L.map(
+                &quot;map_d9d772f777f1f1933d034aa9367f2fc7&quot;,
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 1,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;maxBounds&quot;: [
+[
+28.403052135245247,
+76.84251435748224,
+],
+[
+28.879321705537276,
+77.34765178578583,
+],
+],
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5219faeaeaab742ab24b4e95bce5031c = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 10,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_5219faeaeaab742ab24b4e95bce5031c.addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+            map_d9d772f777f1f1933d034aa9367f2fc7.fitBounds(
+                [[28.403052135245247, 76.84251435748224], [28.879321705537276, 77.34765178578583]],
+                {}
+            );
+        
+    
+            var marker_9a10bd3e36f7ef2927eb2153fd68385c = L.marker(
+                [28.695381, 77.181665],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_8f2d06010400fb2168de1609f10250cb = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_d9e3af409d78a0b46c039194e0f4e323 = $(`<div id=&quot;html_d9e3af409d78a0b46c039194e0f4e323&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_8f2d06010400fb2168de1609f10250cb.setContent(html_d9e3af409d78a0b46c039194e0f4e323);
+            
+        
+
+        marker_9a10bd3e36f7ef2927eb2153fd68385c.bindPopup(popup_8f2d06010400fb2168de1609f10250cb)
+        ;
+
+        
+    
+    
+            marker_9a10bd3e36f7ef2927eb2153fd68385c.bindTooltip(
+                `<div>
+                     Ashok Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_47c1c939eee988d3127c24e097ec4d2e = L.marker(
+                [28.7762, 77.051074],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_475165f4e58770d29704a445ce314941 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_e754097c223e7b05eea94481c238ee6d = $(`<div id=&quot;html_e754097c223e7b05eea94481c238ee6d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_475165f4e58770d29704a445ce314941.setContent(html_e754097c223e7b05eea94481c238ee6d);
+            
+        
+
+        marker_47c1c939eee988d3127c24e097ec4d2e.bindPopup(popup_475165f4e58770d29704a445ce314941)
+        ;
+
+        
+    
+    
+            marker_47c1c939eee988d3127c24e097ec4d2e.bindTooltip(
+                `<div>
+                     Bawana, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_5040cac9c74da58fd884f2e25ffc9e2c = L.marker(
+                [28.498571, 77.26484],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_c5612f12fdca6d0d7e5a94fb8aac79ba = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_51d130ba5c4ff776eeb592671d729110 = $(`<div id=&quot;html_51d130ba5c4ff776eeb592671d729110&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_c5612f12fdca6d0d7e5a94fb8aac79ba.setContent(html_51d130ba5c4ff776eeb592671d729110);
+            
+        
+
+        marker_5040cac9c74da58fd884f2e25ffc9e2c.bindPopup(popup_c5612f12fdca6d0d7e5a94fb8aac79ba)
+        ;
+
+        
+    
+    
+            marker_5040cac9c74da58fd884f2e25ffc9e2c.bindTooltip(
+                `<div>
+                     Dr. Karni Singh Shooting Range, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_6328a2712cf226225e6a96efb7935e19 = L.marker(
+                [28.5710274, 77.0719006],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_063183080d34ce148529eb39f7035e11 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_a760ded3e4bdd8ac4d295c010833f08f = $(`<div id=&quot;html_a760ded3e4bdd8ac4d295c010833f08f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_063183080d34ce148529eb39f7035e11.setContent(html_a760ded3e4bdd8ac4d295c010833f08f);
+            
+        
+
+        marker_6328a2712cf226225e6a96efb7935e19.bindPopup(popup_063183080d34ce148529eb39f7035e11)
+        ;
+
+        
+    
+    
+            marker_6328a2712cf226225e6a96efb7935e19.bindTooltip(
+                `<div>
+                     Dwarka-Sector 8, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_3354f28393bf4b65d03b8007a021dc00 = L.marker(
+                [28.73282, 77.170633],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_ed01c4fe22b1faddb32646d8dee99452 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_9d25a6d23c9807d573fbda76b1f1dd1a = $(`<div id=&quot;html_9d25a6d23c9807d573fbda76b1f1dd1a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ed01c4fe22b1faddb32646d8dee99452.setContent(html_9d25a6d23c9807d573fbda76b1f1dd1a);
+            
+        
+
+        marker_3354f28393bf4b65d03b8007a021dc00.bindPopup(popup_ed01c4fe22b1faddb32646d8dee99452)
+        ;
+
+        
+    
+    
+            marker_3354f28393bf4b65d03b8007a021dc00.bindTooltip(
+                `<div>
+                     Jahangirpuri, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_0ea84b7ede1ad5e825a03c5e5b85023e = L.marker(
+                [28.58028, 77.233829],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_53750a754902be2ebdd85301ddc3f953 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_a8ac356288317c414631d05e5feac159 = $(`<div id=&quot;html_a8ac356288317c414631d05e5feac159&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_53750a754902be2ebdd85301ddc3f953.setContent(html_a8ac356288317c414631d05e5feac159);
+            
+        
+
+        marker_0ea84b7ede1ad5e825a03c5e5b85023e.bindPopup(popup_53750a754902be2ebdd85301ddc3f953)
+        ;
+
+        
+    
+    
+            marker_0ea84b7ede1ad5e825a03c5e5b85023e.bindTooltip(
+                `<div>
+                     Jawaharlal Nehru Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_faefc755becfdd27ded38e2d3424be41 = L.marker(
+                [28.611281, 77.237738],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_e8e195e22f2e0a5fafc3a9e476be8deb = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_8805b884bfc1277cb2be36d1d6b37526 = $(`<div id=&quot;html_8805b884bfc1277cb2be36d1d6b37526&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_e8e195e22f2e0a5fafc3a9e476be8deb.setContent(html_8805b884bfc1277cb2be36d1d6b37526);
+            
+        
+
+        marker_faefc755becfdd27ded38e2d3424be41.bindPopup(popup_e8e195e22f2e0a5fafc3a9e476be8deb)
+        ;
+
+        
+    
+    
+            marker_faefc755becfdd27ded38e2d3424be41.bindTooltip(
+                `<div>
+                     Major Dhyan Chand National Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_30d369bfeeab2b4255f80e86a2c63a1b = L.marker(
+                [28.636429, 77.201067],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_be30034c258b618c6fbc14c188acc889 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_b4ee5779d0d808170e88bf0f5e9bcf40 = $(`<div id=&quot;html_b4ee5779d0d808170e88bf0f5e9bcf40&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_be30034c258b618c6fbc14c188acc889.setContent(html_b4ee5779d0d808170e88bf0f5e9bcf40);
+            
+        
+
+        marker_30d369bfeeab2b4255f80e86a2c63a1b.bindPopup(popup_be30034c258b618c6fbc14c188acc889)
+        ;
+
+        
+    
+    
+            marker_30d369bfeeab2b4255f80e86a2c63a1b.bindTooltip(
+                `<div>
+                     Mandir Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_55852d3445aec2fd9f429ee48787673d = L.marker(
+                [28.684678, 77.076574],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_be41220351f7b8e76b687830aca15baf = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3211ff72e39af2f6700bdde6e9667932 = $(`<div id=&quot;html_3211ff72e39af2f6700bdde6e9667932&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_be41220351f7b8e76b687830aca15baf.setContent(html_3211ff72e39af2f6700bdde6e9667932);
+            
+        
+
+        marker_55852d3445aec2fd9f429ee48787673d.bindPopup(popup_be41220351f7b8e76b687830aca15baf)
+        ;
+
+        
+    
+    
+            marker_55852d3445aec2fd9f429ee48787673d.bindTooltip(
+                `<div>
+                     Mundka, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_8b9c85418c084dca1cd0e1c693d1744f = L.marker(
+                [28.570173, 76.933762],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_d81c55d9042e26c7bb0827df3af19a7e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3dad929985e8202c03fe4d2d9e741c6b = $(`<div id=&quot;html_3dad929985e8202c03fe4d2d9e741c6b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_d81c55d9042e26c7bb0827df3af19a7e.setContent(html_3dad929985e8202c03fe4d2d9e741c6b);
+            
+        
+
+        marker_8b9c85418c084dca1cd0e1c693d1744f.bindPopup(popup_d81c55d9042e26c7bb0827df3af19a7e)
+        ;
+
+        
+    
+    
+            marker_8b9c85418c084dca1cd0e1c693d1744f.bindTooltip(
+                `<div>
+                     Najafgarh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_a9c39dc7cdb9851090a7b2c68b8553c2 = L.marker(
+                [28.822836, 77.101981],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_1c4c42dbd38973d272c4ecb6e3da7ad3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_5f6f1ddc0b6ff35089aa8543854a4854 = $(`<div id=&quot;html_5f6f1ddc0b6ff35089aa8543854a4854&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_1c4c42dbd38973d272c4ecb6e3da7ad3.setContent(html_5f6f1ddc0b6ff35089aa8543854a4854);
+            
+        
+
+        marker_a9c39dc7cdb9851090a7b2c68b8553c2.bindPopup(popup_1c4c42dbd38973d272c4ecb6e3da7ad3)
+        ;
+
+        
+    
+    
+            marker_a9c39dc7cdb9851090a7b2c68b8553c2.bindTooltip(
+                `<div>
+                     Narela, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_4a23e69cb736d0cb1d224711f6f05980 = L.marker(
+                [28.56789, 77.250515],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_4e286b654e01803d6daca0f51bbe30de = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_fa22f474042a800dc2af9601fda8e379 = $(`<div id=&quot;html_fa22f474042a800dc2af9601fda8e379&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_4e286b654e01803d6daca0f51bbe30de.setContent(html_fa22f474042a800dc2af9601fda8e379);
+            
+        
+
+        marker_4a23e69cb736d0cb1d224711f6f05980.bindPopup(popup_4e286b654e01803d6daca0f51bbe30de)
+        ;
+
+        
+    
+    
+            marker_4a23e69cb736d0cb1d224711f6f05980.bindTooltip(
+                `<div>
+                     Nehru Nagar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_d98f76edef8c8ab7a0d3da8a5e0d8ee2 = L.marker(
+                [28.530785, 77.271255],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_c4327c3124a19a162cb9cb0d7d1390c3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_6c7fb8200761358a85072774019a6780 = $(`<div id=&quot;html_6c7fb8200761358a85072774019a6780&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_c4327c3124a19a162cb9cb0d7d1390c3.setContent(html_6c7fb8200761358a85072774019a6780);
+            
+        
+
+        marker_d98f76edef8c8ab7a0d3da8a5e0d8ee2.bindPopup(popup_c4327c3124a19a162cb9cb0d7d1390c3)
+        ;
+
+        
+    
+    
+            marker_d98f76edef8c8ab7a0d3da8a5e0d8ee2.bindTooltip(
+                `<div>
+                     Okhla Phase-2, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_7d8ecaf37308d929e3e961170342997d = L.marker(
+                [28.623763, 77.287209],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_0782eb8d3050113a0a1f09497dbf3cec = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_c0bd1b2219ededee38e264e402243d54 = $(`<div id=&quot;html_c0bd1b2219ededee38e264e402243d54&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_0782eb8d3050113a0a1f09497dbf3cec.setContent(html_c0bd1b2219ededee38e264e402243d54);
+            
+        
+
+        marker_7d8ecaf37308d929e3e961170342997d.bindPopup(popup_0782eb8d3050113a0a1f09497dbf3cec)
+        ;
+
+        
+    
+    
+            marker_7d8ecaf37308d929e3e961170342997d.bindTooltip(
+                `<div>
+                     Patparganj, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_8e87a882b97d2eecc3d033c8a9af2430 = L.marker(
+                [28.674045, 77.131023],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_70ffdc7f65dca0468d8a587fba5d8891 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_6bd5a8a271203bffc8328cf696196f29 = $(`<div id=&quot;html_6bd5a8a271203bffc8328cf696196f29&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_70ffdc7f65dca0468d8a587fba5d8891.setContent(html_6bd5a8a271203bffc8328cf696196f29);
+            
+        
+
+        marker_8e87a882b97d2eecc3d033c8a9af2430.bindPopup(popup_70ffdc7f65dca0468d8a587fba5d8891)
+        ;
+
+        
+    
+    
+            marker_8e87a882b97d2eecc3d033c8a9af2430.bindTooltip(
+                `<div>
+                     Punjabi Bagh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_60269505a4eab46a0378d448ded702c9 = L.marker(
+                [28.639652, 77.146275],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_49a1743ac50d9be34da6714e31c9cc61 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_aa9febe8e06330a9701d8570fb2a9681 = $(`<div id=&quot;html_aa9febe8e06330a9701d8570fb2a9681&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_49a1743ac50d9be34da6714e31c9cc61.setContent(html_aa9febe8e06330a9701d8570fb2a9681);
+            
+        
+
+        marker_60269505a4eab46a0378d448ded702c9.bindPopup(popup_49a1743ac50d9be34da6714e31c9cc61)
+        ;
+
+        
+    
+    
+            marker_60269505a4eab46a0378d448ded702c9.bindTooltip(
+                `<div>
+                     Pusa, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_1a9646c2ead993c2c359e4836f2ad77b = L.marker(
+                [28.563262, 77.186937],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_8fdd25e0ed32e911742b88ed376fad24 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_47deadc7d6d71bf9e3b157e7ac1acc38 = $(`<div id=&quot;html_47deadc7d6d71bf9e3b157e7ac1acc38&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_8fdd25e0ed32e911742b88ed376fad24.setContent(html_47deadc7d6d71bf9e3b157e7ac1acc38);
+            
+        
+
+        marker_1a9646c2ead993c2c359e4836f2ad77b.bindPopup(popup_8fdd25e0ed32e911742b88ed376fad24)
+        ;
+
+        
+    
+    
+            marker_1a9646c2ead993c2c359e4836f2ad77b.bindTooltip(
+                `<div>
+                     R K Puram, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_ae51e1ac6ae041537b7a18c4d34918c0 = L.marker(
+                [28.732528, 77.11992],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_624b5546f6567ecbc53de3e4ce350ad9 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_d6864010b0f57666191f10dc3cbddb7d = $(`<div id=&quot;html_d6864010b0f57666191f10dc3cbddb7d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_624b5546f6567ecbc53de3e4ce350ad9.setContent(html_d6864010b0f57666191f10dc3cbddb7d);
+            
+        
+
+        marker_ae51e1ac6ae041537b7a18c4d34918c0.bindPopup(popup_624b5546f6567ecbc53de3e4ce350ad9)
+        ;
+
+        
+    
+    
+            marker_ae51e1ac6ae041537b7a18c4d34918c0.bindTooltip(
+                `<div>
+                     Rohini, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_db28a3a51aa31ffaa540dfdf7cd21782 = L.marker(
+                [28.710508, 77.249485],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_7ba27c1ca8561fc1b7c5d31da21fb329 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_7a2b7ef0e23f4c5f64e11255eef96837 = $(`<div id=&quot;html_7a2b7ef0e23f4c5f64e11255eef96837&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_7ba27c1ca8561fc1b7c5d31da21fb329.setContent(html_7a2b7ef0e23f4c5f64e11255eef96837);
+            
+        
+
+        marker_db28a3a51aa31ffaa540dfdf7cd21782.bindPopup(popup_7ba27c1ca8561fc1b7c5d31da21fb329)
+        ;
+
+        
+    
+    
+            marker_db28a3a51aa31ffaa540dfdf7cd21782.bindTooltip(
+                `<div>
+                     Sonia Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_020f018b4080e33dc596c925cd967440 = L.marker(
+                [28.531346, 77.190156],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_c1c3f66c57bdda74af195ba0ab80a6b8 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_798f04c9abef7fbb1d48625f876f16e1 = $(`<div id=&quot;html_798f04c9abef7fbb1d48625f876f16e1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_c1c3f66c57bdda74af195ba0ab80a6b8.setContent(html_798f04c9abef7fbb1d48625f876f16e1);
+            
+        
+
+        marker_020f018b4080e33dc596c925cd967440.bindPopup(popup_c1c3f66c57bdda74af195ba0ab80a6b8)
+        ;
+
+        
+    
+    
+            marker_020f018b4080e33dc596c925cd967440.bindTooltip(
+                `<div>
+                     Sri Aurobindo Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_9440c71596bc672624865b564f3e648f = L.marker(
+                [28.672342, 77.31526],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_450a090d690ac6f354e26131b6f33f42 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ca8a9fd01bb2e73487faf7a9cf720220 = $(`<div id=&quot;html_ca8a9fd01bb2e73487faf7a9cf720220&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_450a090d690ac6f354e26131b6f33f42.setContent(html_ca8a9fd01bb2e73487faf7a9cf720220);
+            
+        
+
+        marker_9440c71596bc672624865b564f3e648f.bindPopup(popup_450a090d690ac6f354e26131b6f33f42)
+        ;
+
+        
+    
+    
+            marker_9440c71596bc672624865b564f3e648f.bindTooltip(
+                `<div>
+                     Vivek Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_33ee8172402abc319a1332223906ad6b = L.marker(
+                [28.699793, 77.165453],
+                {
+}
+            ).addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+    
+        var popup_f2d38c57c2a9541a63ea2445e3a0e940 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_62da019fcefd4a78e16f0be0d7159edc = $(`<div id=&quot;html_62da019fcefd4a78e16f0be0d7159edc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_f2d38c57c2a9541a63ea2445e3a0e940.setContent(html_62da019fcefd4a78e16f0be0d7159edc);
+            
+        
+
+        marker_33ee8172402abc319a1332223906ad6b.bindPopup(popup_f2d38c57c2a9541a63ea2445e3a0e940)
+        ;
+
+        
+    
+    
+            marker_33ee8172402abc319a1332223906ad6b.bindTooltip(
+                `<div>
+                     Wazirpur, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+
+        function geo_json_7b2a18617eee6f158f3a454b46e31845_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7b2a18617eee6f158f3a454b46e31845 = L.geoJson(null, {
+                onEachFeature: geo_json_7b2a18617eee6f158f3a454b46e31845_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_7b2a18617eee6f158f3a454b46e31845_add (data) {
+            geo_json_7b2a18617eee6f158f3a454b46e31845
+                .addData(data);
+        }
+            geo_json_7b2a18617eee6f158f3a454b46e31845_add({&quot;crs&quot;: {&quot;properties&quot;: {&quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;}, &quot;type&quot;: &quot;name&quot;}, &quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.32544205436459, 28.645907030477645], [77.3213046867176, 28.6391865225465], [77.33105474972714, 28.630560992626954], [77.34055944724112, 28.62593061720227], [77.34431417293108, 28.62150692359716], [77.34716790087138, 28.616412145357774], [77.34625279456911, 28.603392151011704], [77.31716425390505, 28.591442137128972], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.3051413673883, 28.555732227913847], [77.31300984258708, 28.544969186315203], [77.33144856523451, 28.530363873542257], [77.34389780963718, 28.51519772004282], [77.3467555736686, 28.510166443541074], [77.34765178578583, 28.50345539386918], [77.34437051094167, 28.505584654180733], [77.33889524476847, 28.50282321673253], [77.33657377596872, 28.49795786780577], [77.33159199450778, 28.493882989277235], [77.31672824601804, 28.485191441211544], [77.30612106397625, 28.485668662545912], [77.29564126151455, 28.490795216269316], [77.28790080744703, 28.492677906822067], [77.28096052855314, 28.491564112316944], [77.26991008923501, 28.48297439297787], [77.26378569834469, 28.48009357731464], [77.25244400621256, 28.47915064567805], [77.24218273391853, 28.47035216349048], [77.2373837747999, 28.464308874093746], [77.23549659680403, 28.45856822564237], [77.2361795589214, 28.454817613335457], [77.24285892495196, 28.45400642953283], [77.24961574516955, 28.44815818475137], [77.2530268026152, 28.442036338229865], [77.25403011720421, 28.436207899655177], [77.25291103475394, 28.428222896042964], [77.25034156499044, 28.42340186441194], [77.22497561624277, 28.410302025107384], [77.21556351810086, 28.407962744783415], [77.18913212642883, 28.406957202651455], [77.1753786965703, 28.403052135245247], [77.16397705230139, 28.415900047311332], [77.1615020553078, 28.42292256332066], [77.15205411077763, 28.430329863056606], [77.13370781022178, 28.433864579383528], [77.12793400653317, 28.437064448307424], [77.12215454261144, 28.444875475495117], [77.11240519680932, 28.46510414626018], [77.1112007528156, 28.471134423109145], [77.11737741977366, 28.488521191935334], [77.10002289768582, 28.500122093855918], [77.09568418742538, 28.505535157149794], [77.08218639784023, 28.514969729422507], [77.07717268518716, 28.515336739053954], [77.06664152553824, 28.50856863575967], [77.05844843242112, 28.509950156564734], [77.0513371066247, 28.513677486259233], [77.04283624252213, 28.523067890818023], [77.02931240272851, 28.528010242359837], [77.02533919539864, 28.528069326699114], [77.01578176421805, 28.537520967096555], [77.0098872844861, 28.536763689882264], [77.00562253774439, 28.531655257826593], [77.00787223541388, 28.52689841227009], [77.02105034555119, 28.518854424369597], [77.02058822779065, 28.512771093394687], [77.01519124948031, 28.509187790973435], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.93223080421859, 28.51408299365603], [76.91802423683191, 28.509739375596542], [76.90700264854304, 28.51260929400555], [76.89633714122468, 28.506079493782593], [76.888890648998, 28.503906424160505], [76.88332862462205, 28.509253264411544], [76.88899488687875, 28.51885231626565], [76.88586106805107, 28.52326006274611], [76.86877345556685, 28.536804588992013], [76.86630758723604, 28.542702284659295], [76.84717142496928, 28.55189587437348], [76.84251435748224, 28.577422597419602], [76.84464047343846, 28.586319016621548], [76.8598587067249, 28.585022638082673], [76.86444686291388, 28.58724614495722], [76.88765759795864, 28.632525240430876], [76.90341270731547, 28.62762487083816], [76.9070096334832, 28.627671664479006], [76.91375069989202, 28.63280689778049], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.93572361453052, 28.624101213998003], [76.94367249234084, 28.632492501025634], [76.92798055656309, 28.648132152727797], [76.92727591837325, 28.652127844819315], [76.93291729164164, 28.664080331174244], [76.93955322250906, 28.669276359015303], [76.95238879168892, 28.669957511543057], [76.95710295606034, 28.672006049929216], [76.95579604403122, 28.678325016988953], [76.96409474481646, 28.695371953722788], [76.96450443108594, 28.700214302077242], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.95915313241429, 28.736356587893432], [76.96026542078114, 28.741514679343066], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.95397161658781, 28.773408004550145], [76.95234457925335, 28.78264123627383], [76.95311925089919, 28.789998472271208], [76.94750610430553, 28.79838957173434], [76.94740075351014, 28.804046761530323], [76.95237135087149, 28.815574517806848], [76.95828556327555, 28.81255028052861], [76.96584862691063, 28.81490894886266], [76.96810662971122, 28.825219642126683], [76.97093040117177, 28.82655719312726], [76.98065730358687, 28.81997686114232], [76.9837952124208, 28.820710136769204], [76.98967913275564, 28.831574872108764], [76.99363678918797, 28.833955941949693], [76.99986666974684, 28.834022508788333], [77.01676989532704, 28.830110428072633], [77.0289528247558, 28.831891732354034], [77.04170609206948, 28.831609861967735], [77.04786158554664, 28.84759933243861], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.08041327970415, 28.874797294780972], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.10973064204086, 28.86721775214927], [77.11997601034905, 28.860891041976934], [77.13883755570389, 28.86013342522956], [77.14536199101484, 28.853229476866307], [77.14586011244924, 28.8474284358327], [77.14406717911004, 28.83944953660806], [77.14946011330588, 28.836399908015032], [77.16092954944801, 28.84317053769546], [77.17490730047335, 28.85535417182215], [77.19398918870692, 28.857001316197163], [77.19721033144612, 28.861519456499753], [77.21515278829848, 28.857591132498012], [77.22180895061327, 28.84960424534348], [77.22093899702955, 28.83996404332024], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.20468972213968, 28.796959832985785], [77.207169612488, 28.789949943276], [77.21291649218315, 28.784070027014202], [77.2186797593756, 28.781845232583745], [77.23493032368563, 28.782273792343755], [77.2323205733389, 28.778380986561967], [77.2273273412673, 28.776331649021603], [77.2392638482639, 28.76707241371082], [77.24820531120781, 28.75384868265035], [77.25868312652483, 28.752152873178126], [77.26341465224546, 28.74740002465139], [77.26207910610313, 28.740112503092273], [77.26637280166048, 28.73454010236981], [77.27012818633878, 28.732723939288697], [77.27657100341791, 28.7338795378577], [77.28133040053568, 28.732781866462926], [77.28706457692951, 28.72898544461337], [77.29462447352118, 28.71850977850799], [77.29509038307268, 28.7070330410502], [77.30312431192496, 28.70434348419933], [77.31166707844272, 28.71129384143181], [77.31643073365667, 28.712231616501384], [77.33370385341296, 28.71041555057635], [77.33003330949782, 28.69819532955926], [77.33111759751431, 28.694218477306148], [77.33775169207539, 28.68638048190534], [77.33729417289436, 28.67969463083855], [77.3355514988024, 28.677037384140963], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;name&quot;: &quot;delhi_simple_001&quot;, &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_7b2a18617eee6f158f3a454b46e31845.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_7b2a18617eee6f158f3a454b46e31845.addTo(map_d9d772f777f1f1933d034aa9367f2fc7);
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+<div id="50b87ffa" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save_delhi_geojson.py</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the shapefile</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>shapefile_path <span class="op">=</span> <span class="st">"data/shapefile/Districts.shp"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>delhi <span class="op">=</span> gpd.read_file(shapefile_path)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Simplify the geometry to reduce points (speeds up web rendering)</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>delhi_simple <span class="op">=</span> delhi.copy()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>delhi_simple[<span class="st">'geometry'</span>] <span class="op">=</span> delhi_simple[<span class="st">'geometry'</span>].simplify(tolerance<span class="op">=</span><span class="fl">0.005</span>, preserve_topology<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Save as GeoJSON</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>delhi_simple.to_file(<span class="st">"data/shapefile/delhi_simple_005.geojson"</span>, driver<span class="op">=</span><span class="st">"GeoJSON"</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"GeoJSON with tolerance = 0.005"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GeoJSON with tolerance = 0.005</code></pre>
+</div>
+</div>
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_3bdf6cea8de871c0a501238e751cabcf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_3bdf6cea8de871c0a501238e751cabcf&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3bdf6cea8de871c0a501238e751cabcf = L.map(
+                &quot;map_3bdf6cea8de871c0a501238e751cabcf&quot;,
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 1,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+  &quot;maxBounds&quot;: [
+[
+28.403052135245247,
+76.84464047343846,
+],
+[
+28.879321705537276,
+77.34765178578583,
+],
+],
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e1c88d907c06f391747bd44818e2c59d = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 10,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_e1c88d907c06f391747bd44818e2c59d.addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+            map_3bdf6cea8de871c0a501238e751cabcf.fitBounds(
+                [[28.403052135245247, 76.84464047343846], [28.879321705537276, 77.34765178578583]],
+                {}
+            );
+        
+    
+            var marker_ce39ac4705621d6612b9d849a66f8687 = L.marker(
+                [28.695381, 77.181665],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_35d18b2860610126c22bc30fc9fe6048 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_fd93069a414129a61438b102a4f9ad29 = $(`<div id=&quot;html_fd93069a414129a61438b102a4f9ad29&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Ashok Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_35d18b2860610126c22bc30fc9fe6048.setContent(html_fd93069a414129a61438b102a4f9ad29);
+            
+        
+
+        marker_ce39ac4705621d6612b9d849a66f8687.bindPopup(popup_35d18b2860610126c22bc30fc9fe6048)
+        ;
+
+        
+    
+    
+            marker_ce39ac4705621d6612b9d849a66f8687.bindTooltip(
+                `<div>
+                     Ashok Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_c9de5828f56733ee797366af31a37b51 = L.marker(
+                [28.7762, 77.051074],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_8894b0a19b05e90aae1c1da85ff4f824 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_738deddf952b4dd4cc36d4f5d0f8c729 = $(`<div id=&quot;html_738deddf952b4dd4cc36d4f5d0f8c729&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Bawana, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_8894b0a19b05e90aae1c1da85ff4f824.setContent(html_738deddf952b4dd4cc36d4f5d0f8c729);
+            
+        
+
+        marker_c9de5828f56733ee797366af31a37b51.bindPopup(popup_8894b0a19b05e90aae1c1da85ff4f824)
+        ;
+
+        
+    
+    
+            marker_c9de5828f56733ee797366af31a37b51.bindTooltip(
+                `<div>
+                     Bawana, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_012f42b6a3591697289f4a88a8081653 = L.marker(
+                [28.498571, 77.26484],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_be864f11ffb700e0a1a619897733f156 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_84d2b6f11b80e613cedcfb21fba5ea8b = $(`<div id=&quot;html_84d2b6f11b80e613cedcfb21fba5ea8b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dr. Karni Singh Shooting Range, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_be864f11ffb700e0a1a619897733f156.setContent(html_84d2b6f11b80e613cedcfb21fba5ea8b);
+            
+        
+
+        marker_012f42b6a3591697289f4a88a8081653.bindPopup(popup_be864f11ffb700e0a1a619897733f156)
+        ;
+
+        
+    
+    
+            marker_012f42b6a3591697289f4a88a8081653.bindTooltip(
+                `<div>
+                     Dr. Karni Singh Shooting Range, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_4b592fba2eb3c206c717e01e0f08d1e5 = L.marker(
+                [28.5710274, 77.0719006],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_a9912c3a8aacfd08ab32ab9a2e4d76f9 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_d6825e777c72eddd6679956ea8c60641 = $(`<div id=&quot;html_d6825e777c72eddd6679956ea8c60641&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Dwarka-Sector 8, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_a9912c3a8aacfd08ab32ab9a2e4d76f9.setContent(html_d6825e777c72eddd6679956ea8c60641);
+            
+        
+
+        marker_4b592fba2eb3c206c717e01e0f08d1e5.bindPopup(popup_a9912c3a8aacfd08ab32ab9a2e4d76f9)
+        ;
+
+        
+    
+    
+            marker_4b592fba2eb3c206c717e01e0f08d1e5.bindTooltip(
+                `<div>
+                     Dwarka-Sector 8, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_eeddacd20760effa249cc157f56695f4 = L.marker(
+                [28.73282, 77.170633],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_21c7ee8b98b7a2891f459444a575be11 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_17d562bbf99227e246bde040bebecc63 = $(`<div id=&quot;html_17d562bbf99227e246bde040bebecc63&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jahangirpuri, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_21c7ee8b98b7a2891f459444a575be11.setContent(html_17d562bbf99227e246bde040bebecc63);
+            
+        
+
+        marker_eeddacd20760effa249cc157f56695f4.bindPopup(popup_21c7ee8b98b7a2891f459444a575be11)
+        ;
+
+        
+    
+    
+            marker_eeddacd20760effa249cc157f56695f4.bindTooltip(
+                `<div>
+                     Jahangirpuri, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_bf48e3269b7c72502ea4c8bdd936e382 = L.marker(
+                [28.58028, 77.233829],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_fa17c6e2e6f1553d5962a152f8cbca39 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_ba40cc0e91dc82badce2c41c8d5391bc = $(`<div id=&quot;html_ba40cc0e91dc82badce2c41c8d5391bc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Jawaharlal Nehru Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_fa17c6e2e6f1553d5962a152f8cbca39.setContent(html_ba40cc0e91dc82badce2c41c8d5391bc);
+            
+        
+
+        marker_bf48e3269b7c72502ea4c8bdd936e382.bindPopup(popup_fa17c6e2e6f1553d5962a152f8cbca39)
+        ;
+
+        
+    
+    
+            marker_bf48e3269b7c72502ea4c8bdd936e382.bindTooltip(
+                `<div>
+                     Jawaharlal Nehru Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_607b3987203f4575008c64d99fa8aecf = L.marker(
+                [28.611281, 77.237738],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_d1549e4315f3f08e969c31d587eadd51 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_54c95b3f6ef74ce20dbf3a0f5cf13ef0 = $(`<div id=&quot;html_54c95b3f6ef74ce20dbf3a0f5cf13ef0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Major Dhyan Chand National Stadium, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_d1549e4315f3f08e969c31d587eadd51.setContent(html_54c95b3f6ef74ce20dbf3a0f5cf13ef0);
+            
+        
+
+        marker_607b3987203f4575008c64d99fa8aecf.bindPopup(popup_d1549e4315f3f08e969c31d587eadd51)
+        ;
+
+        
+    
+    
+            marker_607b3987203f4575008c64d99fa8aecf.bindTooltip(
+                `<div>
+                     Major Dhyan Chand National Stadium, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_166083cd7d1aac7a2e8a0d02fbad837d = L.marker(
+                [28.636429, 77.201067],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_9d7a70bf5fe485db1174b970023141eb = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_51505fcf35de720fa40f7e0ddf95c861 = $(`<div id=&quot;html_51505fcf35de720fa40f7e0ddf95c861&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mandir Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_9d7a70bf5fe485db1174b970023141eb.setContent(html_51505fcf35de720fa40f7e0ddf95c861);
+            
+        
+
+        marker_166083cd7d1aac7a2e8a0d02fbad837d.bindPopup(popup_9d7a70bf5fe485db1174b970023141eb)
+        ;
+
+        
+    
+    
+            marker_166083cd7d1aac7a2e8a0d02fbad837d.bindTooltip(
+                `<div>
+                     Mandir Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_c81b645e0296f98cfb05066cb1c1629c = L.marker(
+                [28.684678, 77.076574],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_81e5c4958967b6e571c8abcf4de74c40 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_358d98980e5c8e58fc9ed26ca2c79d12 = $(`<div id=&quot;html_358d98980e5c8e58fc9ed26ca2c79d12&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Mundka, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_81e5c4958967b6e571c8abcf4de74c40.setContent(html_358d98980e5c8e58fc9ed26ca2c79d12);
+            
+        
+
+        marker_c81b645e0296f98cfb05066cb1c1629c.bindPopup(popup_81e5c4958967b6e571c8abcf4de74c40)
+        ;
+
+        
+    
+    
+            marker_c81b645e0296f98cfb05066cb1c1629c.bindTooltip(
+                `<div>
+                     Mundka, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_4d8797b0873868cac2be8d892d73d92e = L.marker(
+                [28.570173, 76.933762],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_93bdc8fa9552c6c55b2b213f13a95bed = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_21ef3cda67966fafce34f93455826a74 = $(`<div id=&quot;html_21ef3cda67966fafce34f93455826a74&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Najafgarh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_93bdc8fa9552c6c55b2b213f13a95bed.setContent(html_21ef3cda67966fafce34f93455826a74);
+            
+        
+
+        marker_4d8797b0873868cac2be8d892d73d92e.bindPopup(popup_93bdc8fa9552c6c55b2b213f13a95bed)
+        ;
+
+        
+    
+    
+            marker_4d8797b0873868cac2be8d892d73d92e.bindTooltip(
+                `<div>
+                     Najafgarh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_97914aca87c092622f26b9cf8e36d12a = L.marker(
+                [28.822836, 77.101981],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_ca6b05b40d8683ffcbb52c92b79a3eb9 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_aa5e11ec611612b4a4b7120410f4c24a = $(`<div id=&quot;html_aa5e11ec611612b4a4b7120410f4c24a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Narela, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_ca6b05b40d8683ffcbb52c92b79a3eb9.setContent(html_aa5e11ec611612b4a4b7120410f4c24a);
+            
+        
+
+        marker_97914aca87c092622f26b9cf8e36d12a.bindPopup(popup_ca6b05b40d8683ffcbb52c92b79a3eb9)
+        ;
+
+        
+    
+    
+            marker_97914aca87c092622f26b9cf8e36d12a.bindTooltip(
+                `<div>
+                     Narela, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_40e56d0a856b33e60df36627e00a3655 = L.marker(
+                [28.56789, 77.250515],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_47977724a45e4eb9f29fcd49db381e9f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_7d4b103af96357f90d8c29f50baa8021 = $(`<div id=&quot;html_7d4b103af96357f90d8c29f50baa8021&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Nehru Nagar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_47977724a45e4eb9f29fcd49db381e9f.setContent(html_7d4b103af96357f90d8c29f50baa8021);
+            
+        
+
+        marker_40e56d0a856b33e60df36627e00a3655.bindPopup(popup_47977724a45e4eb9f29fcd49db381e9f)
+        ;
+
+        
+    
+    
+            marker_40e56d0a856b33e60df36627e00a3655.bindTooltip(
+                `<div>
+                     Nehru Nagar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_238870cbf80e9e423e32f12ebd0c0446 = L.marker(
+                [28.530785, 77.271255],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_22c43dd78ff6a8283864ec842fab3f56 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_a15dc9b69b61d257b41baeed4b1fb090 = $(`<div id=&quot;html_a15dc9b69b61d257b41baeed4b1fb090&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Okhla Phase-2, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_22c43dd78ff6a8283864ec842fab3f56.setContent(html_a15dc9b69b61d257b41baeed4b1fb090);
+            
+        
+
+        marker_238870cbf80e9e423e32f12ebd0c0446.bindPopup(popup_22c43dd78ff6a8283864ec842fab3f56)
+        ;
+
+        
+    
+    
+            marker_238870cbf80e9e423e32f12ebd0c0446.bindTooltip(
+                `<div>
+                     Okhla Phase-2, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_595f1e9ae208736d1b7d6edcd1480339 = L.marker(
+                [28.623763, 77.287209],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_83a8059fd253d379e24e19bdb99b7e95 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_86c00f6024530ae7419b603877f75ad9 = $(`<div id=&quot;html_86c00f6024530ae7419b603877f75ad9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Patparganj, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_83a8059fd253d379e24e19bdb99b7e95.setContent(html_86c00f6024530ae7419b603877f75ad9);
+            
+        
+
+        marker_595f1e9ae208736d1b7d6edcd1480339.bindPopup(popup_83a8059fd253d379e24e19bdb99b7e95)
+        ;
+
+        
+    
+    
+            marker_595f1e9ae208736d1b7d6edcd1480339.bindTooltip(
+                `<div>
+                     Patparganj, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_649348ad55c02e9d01dc5af9686f7af2 = L.marker(
+                [28.674045, 77.131023],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_0f4e6d52d1a24f0787ec66421818f904 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_46dbd778b690c8b41fe5c894351deeda = $(`<div id=&quot;html_46dbd778b690c8b41fe5c894351deeda&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Punjabi Bagh, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_0f4e6d52d1a24f0787ec66421818f904.setContent(html_46dbd778b690c8b41fe5c894351deeda);
+            
+        
+
+        marker_649348ad55c02e9d01dc5af9686f7af2.bindPopup(popup_0f4e6d52d1a24f0787ec66421818f904)
+        ;
+
+        
+    
+    
+            marker_649348ad55c02e9d01dc5af9686f7af2.bindTooltip(
+                `<div>
+                     Punjabi Bagh, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_644d857e743098d4a6fef95ebb67abbc = L.marker(
+                [28.639652, 77.146275],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_65a0edd4f1d98cedec522132c8f79f32 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_29d35edd29ace66bf4c5612de19d7176 = $(`<div id=&quot;html_29d35edd29ace66bf4c5612de19d7176&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Pusa, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_65a0edd4f1d98cedec522132c8f79f32.setContent(html_29d35edd29ace66bf4c5612de19d7176);
+            
+        
+
+        marker_644d857e743098d4a6fef95ebb67abbc.bindPopup(popup_65a0edd4f1d98cedec522132c8f79f32)
+        ;
+
+        
+    
+    
+            marker_644d857e743098d4a6fef95ebb67abbc.bindTooltip(
+                `<div>
+                     Pusa, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_272e37673c3d4474ee4b302b92bfee78 = L.marker(
+                [28.563262, 77.186937],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_9c2439448e5186a7cdd207dc30340f8c = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_fe1896fd103d73b4d3fa5efb3472726d = $(`<div id=&quot;html_fe1896fd103d73b4d3fa5efb3472726d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=R K Puram, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_9c2439448e5186a7cdd207dc30340f8c.setContent(html_fe1896fd103d73b4d3fa5efb3472726d);
+            
+        
+
+        marker_272e37673c3d4474ee4b302b92bfee78.bindPopup(popup_9c2439448e5186a7cdd207dc30340f8c)
+        ;
+
+        
+    
+    
+            marker_272e37673c3d4474ee4b302b92bfee78.bindTooltip(
+                `<div>
+                     R K Puram, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_4be4b9d0c406e0560b53d8ee2ab29584 = L.marker(
+                [28.732528, 77.11992],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_662af603005d92dfcf241a137933ec1c = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_e4e40107fd702629e6d3f305442dd6b8 = $(`<div id=&quot;html_e4e40107fd702629e6d3f305442dd6b8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Rohini, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_662af603005d92dfcf241a137933ec1c.setContent(html_e4e40107fd702629e6d3f305442dd6b8);
+            
+        
+
+        marker_4be4b9d0c406e0560b53d8ee2ab29584.bindPopup(popup_662af603005d92dfcf241a137933ec1c)
+        ;
+
+        
+    
+    
+            marker_4be4b9d0c406e0560b53d8ee2ab29584.bindTooltip(
+                `<div>
+                     Rohini, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_59aa58cdc21356262b1bb0b973135873 = L.marker(
+                [28.710508, 77.249485],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_620331f41b08a710d41a1a182199cb1b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_57bef5d3c2005b0c8b5e6b6874d4bb5a = $(`<div id=&quot;html_57bef5d3c2005b0c8b5e6b6874d4bb5a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sonia Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_620331f41b08a710d41a1a182199cb1b.setContent(html_57bef5d3c2005b0c8b5e6b6874d4bb5a);
+            
+        
+
+        marker_59aa58cdc21356262b1bb0b973135873.bindPopup(popup_620331f41b08a710d41a1a182199cb1b)
+        ;
+
+        
+    
+    
+            marker_59aa58cdc21356262b1bb0b973135873.bindTooltip(
+                `<div>
+                     Sonia Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_e709ac4a1d3eb5931a9be614b6ed649f = L.marker(
+                [28.531346, 77.190156],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_cc398197aee7d98c49c2c549022e29cb = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_727ec533891628eb31760bd9802610a6 = $(`<div id=&quot;html_727ec533891628eb31760bd9802610a6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Sri Aurobindo Marg, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_cc398197aee7d98c49c2c549022e29cb.setContent(html_727ec533891628eb31760bd9802610a6);
+            
+        
+
+        marker_e709ac4a1d3eb5931a9be614b6ed649f.bindPopup(popup_cc398197aee7d98c49c2c549022e29cb)
+        ;
+
+        
+    
+    
+            marker_e709ac4a1d3eb5931a9be614b6ed649f.bindTooltip(
+                `<div>
+                     Sri Aurobindo Marg, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_2fc21a5fe9e7e8a0c5b61ed06e1e160d = L.marker(
+                [28.672342, 77.31526],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_50ebd94d2f2c3856993b2e4a726dba89 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_527eaa92e5af16e7da0fa1669eabb7c7 = $(`<div id=&quot;html_527eaa92e5af16e7da0fa1669eabb7c7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Vivek Vihar, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_50ebd94d2f2c3856993b2e4a726dba89.setContent(html_527eaa92e5af16e7da0fa1669eabb7c7);
+            
+        
+
+        marker_2fc21a5fe9e7e8a0c5b61ed06e1e160d.bindPopup(popup_50ebd94d2f2c3856993b2e4a726dba89)
+        ;
+
+        
+    
+    
+            marker_2fc21a5fe9e7e8a0c5b61ed06e1e160d.bindTooltip(
+                `<div>
+                     Vivek Vihar, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_50bb11bbe244652e343455ca78f73821 = L.marker(
+                [28.699793, 77.165453],
+                {
+}
+            ).addTo(map_3bdf6cea8de871c0a501238e751cabcf);
+        
+    
+        var popup_6046c78793a00b0d4396accf49472864 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_0f6a6313ee46c2870c2119b4ccb8e06c = $(`<div id=&quot;html_0f6a6313ee46c2870c2119b4ccb8e06c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;><a href=&quot;station.html?station=Wazirpur, Delhi - DPCC&quot; target=&quot;_blank&quot;>View Forecast</a></div>`)[0];
+                popup_6046c78793a00b0d4396accf49472864.setContent(html_0f6a6313ee46c2870c2119b4ccb8e06c);
+            
+        
+
+        marker_50bb11bbe244652e343455ca78f73821.bindPopup(popup_6046c78793a00b0d4396accf49472864)
+        ;
+
+        
+    
+    
+            marker_50bb11bbe244652e343455ca78f73821.bindTooltip(
+                `<div>
+                     Wazirpur, Delhi - DPCC
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+
+        function geo_json_7f4985534a21a24aedcd3361bdc384bf_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7f4985534a21a24aedcd3361bdc384bf = L.geoJson(null, {
+                onEachFeature: geo_json_7f4985534a21a24aedcd3361bdc384bf_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_7f4985534a21a24aedcd3361bdc384bf_add (data) {
+            geo_json_7f4985534a21a24aedcd3361bdc384bf
+                .addData(data);
+        }
+            geo_json_7f4985534a21a24aedcd3361bdc384bf_add({&quot;crs&quot;: {&quot;properties&quot;: {&quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;}, &quot;type&quot;: &quot;name&quot;}, &quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[77.32807361937029, 28.67385857690648], [77.3213046867176, 28.6391865225465], [77.34431417293108, 28.62150692359716], [77.34625279456911, 28.603392151011704], [77.31716425390505, 28.591442137128972], [77.30363037479074, 28.574258900229875], [77.30375620751364, 28.561264438305184], [77.34765178578583, 28.50345539386918], [77.31672824601804, 28.485191441211544], [77.28790080744703, 28.492677906822067], [77.25244400621256, 28.47915064567805], [77.23549659680403, 28.45856822564237], [77.24961574516955, 28.44815818475137], [77.25291103475394, 28.428222896042964], [77.22497561624277, 28.410302025107384], [77.1753786965703, 28.403052135245247], [77.15205411077763, 28.430329863056606], [77.12793400653317, 28.437064448307424], [77.11240519680932, 28.46510414626018], [77.11737741977366, 28.488521191935334], [77.08218639784023, 28.514969729422507], [77.05844843242112, 28.509950156564734], [77.01578176421805, 28.537520967096555], [77.00562253774439, 28.531655257826593], [77.02105034555119, 28.518854424369597], [77.01519124948031, 28.509187790973435], [76.97809693899958, 28.522354668094167], [76.9542157538593, 28.508429573644957], [76.90700264854304, 28.51260929400555], [76.888890648998, 28.503906424160505], [76.88586106805107, 28.52326006274611], [76.84717142496928, 28.55189587437348], [76.84464047343846, 28.586319016621548], [76.86444686291388, 28.58724614495722], [76.88765759795864, 28.632525240430876], [76.92009986070609, 28.632690969937748], [76.93340651611648, 28.62350167103948], [76.94367249234084, 28.632492501025634], [76.92727591837325, 28.652127844819315], [76.93955322250906, 28.669276359015303], [76.95710295606034, 28.672006049929216], [76.96450443108594, 28.700214302077242], [76.9511724371652, 28.711890679258342], [76.96060604612987, 28.731320662833408], [76.9481689225967, 28.754502444229256], [76.95658061508905, 28.768908062820497], [76.94750610430553, 28.79838957173434], [76.95237135087149, 28.815574517806848], [76.96584862691063, 28.81490894886266], [76.97093040117177, 28.82655719312726], [76.9837952124208, 28.820710136769204], [76.99363678918797, 28.833955941949693], [77.04170609206948, 28.831609861967735], [77.05999318424534, 28.86800385153041], [77.07591544442103, 28.867804884159074], [77.0861236211929, 28.879321705537276], [77.0936136972754, 28.86939745694931], [77.13883755570389, 28.86013342522956], [77.14946011330588, 28.836399908015032], [77.17490730047335, 28.85535417182215], [77.21515278829848, 28.857591132498012], [77.22763916539562, 28.82995056625787], [77.22392665643166, 28.808163422382506], [77.20488239307566, 28.810023818129128], [77.207169612488, 28.789949943276], [77.23493032368563, 28.782273792343755], [77.2273273412673, 28.776331649021603], [77.26341465224546, 28.74740002465139], [77.26637280166048, 28.73454010236981], [77.28706457692951, 28.72898544461337], [77.29509038307268, 28.7070330410502], [77.33370385341296, 28.71041555057635], [77.33003330949782, 28.69819532955926], [77.33729417289436, 28.67969463083855], [77.32807361937029, 28.67385857690648]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;properties&quot;: {&quot;FID&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;name&quot;: &quot;delhi_simple_005&quot;, &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_7f4985534a21a24aedcd3361bdc384bf.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_7f4985534a21a24aedcd3361bdc384bf.addTo(map_3bdf6cea8de871c0a501238e751cabcf);
         
 </script>
 </html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
