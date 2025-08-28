@@ -1,0 +1,39 @@
+---
+title: "Station Level PM₂.₅ Forecasting"
+format:
+  html:
+    page-layout: full
+---
+
+# Delhi Air Quality Forecast Map
+
+Welcome to the **PM₂.₅ Forecasting Dashboard** for Delhi. This interactive map shows real-time station-level forecasts of air pollution across 22 monitoring stations in the city.
+
+Click on any station marker to view the **3-day PM₂.₅ forecast**, generated using the **TimesFM model**, which analyzes the past 14 days of data to predict future air quality.
+
+<iframe src="delhi_light_map.html" width="100%" height="600px"></iframe>
+
+---
+
+### How this dashboard works
+
+- The map above shows **22 monitoring stations** in Delhi.  
+- Click on any station marker to see its past and **3-day forecast chart**.  
+- Forecasts are updated daily using TimesFM.  
+
+---
+
+### About TimesFM
+
+**TimesFM** (Time Series Foundation Model) is a state-of-the-art forecasting model developed by **Google Research** for univariate time-series prediction. It is designed to generate accurate forecasts using only historical data (no retraining or fine-tuning required).
+
+- **Version used here:** [google/timesfm-2.0-500m-pytorch](https://huggingface.co/google/timesfm-2.0-500m-pytorch)  
+- **Input:** Past **336 hours (14 days)** of PM₂.₅ data per station  
+- **Output:** Predicted **next 72 hours (3 days)** of PM₂.₅ values  
+- **Why TimesFM?**  
+  - **Zero-shot forecasting**: TimesFM can make predictions on new datasets without any additional training.
+  - **Transformer-based architecture**: Built with hundreds of millions of parameters, it captures complex temporal patterns using deep learning.
+  - **Massive training corpus**: Pretrained on over **100 billion time points**, enabling it to generalize across domains like weather, pollution, finance, and more.
+  - **Long context windows**: Supports input sequences up to **512 time steps**, making it ideal for hourly or daily forecasting.
+
+---

@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "forecasting/station.html",
-    "href": "forecasting/station.html",
+    "objectID": "station.html",
+    "href": "station.html",
     "title": "Station Forecast",
     "section": "",
     "text": "Select Station:"
+  },
+  {
+    "objectID": "forecasting.html",
+    "href": "forecasting.html",
+    "title": "Station Level PM₂.₅ Forecasting",
+    "section": "",
+    "text": "Delhi Air Quality Forecast Map\nWelcome to the PM₂.₅ Forecasting Dashboard for Delhi. This interactive map shows real-time station-level forecasts of air pollution across 22 monitoring stations in the city.\nClick on any station marker to view the 3-day PM₂.₅ forecast, generated using the TimesFM model, which analyzes the past 14 days of data to predict future air quality.\n\n\n\n\nHow this dashboard works\n\nThe map above shows 22 monitoring stations in Delhi.\n\nClick on any station marker to see its past and 3-day forecast chart.\n\nForecasts are updated daily using TimesFM.\n\n\n\n\nAbout TimesFM\nTimesFM (Time Series Foundation Model) is a state-of-the-art forecasting model developed by Google Research for univariate time-series prediction. It is designed to generate accurate forecasts using only historical data (no retraining or fine-tuning required).\n\nVersion used here: google/timesfm-2.0-500m-pytorch\n\nInput: Past 336 hours (14 days) of PM₂.₅ data per station\n\nOutput: Predicted next 72 hours (3 days) of PM₂.₅ values\n\nWhy TimesFM?\n\nZero-shot forecasting: TimesFM can make predictions on new datasets without any additional training.\nTransformer-based architecture: Built with hundreds of millions of parameters, it captures complex temporal patterns using deep learning.\nMassive training corpus: Pretrained on over 100 billion time points, enabling it to generalize across domains like weather, pollution, finance, and more.\nLong context windows: Supports input sequences up to 512 time steps, making it ideal for hourly or daily forecasting."
   }
 ]

@@ -1,7 +1,0 @@
----
-title: "PM₂.₅"
----
-
-<iframe src="delhi_map.html" width="100%" height="600px"></iframe>
-
-<iframe src="delhi_light_map.html" width="100%" height="600px"></iframe>

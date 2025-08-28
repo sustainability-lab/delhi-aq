@@ -1,14 +1,16 @@
 project:
   type: website
   resources:
-    - forecasting/data/dataset/timesfm.csv
+    - data/dataset/timesfm_3days.csv
 
 website:
-  title: "PM₂.₅"
+  title: "Delhi Air Quality"
   navbar:
     left:
-      - text: Forecasting
-        href: forecasting/forecasting.qmd
+      - text: Station Level PM₂.₅ Forecasting
+        href: forecasting.qmd
+      - text: Spatial Interpolation
+        href: interpolation.qmd
 
 format:
   html:

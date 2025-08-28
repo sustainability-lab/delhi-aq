@@ -13,5 +13,17 @@
   },
   "forecasting/forecasting.qmd": {
     "forecasting.html": "0091a99b"
+  },
+  "forecasting.qmd": {
+    "forecasting.html": "91a8aa70"
+  },
+  "station.qmd": {
+    "station.html": "22802fe0"
+  },
+  "interpolation.qmd": {
+    "interpolation.html": "9780f5fc"
+  },
+  "interpolation1.qmd": {
+    "interpolation1.html": "4e3d7211"
   }
 }

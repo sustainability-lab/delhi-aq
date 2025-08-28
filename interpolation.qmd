@@ -1,0 +1,8 @@
+---
+title: "Spatial Interpolation"
+format: 
+  html:
+    page-layout: full
+execute:
+  echo: false
+---
