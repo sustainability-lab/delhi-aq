@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Station Forecast – PM₂.₅</title>
+<title>Station Forecast – Delhi Air Quality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,8 +79,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">PM₂.₅</span>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Delhi Air Quality</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,8 +90,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../forecasting/forecasting.html"> 
-<span class="menu-text">Forecasting</span></a>
+    <a class="nav-link" href="./forecasting.html"> 
+<span class="menu-text">Station Level PM₂.₅ Forecasting</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./interpolation.html"> 
+<span class="menu-text">Spatial Interpolation</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -133,19 +137,40 @@ ul.task-list li input[type="checkbox"] {
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f4f6f9;
+  }
+  #forecast-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: auto;
   }
   label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  #station-dropdown {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
   }
   #forecast-chart {
     width: 100%;
-    height: 500px;
-    margin-top: 20px;
+    height: 550px;
   }
 </style>
-<p><label for="station-dropdown">Select Station:</label> <select id="station-dropdown"></select></p>
+<div id="forecast-container">
+<label for="station-dropdown">Select Station:</label> <select id="station-dropdown"></select>
 <div id="forecast-chart">
 
+</div>
 </div>
 <!-- Load Plotly + PapaParse -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -181,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
   // --- CSV + Plotting ---
   let allData = null;
 
-  Papa.parse("./data/dataset/timesfm.csv", {
+  Papa.parse("data/dataset/timesfm_3days.csv", {
     download: true,
     header: true,
     dynamicTyping: true,
@@ -218,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
     if (!allData) return;
 
     const startDate = new Date("2023-10-01T00:00:00");
-    const cutoff = new Date("2023-12-31T23:00:00");
+    const cutoff = new Date("2024-01-03T23:00:00");  // extend till Jan 3
 
     const stationData = allData.filter(row =>
       row.station === station &&
@@ -226,23 +251,62 @@ ul.task-list li input[type="checkbox"] {
       row.Timestamp <= cutoff
     );
 
-
     if (stationData.length === 0) {
-      document.getElementById("forecast-chart").innerHTML = "<p>No data found for this station before cutoff date.</p>";
+      document.getElementById("forecast-chart").innerHTML = "<p>No data found for this station in selected range.</p>";
       return;
     }
 
-    const dates = stationData.map(row => row.Timestamp);
-    const actual = stationData.map(row => row["Actual_PM2.5"]);
-    const predicted = stationData.map(row => row["Predicted_PM2.5"]);
+    // Split ranges
+    const decEnd = new Date("2023-12-31T23:00:00");
+    const janStart = new Date("2024-01-01T00:00:00");
 
-    Plotly.newPlot("forecast-chart", [
-      { x: dates, y: actual, mode: "lines", name: "Actual PM₂.₅" },
-      { x: dates, y: predicted, mode: "lines", name: "Predicted PM₂.₅" }
-    ], {
+    const dataBeforeJan = stationData.filter(row => row.Timestamp <= decEnd);
+    const dataJan = stationData.filter(row => row.Timestamp >= janStart);
+
+    const traces = [];
+
+    // Actual + Predicted till Dec 31 (keep your original style)
+    if (dataBeforeJan.length > 0) {
+      traces.push({
+        x: dataBeforeJan.map(r => r.Timestamp),
+        y: dataBeforeJan.map(r => r["Actual_PM2.5"]),
+        mode: "lines",
+        name: "Actual PM₂.₅"
+      });
+      traces.push({
+        x: dataBeforeJan.map(r => r.Timestamp),
+        y: dataBeforeJan.map(r => r["Predicted_PM2.5"]),
+        mode: "lines",
+        name: "Predicted PM₂.₅"
+      });
+    }
+
+    // Only Predicted for Jan 1–3 (your style)
+    if (dataJan.length > 0) {
+      traces.push({
+        x: dataJan.map(r => r.Timestamp),
+        y: dataJan.map(r => r["Predicted_PM2.5"]),
+        mode: "lines",
+        name: "Forecasted PM₂.₅ (Next 3 Days)"
+      });
+    }
+
+    Plotly.newPlot("forecast-chart", traces, {
       title: station + " PM₂.₅ Forecast",
       xaxis: { title: "Timestamp" },
-      yaxis: { title: "PM₂.₅ (µg/m³)" },
+      yaxis: { 
+        title: "PM₂.₅ (µg/m³)",
+        range: [0, 1000] 
+      },
+      legend: {
+        x: 1,
+        y: 1,
+        xanchor: "right",
+        yanchor: "top",
+        bgcolor: "rgba(255,255,255,0.7)", // optional background
+        bordercolor: "rgba(51, 51, 51, 0.3)",             // optional border
+        borderwidth: 1
+      },
       responsive: true
     });
   }
