@@ -7,20 +7,47 @@ execute:
   echo: false
 ---
 
-## Actual vs Predicted Animations
+**Spatial Interpolation** extends station-level measurements into a **continuous pollution surface** across Delhi, filling the gaps between monitoring stations. 
+It uses spatial correlations in the data to estimate PM₂.₅ values in unsampled areas.
+
+---
+
 <table style="width:100%; text-align:center;">
 <tr>
 <td>
-<h3>Actual Timestamps</h3>
-<video controls autoplay loop width="500">
-  <source src="data/animations/pm25_actual_animation1.mp4" type="video/mp4">
-</video>
+<h4>March</h4>
+<img src="data/animations/pm25_mar.gif" alt="Actual Animation" width="100%">
 </td>
 <td>
-<h3>Predicted Timestamps</h3>
-<video controls autoplay loop width="500">
-  <source src="data/animations/pm25_preds_animation1.mp4" type="video/mp4">
-</video>
+<h4>June</h4>
+<img src="data/animations/pm25_jun.gif" alt="Actual Animation" width="100%">
+</td>
+</tr>
+<tr>
+<td>
+<h4>September</h4>
+<img src="data/animations/pm25_sep.gif" alt="Actual Animation" width="100%">
+</td>
+<td>
+<h4>December</h4>
+<img src="data/animations/pm25_dec.gif" alt="Actual Animation" width="100%">
 </td>
 </tr>
 </table>
+---
+
+### About TabNet
+
+**TabNet** is a deep learning model for tabular data, also introduced by **Google Research**. It is especially useful for combining air quality data with external predictors like weather, traffic, and land use to improve forecasting accuracy.
+
+- **Version used here:** [dreamquark-ai/tabnet](https://arxiv.org/abs/1908.07442)
+- **Input:** Station data of PM₂.₅ + other contextual features
+- **Output:** Predicted PM₂.₅ values at both station and city scale
+- **Why TabNet?**
+
+  - **Interpretable predictions:** Attention masks show which features drive forecasts.
+  - **High performance:** Outperforms many ML models (Random Forest, XGBoost) on structured data.
+  - **Efficient feature learning:** Automatically selects the most relevant predictors at each step.
+  - **Scalable:** Handles large, mixed-type datasets effectively.
+
+TabNet strengthens forecasting by leveraging **multi-source contextual data** for more accurate and explainable predictions.
