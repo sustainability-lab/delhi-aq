@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 3000px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -174,7 +174,6 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<!-- Load Plotly + PapaParse -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script>
@@ -188,7 +187,6 @@ ul.task-list li input[type="checkbox"] {
     "Vivek Vihar, Delhi - DPCC","Wazirpur, Delhi - DPCC"
   ];
 
-  // --- Preselect from query param ---
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -205,7 +203,6 @@ ul.task-list li input[type="checkbox"] {
     dropdown.add(option);
   });
 
-  // --- CSV + Plotting ---
   let allData = null;
 
   Papa.parse("data/dataset/timesfm_3days.csv", {
@@ -219,8 +216,6 @@ ul.task-list li input[type="checkbox"] {
         row.Timestamp = new Date(row.Timestamp);
       });
 
-      console.log("CSV loaded:", allData.length, "rows");
-
       plotForecast(selectedStation);
     },
     error: function(err) {
@@ -229,15 +224,12 @@ ul.task-list li input[type="checkbox"] {
     }
   });
 
-  // --- Dropdown change: update URL + plot ---
   dropdown.addEventListener("change", function() {
     const station = dropdown.value;
 
-    // Update query param in the browser (without reload)
     const newUrl = window.location.pathname + "?station=" + encodeURIComponent(station);
     window.history.replaceState(null, "", newUrl);
 
-    // Update chart instantly
     plotForecast(station);
   });
 
@@ -258,7 +250,6 @@ ul.task-list li input[type="checkbox"] {
       return;
     }
 
-    // Split ranges
     const decEnd = new Date("2023-12-31T23:00:00");
     const janStart = new Date("2024-01-01T00:00:00");
 
@@ -267,7 +258,6 @@ ul.task-list li input[type="checkbox"] {
 
     const traces = [];
 
-    // Actual + Predicted till Dec 31 (keep your original style)
     if (dataBeforeJan.length > 0) {
       traces.push({
         x: dataBeforeJan.map(r => r.Timestamp),
@@ -283,7 +273,6 @@ ul.task-list li input[type="checkbox"] {
       });
     }
 
-    // Only Predicted for Jan 1–3 (your style)
     if (dataJan.length > 0) {
       traces.push({
         x: dataJan.map(r => r.Timestamp),
@@ -305,8 +294,8 @@ ul.task-list li input[type="checkbox"] {
         y: 1,
         xanchor: "right",
         yanchor: "top",
-        bgcolor: "rgba(255,255,255,0.7)", // optional background
-        bordercolor: "rgba(51, 51, 51, 0.3)",             // optional border
+        bgcolor: "rgba(255,255,255,0.7)",
+        bordercolor: "rgba(51, 51, 51, 0.3)",
         borderwidth: 1
       },
       responsive: true
