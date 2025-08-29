@@ -17,7 +17,7 @@ Click on any station marker to view the **3-day PM₂.₅ forecast**, generated 
 
 ### How this dashboard works
 
-- The map above shows **22 monitoring stations** in Delhi.  
+- The map above shows **22 monitoring stations** in Delhi.   
 - Click on any station marker to see its past and **3-day forecast chart**.  
 - Forecasts are updated daily using TimesFM.  
 
