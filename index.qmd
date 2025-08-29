@@ -1,3 +1,6 @@
 ---
 title: "Delhi Air Quality"
+format: 
+  html:
+    page-layout: full
 ---
