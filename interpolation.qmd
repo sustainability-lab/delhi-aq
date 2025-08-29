@@ -16,21 +16,21 @@ It uses spatial correlations in the data to estimate PM₂.₅ values in unsampl
 <tr>
 <td>
 <h4>March</h4>
-<img src="data/animations/pm25_mar.gif" alt="Actual Animation" width="100%">
+<img src="data/animations/pm25_mar_all.gif" alt="Actual Animation" width="100%">
 </td>
 <td>
 <h4>June</h4>
-<img src="data/animations/pm25_jun.gif" alt="Actual Animation" width="100%">
+<img src="data/animations/pm25_jun_all.gif" alt="Actual Animation" width="100%">
 </td>
 </tr>
 <tr>
 <td>
 <h4>September</h4>
-<img src="data/animations/pm25_sep.gif" alt="Actual Animation" width="100%">
+<img src="data/animations/pm25_sep_all.gif" alt="Actual Animation" width="100%">
 </td>
 <td>
 <h4>December</h4>
-<img src="data/animations/pm25_dec.gif" alt="Actual Animation" width="100%">
+<img src="data/animations/pm25_dec_all.gif" alt="Actual Animation" width="100%">
 </td>
 </tr>
 </table>
