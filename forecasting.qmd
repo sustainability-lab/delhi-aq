@@ -1,5 +1,5 @@
 ---
-title: "Station Level PM₂.₅ Forecasting"
+title: ""
 format:
   html:
     page-layout: full

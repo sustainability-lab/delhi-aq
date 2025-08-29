@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Spatial Interpolation – Delhi Air Quality</title>
+<title>interpolation – Delhi Air Quality</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,56 +113,73 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#actual-vs-predicted-animations" id="toc-actual-vs-predicted-animations" class="nav-link active" data-scroll-target="#actual-vs-predicted-animations">Actual vs Predicted Animations</a></li>
+  <li><a href="#delhi-air-quality-interpolation-map" id="toc-delhi-air-quality-interpolation-map" class="nav-link active" data-scroll-target="#delhi-air-quality-interpolation-map">Delhi Air Quality Interpolation Map</a>
+  <ul class="collapse">
+  <li><a href="#about-tabnet" id="toc-about-tabnet" class="nav-link" data-scroll-target="#about-tabnet">About TabNet</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Spatial Interpolation</h1>
-</div>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page-left">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="actual-vs-predicted-animations" class="level2">
-<h2 class="anchored" data-anchor-id="actual-vs-predicted-animations">Actual vs Predicted Animations</h2>
+<section id="delhi-air-quality-interpolation-map" class="level1">
+<h1>Delhi Air Quality Interpolation Map</h1>
+<p><strong>Spatial Interpolation</strong> extends station-level measurements into a <strong>continuous pollution surface</strong> across Delhi, filling the gaps between monitoring stations. It uses spatial correlations in the data to estimate PM₂.₅ values in unsampled areas.</p>
+<hr>
 <table style="width:100%; text-align:center;">
 <tbody><tr>
 <td>
-<h3 class="anchored">
-Actual Timestamps
-</h3>
-<video controls="" autoplay="" loop="" width="500">
-<source src="data/animations/pm25_actual_animation1.mp4" type="video/mp4">
-</video>
+<h4 class="anchored">
+March
+</h4>
+<img src="data/animations/pm25_mar.gif" alt="Actual Animation" width="100%">
 </td>
 <td>
-<h3 class="anchored">
-Predicted Timestamps
-</h3>
-<video controls="" autoplay="" loop="" width="500">
-<source src="data/animations/pm25_preds_animation1.mp4" type="video/mp4">
-</video>
+<h4 class="anchored">
+June
+</h4>
+<img src="data/animations/pm25_jun.gif" alt="Actual Animation" width="100%">
+</td>
+</tr>
+<tr>
+<td>
+<h4 class="anchored">
+September
+</h4>
+<img src="data/animations/pm25_sep.gif" alt="Actual Animation" width="100%">
+</td>
+<td>
+<h4 class="anchored">
+December
+</h4>
+<img src="data/animations/pm25_dec.gif" alt="Actual Animation" width="100%">
 </td>
 </tr>
 </tbody></table>
+<hr>
+<section id="about-tabnet" class="level3">
+<h3 class="anchored" data-anchor-id="about-tabnet">About TabNet</h3>
+<p><strong>TabNet</strong> is a deep learning model for tabular data, also introduced by <strong>Google Research</strong>. It is especially useful for combining air quality data with external predictors like weather, traffic, and land use to improve forecasting accuracy.</p>
+<ul>
+<li><strong>Version used here:</strong> <a href="https://arxiv.org/abs/1908.07442">dreamquark-ai/tabnet</a></li>
+<li><strong>Input:</strong> Station data of PM₂.₅ + other contextual features</li>
+<li><strong>Output:</strong> Predicted PM₂.₅ values at both station and city scale</li>
+<li><strong>Why TabNet?</strong>
+<ul>
+<li><strong>Interpretable predictions:</strong> Attention masks show which features drive forecasts.</li>
+<li><strong>High performance:</strong> Outperforms many ML models (Random Forest, XGBoost) on structured data.</li>
+<li><strong>Efficient feature learning:</strong> Automatically selects the most relevant predictors at each step.</li>
+<li><strong>Scalable:</strong> Handles large, mixed-type datasets effectively.</li>
+</ul></li>
+</ul>
+<p>TabNet strengthens forecasting by leveraging <strong>multi-source contextual data</strong> for more accurate and explainable predictions.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

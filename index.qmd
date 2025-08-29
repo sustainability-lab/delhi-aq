@@ -5,11 +5,12 @@ format:
     page-layout: full
 ---
 
-### Objective 1 
-Developing 400-meter spatial resolution and hourly air quality information for Delhi NCR region from the year 2019 onwards. <br>
-<img src="data/interpolation_obj.png" alt="Actual Animation" width=600>
+### Objective 1 - Forecasting
+Developing up to 3 days ahead air quality forecasting model for Delhi NCR using machine learning.
+<img src="data/images/forecast.png" alt="Actual Animation" width=600>
+
 ---
 
-### Objective 2
-Developing up to 3 days ahead air quality forecasting model for Delhi NCR using machine learning.
-<img src="data/forecasting_obj.png" alt="Actual Animation" width=700>
+### Objective 2 - Interpolation
+Developing 400-meter spatial resolution and hourly air quality information for Delhi NCR region from the year 2019 onwards. <br>
+<img src="data/images/interpolation.png" alt="Actual Animation" width=600>

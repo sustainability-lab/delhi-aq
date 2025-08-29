@@ -1,11 +1,13 @@
 ---
-title: "Spatial Interpolation"
+title: ""
 format: 
   html:
     page-layout: full
 execute:
   echo: false
 ---
+
+# Delhi Air Quality Interpolation Map
 
 **Spatial Interpolation** extends station-level measurements into a **continuous pollution surface** across Delhi, filling the gaps between monitoring stations. 
 It uses spatial correlations in the data to estimate PM₂.₅ values in unsampled areas.
@@ -44,7 +46,6 @@ It uses spatial correlations in the data to estimate PM₂.₅ values in unsampl
 - **Input:** Station data of PM₂.₅ + other contextual features
 - **Output:** Predicted PM₂.₅ values at both station and city scale
 - **Why TabNet?**
-
   - **Interpretable predictions:** Attention masks show which features drive forecasts.
   - **High performance:** Outperforms many ML models (Random Forest, XGBoost) on structured data.
   - **Efficient feature learning:** Automatically selects the most relevant predictors at each step.
