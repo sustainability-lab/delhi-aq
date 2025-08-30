@@ -21,6 +21,8 @@ Click on any station marker to view the **3-day PM₂.₅ forecast**, generated 
 - Click on any station marker to see its past and **3-day forecast chart**.  
 - Forecasts are updated daily using TimesFM.  
 
+> The **skill scores** reported in this dashboard are calculated relative to a **SARIMAX** baseline model.
+
 ---
 
 ### About TimesFM

@@ -177,15 +177,31 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <script>
-  const stations = [
-    "Ashok Vihar, Delhi - DPCC","Bawana, Delhi - DPCC","Dr. Karni Singh Shooting Range, Delhi - DPCC",
-    "Dwarka-Sector 8, Delhi - DPCC","Jahangirpuri, Delhi - DPCC","Jawaharlal Nehru Stadium, Delhi - DPCC",
-    "Major Dhyan Chand National Stadium, Delhi - DPCC","Mandir Marg, Delhi - DPCC","Mundka, Delhi - DPCC",
-    "Najafgarh, Delhi - DPCC","Narela, Delhi - DPCC","Nehru Nagar, Delhi - DPCC","Okhla Phase-2, Delhi - DPCC",
-    "Patparganj, Delhi - DPCC","Punjabi Bagh, Delhi - DPCC","Pusa, Delhi - DPCC","R K Puram, Delhi - DPCC",
-    "Rohini, Delhi - DPCC","Sonia Vihar, Delhi - DPCC","Sri Aurobindo Marg, Delhi - DPCC",
-    "Vivek Vihar, Delhi - DPCC","Wazirpur, Delhi - DPCC"
-  ];
+  // station -> skill score dictionary
+  const skillScores = {
+    "Ashok Vihar, Delhi - DPCC": 0.549601,
+    "Bawana, Delhi - DPCC": 0.475951,
+    "Dr. Karni Singh Shooting Range, Delhi - DPCC": 0.481223,
+    "Dwarka-Sector 8, Delhi - DPCC": 0.389267,
+    "Jahangirpuri, Delhi - DPCC": 0.321271,
+    "Jawaharlal Nehru Stadium, Delhi - DPCC": 0.671313,
+    "Major Dhyan Chand National Stadium, Delhi - DPCC": 0.473435,
+    "Mandir Marg, Delhi - DPCC": 0.388009,
+    "Mundka, Delhi - DPCC": 0.468725,
+    "Najafgarh, Delhi - DPCC": -0.014836,
+    "Narela, Delhi - DPCC": 0.589600,
+    "Nehru Nagar, Delhi - DPCC": 0.116329,
+    "Okhla Phase-2, Delhi - DPCC": 0.576590,
+    "Patparganj, Delhi - DPCC": 0.493397,
+    "Punjabi Bagh, Delhi - DPCC": 0.571201,
+    "Pusa, Delhi - DPCC": 0.509975,
+    "R K Puram, Delhi - DPCC": 0.466485,
+    "Rohini, Delhi - DPCC": 0.686920,
+    "Sonia Vihar, Delhi - DPCC": 0.410197,
+    "Sri Aurobindo Marg, Delhi - DPCC": 0.185391,
+    "Vivek Vihar, Delhi - DPCC": 0.584140,
+    "Wazirpur, Delhi - DPCC": 0.503040
+  };
 
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -193,6 +209,8 @@ ul.task-list li input[type="checkbox"] {
   }
 
   const dropdown = document.getElementById("station-dropdown");
+
+  const stations = Object.keys(skillScores);
   const selectedStation = getQueryParam("station") || stations[0];
 
   stations.forEach(station => {
@@ -226,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 
   dropdown.addEventListener("change", function() {
     const station = dropdown.value;
-
+    
     const newUrl = window.location.pathname + "?station=" + encodeURIComponent(station);
     window.history.replaceState(null, "", newUrl);
 
@@ -237,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
     if (!allData) return;
 
     const startDate = new Date("2023-12-18T00:00:00");
-    const cutoff = new Date("2024-01-03T23:00:00");  // extend till Jan 3
+    const cutoff = new Date("2024-01-03T23:00:00");
 
     const stationData = allData.filter(row =>
       row.station === station &&
@@ -282,8 +300,11 @@ ul.task-list li input[type="checkbox"] {
       });
     }
 
+    const score = skillScores[station] !== undefined ? 
+                  " | Skill Score: " + skillScores[station].toFixed(3) : "";
+
     Plotly.newPlot("forecast-chart", traces, {
-      title: station + " PM₂.₅ Forecast",
+      title: station + " PM₂.₅ Forecast" + score,
       xaxis: { title: "Timestamp" },
       yaxis: { 
         title: "PM₂.₅ (µg/m³)",
@@ -305,7 +326,6 @@ ul.task-list li input[type="checkbox"] {
   window.addEventListener("resize", function() {
     Plotly.Plots.resize(document.getElementById("forecast-chart"));
   });
-
 </script>
 
 
