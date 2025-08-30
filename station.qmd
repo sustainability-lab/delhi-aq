@@ -29,6 +29,8 @@ execute:
     margin-bottom: 8px;
   }
   #station-dropdown {
+    width: 100%;
+    max-width: 400px;
     padding: 8px 12px;
     font-size: 14px;
     border-radius: 8px;
@@ -36,6 +38,7 @@ execute:
     margin-bottom: 20px;
     background-color: #f9f9f9;
     cursor: pointer;
+    box-sizing: border-box;
   }
   #forecast-chart {
     width: 100%;
@@ -177,14 +180,24 @@ execute:
     }
 
     const score = skillScores[station] !== undefined ? 
-                  " | Skill Score: " + skillScores[station].toFixed(3) : "";
+                  "Skill Score: " + skillScores[station].toFixed(3) : "";
 
     Plotly.newPlot("forecast-chart", traces, {
-      title: station + " PM₂.₅ Forecast" + score,
-      xaxis: { title: "Timestamp" },
+      title: station + "<br>" + score,
+      xaxis: {
+        title: "Timestamp",
+        automargin: true
+      },
       yaxis: { 
         title: "PM₂.₅ (µg/m³)",
         range: [0, 1000] 
+      },
+      margin: {
+        l: 50,
+        r: 0,
+        b: 50,
+        t: 50,
+        pad: 4
       },
       legend: {
         x: 1,
@@ -195,7 +208,8 @@ execute:
         bordercolor: "rgba(51, 51, 51, 0.3)",
         borderwidth: 1
       },
-      responsive: true
+      responsive: true,
+      autosize: true
     });
   }
 
