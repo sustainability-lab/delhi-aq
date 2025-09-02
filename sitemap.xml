@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sustainability-lab.github.io/delhi-aq/station.html</loc>
-    <lastmod>2025-08-30T15:39:42.559Z</lastmod>
+    <loc>https://sustainability-lab.github.io/delhi-aq/thane.html</loc>
+    <lastmod>2025-09-02T14:12:19.669Z</lastmod>
   </url>
   <url>
-    <loc>https://sustainability-lab.github.io/delhi-aq/index.html</loc>
-    <lastmod>2025-08-30T13:27:12.696Z</lastmod>
+    <loc>https://sustainability-lab.github.io/delhi-aq/interpolation.html</loc>
+    <lastmod>2025-08-30T12:37:36.746Z</lastmod>
   </url>
   <url>
     <loc>https://sustainability-lab.github.io/delhi-aq/forecasting.html</loc>
     <lastmod>2025-08-30T12:37:36.743Z</lastmod>
   </url>
   <url>
-    <loc>https://sustainability-lab.github.io/delhi-aq/interpolation.html</loc>
-    <lastmod>2025-08-30T12:37:36.746Z</lastmod>
+    <loc>https://sustainability-lab.github.io/delhi-aq/index.html</loc>
+    <lastmod>2025-08-30T13:27:12.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sustainability-lab.github.io/delhi-aq/station.html</loc>
+    <lastmod>2025-09-02T11:07:18.698Z</lastmod>
   </url>
 </urlset>
