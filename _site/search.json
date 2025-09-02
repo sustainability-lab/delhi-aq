@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "station.html",
-    "href": "station.html",
+    "objectID": "thane.html",
+    "href": "thane.html",
     "title": "Station Forecast",
     "section": "",
-    "text": "Select Station:"
+    "text": "Start Date:  End Date:  Apply"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Delhi Air Quality",
+    "objectID": "interpolation.html",
+    "href": "interpolation.html",
+    "title": "Delhi Air Quality Interpolation Map",
     "section": "",
-    "text": "Objective 1 - Forecasting\nDeveloping up to 3 days ahead air quality forecasting model for Delhi NCR using machine learning. \n\n\n\nObjective 2 - Interpolation\nDeveloping 400-meter spatial resolution and hourly air quality information for Delhi NCR region from the year 2019 onwards."
+    "text": "Delhi Air Quality Interpolation Map\nSpatial Interpolation extends station-level measurements into a continuous pollution surface across Delhi, filling the gaps between monitoring stations. It uses spatial correlations in the data to estimate PM₂.₅ values in unsampled areas.\n\n\n\n\n\nMarch\n\n\n\n\n\nJune\n\n\n\n\n\n\n\nSeptember\n\n\n\n\n\nDecember\n\n\n\n\n\n\n\nAbout TabNet\nTabNet is a deep learning model for tabular data, also introduced by Google Research. It is especially useful for combining air quality data with external predictors like weather, traffic, and land use to improve forecasting accuracy.\n\nVersion used here: dreamquark-ai/tabnet\nInput: Station data of PM₂.₅ + other contextual features\nOutput: Predicted PM₂.₅ values at both station and city scale\nWhy TabNet?\n\nInterpretable predictions: Attention masks show which features drive forecasts.\nHigh performance: Outperforms many ML models (Random Forest, XGBoost) on structured data.\nEfficient feature learning: Automatically selects the most relevant predictors at each step.\nScalable: Handles large, mixed-type datasets effectively.\n\n\nTabNet strengthens forecasting by leveraging multi-source contextual data for more accurate and explainable predictions."
   },
   {
     "objectID": "forecasting.html",
@@ -21,10 +21,17 @@
     "text": "Delhi Air Quality Forecast Map\nWelcome to the PM₂.₅ Forecasting Dashboard for Delhi. This interactive map shows real-time station-level forecasts of air pollution across 22 monitoring stations in the city.\nClick on any station marker to view the 3-day PM₂.₅ forecast, generated using the TimesFM model, which analyzes the past 14 days of data to predict future air quality.\n\n\n\n\nHow this dashboard works\n\nThe map above shows 22 monitoring stations in Delhi.\n\nClick on any station marker to see its past and 3-day forecast chart.\n\nForecasts are updated daily using TimesFM.\n\n\nThe skill scores reported in this dashboard are calculated relative to a SARIMAX baseline model.\n\n\n\n\nAbout TimesFM\nTimesFM (Time Series Foundation Model) is a state-of-the-art forecasting model developed by Google Research for univariate time-series prediction. It is designed to generate accurate forecasts using only historical data (no retraining or fine-tuning required).\n\nVersion used here: google/timesfm-2.0-500m-pytorch\n\nInput: Past 336 hours (14 days) of PM₂.₅ data per station\n\nOutput: Predicted next 72 hours (3 days) of PM₂.₅ values\n\nWhy TimesFM?\n\nZero-shot forecasting: TimesFM can make predictions on new datasets without any additional training.\nTransformer-based architecture: Built with hundreds of millions of parameters, it captures complex temporal patterns using deep learning.\nMassive training corpus: Pretrained on over 100 billion time points, enabling it to generalize across domains like weather, pollution, finance, and more.\nLong context windows: Supports input sequences up to 512 time steps, making it ideal for hourly or daily forecasting."
   },
   {
-    "objectID": "interpolation.html",
-    "href": "interpolation.html",
-    "title": "Delhi Air Quality Interpolation Map",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Delhi Air Quality",
     "section": "",
-    "text": "Delhi Air Quality Interpolation Map\nSpatial Interpolation extends station-level measurements into a continuous pollution surface across Delhi, filling the gaps between monitoring stations. It uses spatial correlations in the data to estimate PM₂.₅ values in unsampled areas.\n\n\n\n\n\nMarch\n\n\n\n\n\nJune\n\n\n\n\n\n\n\nSeptember\n\n\n\n\n\nDecember\n\n\n\n\n\n\n\nAbout TabNet\nTabNet is a deep learning model for tabular data, also introduced by Google Research. It is especially useful for combining air quality data with external predictors like weather, traffic, and land use to improve forecasting accuracy.\n\nVersion used here: dreamquark-ai/tabnet\nInput: Station data of PM₂.₅ + other contextual features\nOutput: Predicted PM₂.₅ values at both station and city scale\nWhy TabNet?\n\nInterpretable predictions: Attention masks show which features drive forecasts.\nHigh performance: Outperforms many ML models (Random Forest, XGBoost) on structured data.\nEfficient feature learning: Automatically selects the most relevant predictors at each step.\nScalable: Handles large, mixed-type datasets effectively.\n\n\nTabNet strengthens forecasting by leveraging multi-source contextual data for more accurate and explainable predictions."
+    "text": "Objective 1 - Forecasting\nDeveloping up to 3 days ahead air quality forecasting model for Delhi NCR using machine learning. \n\n\n\nObjective 2 - Interpolation\nDeveloping 400-meter spatial resolution and hourly air quality information for Delhi NCR region from the year 2019 onwards."
+  },
+  {
+    "objectID": "station.html",
+    "href": "station.html",
+    "title": "Station Forecast",
+    "section": "",
+    "text": "Select Station:"
   }
 ]

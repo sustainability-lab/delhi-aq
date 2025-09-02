@@ -1,0 +1,140 @@
+---
+title: "Station Forecast"
+format: 
+  html:
+    page-layout: full
+execute:
+  echo: false
+---
+
+<style>
+  body, .page-container, .content {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  #forecast-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  #forecast-chart {
+    width: 100%;
+    height: 550px;
+  }
+</style>
+
+<div id="forecast-container">
+  <label>Start Date: <input type="date" id="start-date"></label>
+  <label style="margin-left:10px;">End Date: <input type="date" id="end-date"></label>
+  <button onclick="plotForecast()" style="margin-left:10px;">Apply</button>
+  <div id="forecast-chart"></div>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<script>
+  let allData = null;
+
+  Papa.parse("data/dataset/thane.csv", {
+    download: true,
+    header: true,
+    dynamicTyping: true,
+    complete: function(results) {
+      allData = results.data;
+
+      allData.forEach(row => {
+        row.Timestamp = new Date(row.Timestamp);
+      });
+
+      if (allData.length > 0) {
+        const minDate = allData[0].Timestamp.toISOString().split("T")[0];
+        const maxDate = allData[allData.length - 1].Timestamp.toISOString().split("T")[0];
+
+        document.getElementById("start-date").value = "2023-07-05";
+        document.getElementById("end-date").value = "2025-01-03";
+      }
+
+      plotForecast();
+    },
+    error: function(err) {
+      console.error("CSV load error:", err);
+      document.getElementById("forecast-chart").innerHTML = "<p>Failed to load data.</p>";
+    }
+  });
+
+function plotForecast() {
+  if (!allData) return;
+
+  const startInput = document.getElementById("start-date").value;
+  const endInput = document.getElementById("end-date").value;
+
+  if (!startInput || !endInput) return;
+
+  const startDate = new Date(startInput + "T00:00:00");
+  const endDate = new Date(endInput + "T23:59:59");
+
+  const filteredData = allData.filter(row =>
+    row.Timestamp >= startDate &&
+    row.Timestamp <= endDate
+  );
+
+  if (filteredData.length === 0) {
+    document.getElementById("forecast-chart").innerHTML = "<p>No data found in selected range.</p>";
+    return;
+  }
+
+  const forecastStart = new Date("2024-12-31T15:00:00");
+
+  const pastData = filteredData.filter(row => row.Timestamp < forecastStart);
+  const forecastData = filteredData.filter(row => row.Timestamp >= forecastStart);
+
+  const traces = [];
+
+  traces.push({
+    x: filteredData.map(r => r.Timestamp),
+    y: filteredData.map(r => r["Actual_PM25"]),
+    mode: "lines",
+    name: "Actual PM₂.₅"
+  });
+
+  if (pastData.length > 0) {
+    traces.push({
+      x: pastData.map(r => r.Timestamp),
+      y: pastData.map(r => r["Predicted_PM25"]),
+      mode: "lines",
+      name: "Predicted PM₂.₅"
+    });
+  }
+
+  if (forecastData.length > 0) {
+    traces.push({
+      x: forecastData.map(r => r.Timestamp),
+      y: forecastData.map(r => r["Predicted_PM25"]),
+      mode: "lines",
+      name: "Forecasted PM₂.₅",
+      line: { color: 'green' }
+    });
+  }
+
+  Plotly.newPlot("forecast-chart", traces, {
+    title: "Thane Station Forecast",
+    xaxis: { title: "Timestamp", automargin: true },
+    yaxis: { title: "PM₂.₅ (µg/m³)", range: [0, 255] },
+    margin: { l: 50, r: 0, b: 50, t: 100, pad: 4 },
+    legend: { x: 1, y: 1, xanchor: "right", yanchor: "top", bgcolor: "rgba(255,255,255,0.7)", bordercolor: "rgba(51, 51, 51, 0.3)", borderwidth: 1 },
+    responsive: true,
+    autosize: true
+  });
+}
+
+  window.addEventListener("resize", function() {
+    Plotly.Plots.resize(document.getElementById("forecast-chart"));
+  });
+</script>

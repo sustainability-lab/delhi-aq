@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - data/dataset/timesfm_3days.csv
+    - data/dataset/thane.csv
 
 website:
   title: "Delhi Air Quality"
@@ -11,6 +12,8 @@ website:
         href: forecasting.qmd
       - text: Spatial Interpolation
         href: interpolation.qmd
+      - text: Thane Forecasting
+        href: thane.qmd
 
 format:
   html:
